@@ -1,0 +1,5 @@
+[Rollbar] Scheduling item
+[Rollbar] Sending item
+[Rollbar] Sending json
+[Rollbar] Success
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=ee556bf7-36de-4b0a-a2c4-2754ca43e42c (only available if report was successful)
