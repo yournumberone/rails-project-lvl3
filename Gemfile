@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
+gem 'faker'
 gem 'omniauth-github'
 gem 'omniauth-rails_csrf_protection'
 gem 'ransack'
@@ -38,6 +39,7 @@ gem 'slim'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'dotenv-rails'
   gem 'rubocop-rails'
   gem 'slim_lint'
   gem 'sqlite3', '~> 1.4'
