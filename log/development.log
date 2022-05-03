@@ -2247,3 +2247,2780 @@ puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
 puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
 puma (5.6.4) lib/puma/server.rb:441:in `process_client'
 puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2022-05-03 10:24:10 +0300
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.erb within layouts/application
+  Rendered web/auth/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 685)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 162.5ms | Allocations: 27890)
+Completed 200 OK in 186ms (Views: 170.8ms | ActiveRecord: 0.0ms | Allocations: 31596)
+
+
+Started POST "/auth/development" for 127.0.0.1 at 2022-05-03 10:24:12 +0300
+  
+AbstractController::ActionNotFound (The action 'request' could not be found for Web::AuthController
+Did you mean?  create
+               new):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionview (6.1.5) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+omniauth (2.0.4) lib/omniauth/strategy.rb:202:in `call!'
+omniauth (2.0.4) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.0.4) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.5) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.5) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+rollbar (3.3.0) lib/rollbar/middleware/rails/rollbar.rb:25:in `block in call'
+rollbar (3.3.0) lib/rollbar.rb:145:in `scoped'
+rollbar (3.3.0) lib/rollbar/middleware/rails/rollbar.rb:22:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+rollbar (3.3.0) lib/rollbar/middleware/rails/show_exceptions.rb:22:in `call_with_rollbar'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2022-05-03 10:25:38 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.erb within layouts/application
+  Rendered web/auth/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 364)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 30.0ms | Allocations: 11193)
+Completed 200 OK in 38ms (Views: 34.6ms | ActiveRecord: 0.0ms | Allocations: 12596)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 10:25:39 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.erb within layouts/application
+  Rendered web/auth/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 20.5ms | Allocations: 7015)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.0ms | Allocations: 7516)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 10:25:40 +0300
+Started GET "/login" for 127.0.0.1 at 2022-05-03 10:49:20 +0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.erb within layouts/application
+  Rendered web/auth/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 685)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 134.7ms | Allocations: 27891)
+Completed 200 OK in 153ms (Views: 141.3ms | ActiveRecord: 0.0ms | Allocations: 31597)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 10:49:22 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.erb within layouts/application
+  Rendered web/auth/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 191)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 26.3ms | Allocations: 7112)
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.0ms | Allocations: 7664)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 10:49:24 +0300
+Started GET "/auth/callback%C2%B7?error=redirect_uri_mismatch&error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch&state=745e854f8253e712b2cd927471f3f0acb387cbfd1a56c648" for 127.0.0.1 at 2022-05-03 10:49:24 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/callback%C2%B7"):
+  
+Started GET "/login" for 127.0.0.1 at 2022-05-03 10:50:09 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.erb within layouts/application
+  Rendered web/auth/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 235)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 25.1ms | Allocations: 7275)
+Completed 200 OK in 28ms (Views: 27.1ms | Allocations: 8060)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 10:50:11 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.erb within layouts/application
+  Rendered web/auth/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 25.1ms | Allocations: 7017)
+Completed 200 OK in 28ms (Views: 26.4ms | Allocations: 7515)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 10:50:12 +0300
+Started GET "/auth/callback%C2%B7?error=redirect_uri_mismatch&error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch&state=ffdaff4f78545c1f2d40b2e46179c5e96b546b88830269f6" for 127.0.0.1 at 2022-05-03 10:50:12 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/callback%C2%B7"):
+  
+Started GET "/login" for 127.0.0.1 at 2022-05-03 10:51:03 +0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.erb within layouts/application
+  Rendered web/auth/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 685)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 83.5ms | Allocations: 27890)
+Completed 200 OK in 101ms (Views: 88.8ms | ActiveRecord: 0.0ms | Allocations: 31595)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 10:51:05 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.erb within layouts/application
+  Rendered web/auth/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 192)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 18.9ms | Allocations: 7360)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.0ms | Allocations: 7914)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 10:51:07 +0300
+Started GET "/auth/callback%C2%B7?error=redirect_uri_mismatch&error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch&state=e28ae836476a66c0ba0c82eeed6f9a94c0562744cfa05dd0" for 127.0.0.1 at 2022-05-03 10:51:07 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/callback%C2%B7"):
+  
+Started GET "/login" for 127.0.0.1 at 2022-05-03 10:51:27 +0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.erb within layouts/application
+  Rendered web/auth/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 685)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 99.1ms | Allocations: 27890)
+Completed 200 OK in 118ms (Views: 104.8ms | ActiveRecord: 0.0ms | Allocations: 31596)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 10:51:29 +0300
+Started GET "/auth/callback%C2%B7?error=redirect_uri_mismatch&error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch&state=ed3a8479746b22977fef02ba2cf8d8e94a7273c302e0082e" for 127.0.0.1 at 2022-05-03 10:51:30 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/callback%C2%B7"):
+  
+Started GET "/login" for 127.0.0.1 at 2022-05-03 11:06:58 +0300
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.erb within layouts/application
+  Rendered web/auth/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 685)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 189.7ms | Allocations: 27890)
+Completed 200 OK in 214ms (Views: 198.9ms | ActiveRecord: 0.0ms | Allocations: 31596)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 11:07:00 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.erb within layouts/application
+  Rendered web/auth/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 192)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 113.6ms | Allocations: 7206)
+Completed 200 OK in 125ms (Views: 124.5ms | ActiveRecord: 0.0ms | Allocations: 7762)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 11:07:36 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.erb within layouts/application
+  Rendered web/auth/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 366)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 23.4ms | Allocations: 11112)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.0ms | Allocations: 12495)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 11:07:37 +0300
+Started GET "/auth/callback%C2%B7?error=redirect_uri_mismatch&error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch&state=467937711a57fcb885e6da8f94b28d897b26eca8da60a210" for 127.0.0.1 at 2022-05-03 11:07:37 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/callback%C2%B7"):
+  
+Started GET "/login" for 127.0.0.1 at 2022-05-03 11:07:46 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.erb within layouts/application
+  Rendered web/auth/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 189)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 18.1ms | Allocations: 7200)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.0ms | Allocations: 7735)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 11:07:48 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.erb within layouts/application
+  Rendered web/auth/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 16.1ms | Allocations: 7015)
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.0ms | Allocations: 7467)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 11:08:31 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.erb within layouts/application
+  Rendered web/auth/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 24.3ms | Allocations: 7016)
+Completed 200 OK in 25ms (Views: 24.8ms | ActiveRecord: 0.0ms | Allocations: 7468)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 11:08:34 +0300
+Started GET "/auth/callback%C2%B7?error=redirect_uri_mismatch&error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch&state=742068fd3efd42ce19223d04ddbd2ee5f2bb51ce427ab5cc" for 127.0.0.1 at 2022-05-03 11:08:34 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/callback%C2%B7"):
+  
+Started GET "/login" for 127.0.0.1 at 2022-05-03 11:08:53 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.erb within layouts/application
+  Rendered web/auth/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 364)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 21.6ms | Allocations: 11107)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.0ms | Allocations: 12444)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 11:08:53 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.erb within layouts/application
+  Rendered web/auth/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 14.9ms | Allocations: 7015)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms | Allocations: 7515)
+
+
+Started POST "/auth/github/callback" for 127.0.0.1 at 2022-05-03 11:08:55 +0300
+  
+OmniAuth::Strategies::OAuth2::CallbackError (csrf_detected | CSRF detected):
+  
+omniauth (2.0.4) lib/omniauth/failure_endpoint.rb:25:in `raise_out!'
+omniauth (2.0.4) lib/omniauth/failure_endpoint.rb:20:in `call'
+omniauth (2.0.4) lib/omniauth/failure_endpoint.rb:12:in `call'
+omniauth (2.0.4) lib/omniauth/strategy.rb:544:in `fail!'
+omniauth-oauth2 (1.7.2) lib/omniauth/strategies/oauth2.rb:87:in `callback_phase'
+omniauth (2.0.4) lib/omniauth/strategy.rb:272:in `callback_call'
+omniauth (2.0.4) lib/omniauth/strategy.rb:194:in `call!'
+omniauth (2.0.4) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.0.4) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.5) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.5) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+rollbar (3.3.0) lib/rollbar/middleware/rails/rollbar.rb:25:in `block in call'
+rollbar (3.3.0) lib/rollbar.rb:145:in `scoped'
+rollbar (3.3.0) lib/rollbar/middleware/rails/rollbar.rb:22:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+rollbar (3.3.0) lib/rollbar/middleware/rails/show_exceptions.rb:22:in `call_with_rollbar'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2022-05-03 11:09:23 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.erb within layouts/application
+  Rendered web/auth/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 18.6ms | Allocations: 7185)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.0ms | Allocations: 7638)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 11:14:07 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.erb within layouts/application
+  Rendered web/auth/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 24.1ms | Allocations: 7015)
+Completed 200 OK in 26ms (Views: 25.1ms | Allocations: 7464)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 11:14:09 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.erb within layouts/application
+  Rendered web/auth/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 22.0ms | Allocations: 7029)
+Completed 200 OK in 24ms (Views: 23.0ms | Allocations: 7478)
+
+
+Started POST "/auth/github/callback" for 127.0.0.1 at 2022-05-03 11:14:09 +0300
+  
+OmniAuth::Strategies::OAuth2::CallbackError (csrf_detected | CSRF detected):
+  
+omniauth (2.0.4) lib/omniauth/failure_endpoint.rb:25:in `raise_out!'
+omniauth (2.0.4) lib/omniauth/failure_endpoint.rb:20:in `call'
+omniauth (2.0.4) lib/omniauth/failure_endpoint.rb:12:in `call'
+omniauth (2.0.4) lib/omniauth/strategy.rb:544:in `fail!'
+omniauth-oauth2 (1.7.2) lib/omniauth/strategies/oauth2.rb:87:in `callback_phase'
+omniauth (2.0.4) lib/omniauth/strategy.rb:272:in `callback_call'
+omniauth (2.0.4) lib/omniauth/strategy.rb:194:in `call!'
+omniauth (2.0.4) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.0.4) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.5) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.5) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+rollbar (3.3.0) lib/rollbar/middleware/rails/rollbar.rb:25:in `block in call'
+rollbar (3.3.0) lib/rollbar.rb:145:in `scoped'
+rollbar (3.3.0) lib/rollbar/middleware/rails/rollbar.rb:22:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+rollbar (3.3.0) lib/rollbar/middleware/rails/show_exceptions.rb:22:in `call_with_rollbar'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2022-05-03 11:30:47 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 3.5ms | Allocations: 2139)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 51.3ms | Allocations: 12863)
+Completed 200 OK in 61ms (Views: 59.3ms | Allocations: 14202)
+
+
+Started GET "/login?class=btn+w-100+border+btn-outline-secondary&method=post" for 127.0.0.1 at 2022-05-03 11:30:53 +0300
+Processing by Web::AuthController#new as HTML
+  Parameters: {"class"=>"btn w-100 border btn-outline-secondary", "method"=>"post"}
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.4ms | Allocations: 150)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 19.5ms | Allocations: 7029)
+Completed 200 OK in 21ms (Views: 20.4ms | Allocations: 7528)
+
+
+Started GET "/login?class=btn+w-100+border+btn-outline-secondary&method=post" for 127.0.0.1 at 2022-05-03 11:30:56 +0300
+Processing by Web::AuthController#new as HTML
+  Parameters: {"class"=>"btn w-100 border btn-outline-secondary", "method"=>"post"}
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.6ms | Allocations: 148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 18.6ms | Allocations: 7197)
+Completed 200 OK in 21ms (Views: 19.5ms | Allocations: 7650)
+
+
+Started GET "/login?class=btn+w-100+border+btn-outline-secondary&method=post" for 127.0.0.1 at 2022-05-03 11:31:43 +0300
+Processing by Web::AuthController#new as HTML
+  Parameters: {"class"=>"btn w-100 border btn-outline-secondary", "method"=>"post"}
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.3ms | Allocations: 150)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 34.3ms | Allocations: 7029)
+Completed 200 OK in 36ms (Views: 35.2ms | Allocations: 7481)
+
+
+Started GET "/login?class=btn+w-100+border+btn-outline-secondary&method=post" for 127.0.0.1 at 2022-05-03 11:31:44 +0300
+Processing by Web::AuthController#new as HTML
+  Parameters: {"class"=>"btn w-100 border btn-outline-secondary", "method"=>"post"}
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.6ms | Allocations: 150)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 29.7ms | Allocations: 7029)
+Completed 200 OK in 31ms (Views: 30.5ms | Allocations: 7481)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 11:35:34 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.3ms | Allocations: 150)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 19.5ms | Allocations: 7029)
+Completed 200 OK in 21ms (Views: 20.2ms | Allocations: 7478)
+
+
+Started GET "/ih" for 127.0.0.1 at 2022-05-03 11:36:36 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ih"):
+  
+Started GET "/login" for 127.0.0.1 at 2022-05-03 11:40:39 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.5ms | Allocations: 148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 26.3ms | Allocations: 7197)
+Completed 200 OK in 29ms (Views: 27.3ms | Allocations: 7647)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 11:40:41 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.7ms | Allocations: 148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 20.8ms | Allocations: 7027)
+Completed 200 OK in 22ms (Views: 21.5ms | Allocations: 7476)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 12:02:45 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.9ms | Allocations: 641)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 31.2ms | Allocations: 7705)
+Completed 200 OK in 34ms (Views: 32.7ms | Allocations: 8489)
+
+
+Started GET "/login?class=btn+w-100+border+btn-outline-secondary&method=post" for 127.0.0.1 at 2022-05-03 12:02:47 +0300
+Processing by Web::AuthController#new as HTML
+  Parameters: {"class"=>"btn w-100 border btn-outline-secondary", "method"=>"post"}
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.3ms | Allocations: 148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 23.8ms | Allocations: 7028)
+Completed 200 OK in 26ms (Views: 24.7ms | Allocations: 7526)
+
+
+Started GET "/login?class=btn+w-100+border+btn-outline-secondary&method=post" for 127.0.0.1 at 2022-05-03 12:03:56 +0300
+Processing by Web::AuthController#new as HTML
+  Parameters: {"class"=>"btn w-100 border btn-outline-secondary", "method"=>"post"}
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 4.1ms | Allocations: 1515)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 43.1ms | Allocations: 12315)
+Completed 200 OK in 50ms (Views: 48.5ms | Allocations: 13688)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 12:04:00 +0300
+Started GET "/auth/callback%C2%B7?error=redirect_uri_mismatch&error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch&state=1277cd00c1913bbcc47517e5b84df22c5a85f0f5bfc4b4db" for 127.0.0.1 at 2022-05-03 12:04:00 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/callback%C2%B7"):
+  
+Started GET "/login?class=btn+w-100+border+btn-outline-secondary&method=post" for 127.0.0.1 at 2022-05-03 12:04:14 +0300
+Processing by Web::AuthController#new as HTML
+  Parameters: {"class"=>"btn w-100 border btn-outline-secondary", "method"=>"post"}
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.2ms | Allocations: 103)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 18.0ms | Allocations: 7333)
+Completed 200 OK in 20ms (Views: 19.0ms | Allocations: 8118)
+
+
+Started GET "/login?class=btn+w-100+border+btn-outline-secondary&method=post" for 127.0.0.1 at 2022-05-03 12:04:16 +0300
+Processing by Web::AuthController#new as HTML
+  Parameters: {"class"=>"btn w-100 border btn-outline-secondary", "method"=>"post"}
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.4ms | Allocations: 60)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 19.5ms | Allocations: 6940)
+Completed 200 OK in 21ms (Views: 20.5ms | Allocations: 7435)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 12:04:17 +0300
+Started GET "/auth/callback%C2%B7?error=redirect_uri_mismatch&error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch&state=4cdae2c82d0942ed1d78e3f3f8ea74942612fab443f17825" for 127.0.0.1 at 2022-05-03 12:04:18 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/callback%C2%B7"):
+  
+Started GET "/login" for 127.0.0.1 at 2022-05-03 12:05:28 +0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 14.8ms | Allocations: 9474)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 108.1ms | Allocations: 28899)
+Completed 200 OK in 125ms (Views: 112.8ms | ActiveRecord: 0.0ms | Allocations: 32599)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 12:05:31 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.2ms | Allocations: 79)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 18.7ms | Allocations: 7097)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms | Allocations: 7653)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 12:05:31 +0300
+Started GET "/auth/callback%C2%B7?error=redirect_uri_mismatch&error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch&state=d8e70c2c1c4f8dbc72cb72f68b1257ce867bb1cef0369bcb" for 127.0.0.1 at 2022-05-03 12:05:32 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/callback%C2%B7"):
+  
+Started GET "/login" for 127.0.0.1 at 2022-05-03 12:24:38 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.3ms | Allocations: 103)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 17.8ms | Allocations: 7252)
+Completed 200 OK in 20ms (Views: 19.3ms | Allocations: 8037)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 12:24:40 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.2ms | Allocations: 60)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 43.9ms | Allocations: 7023)
+Completed 200 OK in 47ms (Views: 45.1ms | Allocations: 7519)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 12:24:41 +0300
+Started GET "/auth/callback%C2%B7?error=redirect_uri_mismatch&error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch&state=d2c07b33bf309dcbc2c185c7d2f532ddfb4fbcb6e4481bd9" for 127.0.0.1 at 2022-05-03 12:24:42 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/callback%C2%B7"):
+  
+Started GET "/login" for 127.0.0.1 at 2022-05-03 12:25:01 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 4.9ms | Allocations: 1512)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 153.9ms | Allocations: 12402)
+Completed 200 OK in 168ms (Views: 165.1ms | Allocations: 13743)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 12:25:02 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.2ms | Allocations: 60)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 21.3ms | Allocations: 7023)
+Completed 200 OK in 23ms (Views: 22.2ms | Allocations: 7520)
+
+
+Started POST "/auth/github/callback" for 127.0.0.1 at 2022-05-03 12:25:04 +0300
+  
+OmniAuth::Strategies::OAuth2::CallbackError (csrf_detected | CSRF detected):
+  
+omniauth (2.0.4) lib/omniauth/failure_endpoint.rb:25:in `raise_out!'
+omniauth (2.0.4) lib/omniauth/failure_endpoint.rb:20:in `call'
+omniauth (2.0.4) lib/omniauth/failure_endpoint.rb:12:in `call'
+omniauth (2.0.4) lib/omniauth/strategy.rb:544:in `fail!'
+omniauth-oauth2 (1.7.2) lib/omniauth/strategies/oauth2.rb:87:in `callback_phase'
+omniauth (2.0.4) lib/omniauth/strategy.rb:272:in `callback_call'
+omniauth (2.0.4) lib/omniauth/strategy.rb:194:in `call!'
+omniauth (2.0.4) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.0.4) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.5) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.5) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+rollbar (3.3.0) lib/rollbar/middleware/rails/rollbar.rb:25:in `block in call'
+rollbar (3.3.0) lib/rollbar.rb:145:in `scoped'
+rollbar (3.3.0) lib/rollbar/middleware/rails/rollbar.rb:22:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+rollbar (3.3.0) lib/rollbar/middleware/rails/show_exceptions.rb:22:in `call_with_rollbar'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2022-05-03 12:28:55 +0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 13.1ms | Allocations: 9474)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 83.7ms | Allocations: 28899)
+Completed 200 OK in 102ms (Views: 87.8ms | ActiveRecord: 0.0ms | Allocations: 32596)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 12:29:03 +0300
+Started GET "/auth/callback%C2%B7?error=redirect_uri_mismatch&error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch&state=4c344388737b284e13c0b5873c70df071a3ea73a884b69eb" for 127.0.0.1 at 2022-05-03 12:29:04 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/callback%C2%B7"):
+  
+Started GET "/login" for 127.0.0.1 at 2022-05-03 12:31:33 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 6.0ms | Allocations: 2509)
+  Rendered layout layouts/application.html.slim (Duration: 6.4ms | Allocations: 2585)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 3958)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check = link_to auth_request_path('github', method: :post, class: 'btn w-100 border btn-outline-secondary'
+):
+1:    = link_to auth_request_path('github', method: :post, class: 'btn w-100 border btn-outline-secondary'
+  
+app/views/web/auth/new.html.slim:1: syntax error, unexpected ';', expecting ')'
+app/views/web/auth/new.html.slim:1: syntax error, unexpected ';', expecting ')'
+app/views/web/auth/new.html.slim:1: syntax error, unexpected ';', expecting ')'
+app/views/web/auth/new.html.slim:1: syntax error, unexpected ';', expecting ')'
+app/views/web/auth/new.html.slim:1: syntax error, unexpected ';', expecting ')'
+app/views/web/auth/new.html.slim:1: syntax error, unexpected ';', expecting ')'
+Started GET "/login" for 127.0.0.1 at 2022-05-03 12:32:00 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 4.6ms | Allocations: 2138)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 35.5ms | Allocations: 13033)
+Completed 200 OK in 43ms (Views: 39.1ms | ActiveRecord: 0.0ms | Allocations: 14438)
+
+
+Started GET "/login?class=btn+w-100+border+btn-outline-secondary&method=post" for 127.0.0.1 at 2022-05-03 12:32:04 +0300
+Processing by Web::AuthController#new as HTML
+  Parameters: {"class"=>"btn w-100 border btn-outline-secondary", "method"=>"post"}
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.4ms | Allocations: 148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 24.8ms | Allocations: 7027)
+Completed 200 OK in 26ms (Views: 25.6ms | ActiveRecord: 0.0ms | Allocations: 7531)
+
+
+Started GET "/login?class=btn+w-100+border+btn-outline-secondary&method=post" for 127.0.0.1 at 2022-05-03 12:32:19 +0300
+Processing by Web::AuthController#new as HTML
+  Parameters: {"class"=>"btn w-100 border btn-outline-secondary", "method"=>"post"}
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 2.3ms | Allocations: 643)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 27.1ms | Allocations: 7709)
+Completed 200 OK in 41ms (Views: 39.1ms | Allocations: 8496)
+
+
+Started GET "/login?class=btn+w-100+border+btn-outline-secondary&method=post" for 127.0.0.1 at 2022-05-03 12:32:21 +0300
+Processing by Web::AuthController#new as HTML
+  Parameters: {"class"=>"btn w-100 border btn-outline-secondary", "method"=>"post"}
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 2.3ms | Allocations: 148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 22.7ms | Allocations: 7027)
+Completed 200 OK in 25ms (Views: 23.7ms | Allocations: 7525)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 12:32:22 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.7ms | Allocations: 150)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 15.8ms | Allocations: 7031)
+Completed 200 OK in 17ms (Views: 16.6ms | Allocations: 7486)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 12:32:24 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.4ms | Allocations: 150)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 22.5ms | Allocations: 7029)
+Completed 200 OK in 24ms (Views: 23.1ms | Allocations: 7478)
+
+
+Started GET "/login?class=btn+w-100+border+btn-outline-secondary&method=post" for 127.0.0.1 at 2022-05-03 12:32:26 +0300
+Processing by Web::AuthController#new as HTML
+  Parameters: {"class"=>"btn w-100 border btn-outline-secondary", "method"=>"post"}
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 1.0ms | Allocations: 148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 32.3ms | Allocations: 7027)
+Completed 200 OK in 35ms (Views: 34.0ms | Allocations: 7479)
+
+
+Started GET "/login?class=btn+w-100+border+btn-outline-secondary&method=post" for 127.0.0.1 at 2022-05-03 12:35:24 +0300
+Processing by Web::AuthController#new as HTML
+  Parameters: {"class"=>"btn w-100 border btn-outline-secondary", "method"=>"post"}
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 4.3ms | Allocations: 2050)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 41.9ms | Allocations: 12815)
+Completed 200 OK in 48ms (Views: 45.9ms | Allocations: 14294)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 12:35:25 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.5ms | Allocations: 148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 19.4ms | Allocations: 7027)
+Completed 200 OK in 21ms (Views: 20.1ms | Allocations: 7525)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 12:35:27 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.3ms | Allocations: 148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 21.8ms | Allocations: 7027)
+Completed 200 OK in 24ms (Views: 22.7ms | Allocations: 7476)
+
+
+Started GET "/login?class=btn+w-100+border+btn-outline-secondary&method=post" for 127.0.0.1 at 2022-05-03 12:35:28 +0300
+Processing by Web::AuthController#new as HTML
+  Parameters: {"class"=>"btn w-100 border btn-outline-secondary", "method"=>"post"}
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.4ms | Allocations: 148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 16.1ms | Allocations: 7032)
+Completed 200 OK in 18ms (Views: 17.0ms | Allocations: 7484)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 12:35:54 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 6.4ms | Allocations: 1618)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 32.1ms | Allocations: 12423)
+Completed 200 OK in 39ms (Views: 37.2ms | Allocations: 13767)
+
+
+Started GET "/login?class=btn+w-100+border+btn-outline-secondary&method=post" for 127.0.0.1 at 2022-05-03 12:35:56 +0300
+Processing by Web::AuthController#new as HTML
+  Parameters: {"class"=>"btn w-100 border btn-outline-secondary", "method"=>"post"}
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.4ms | Allocations: 135)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 37.7ms | Allocations: 7014)
+Completed 200 OK in 41ms (Views: 39.9ms | Allocations: 7513)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 12:36:07 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 3.5ms | Allocations: 1500)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 29.0ms | Allocations: 12222)
+Completed 200 OK in 33ms (Views: 31.4ms | Allocations: 13559)
+
+
+Started POST "/auth/github/callback" for 127.0.0.1 at 2022-05-03 12:36:08 +0300
+  
+OmniAuth::Strategies::OAuth2::CallbackError (csrf_detected | CSRF detected):
+  
+omniauth (2.0.4) lib/omniauth/failure_endpoint.rb:25:in `raise_out!'
+omniauth (2.0.4) lib/omniauth/failure_endpoint.rb:20:in `call'
+omniauth (2.0.4) lib/omniauth/failure_endpoint.rb:12:in `call'
+omniauth (2.0.4) lib/omniauth/strategy.rb:544:in `fail!'
+omniauth-oauth2 (1.7.2) lib/omniauth/strategies/oauth2.rb:87:in `callback_phase'
+omniauth (2.0.4) lib/omniauth/strategy.rb:272:in `callback_call'
+omniauth (2.0.4) lib/omniauth/strategy.rb:194:in `call!'
+omniauth (2.0.4) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.0.4) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.5) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.5) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+rollbar (3.3.0) lib/rollbar/middleware/rails/rollbar.rb:25:in `block in call'
+rollbar (3.3.0) lib/rollbar.rb:145:in `scoped'
+rollbar (3.3.0) lib/rollbar/middleware/rails/rollbar.rb:22:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+rollbar (3.3.0) lib/rollbar/middleware/rails/show_exceptions.rb:22:in `call_with_rollbar'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2022-05-03 12:40:02 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 3.2ms | Allocations: 1512)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 38.5ms | Allocations: 12359)
+Completed 200 OK in 47ms (Views: 44.5ms | Allocations: 13838)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 12:40:03 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.2ms | Allocations: 60)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 18.9ms | Allocations: 6939)
+Completed 200 OK in 20ms (Views: 19.8ms | Allocations: 7434)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 12:40:04 +0300
+Started GET "/auth/callback%C2%B7?error=redirect_uri_mismatch&error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch&state=40e25957d35b08134ea2c726d9db8700bf34c5fef7eb8c7d" for 127.0.0.1 at 2022-05-03 12:40:06 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/callback%C2%B7"):
+  
+Started GET "/login" for 127.0.0.1 at 2022-05-03 13:45:28 +0300
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 17.4ms | Allocations: 9474)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 110.0ms | Allocations: 28899)
+Completed 200 OK in 134ms (Views: 118.3ms | ActiveRecord: 0.0ms | Allocations: 32599)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 13:45:30 +0300
+Started GET "/auth/callback%C2%B7?error=redirect_uri_mismatch&error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch&state=3fd7e47e57f8158b83974aca9d7b4b65ce36989d50e08780" for 127.0.0.1 at 2022-05-03 13:45:31 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/callback%C2%B7"):
+  
+Started GET "/login" for 127.0.0.1 at 2022-05-03 13:46:08 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 5.5ms | Allocations: 2511)
+  Rendered layout layouts/application.html.slim (Duration: 5.9ms | Allocations: 2587)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 3960)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check = link_to 'v', auth_request_path 'github', method: :post, class: 'btn w-100 border btn-outline-secondary'
+):
+1:    = link_to 'v', auth_request_path 'github', method: :post, class: 'btn w-100 border btn-outline-secondary'
+  
+app/views/web/auth/new.html.slim:1: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/views/web/auth/new.html.slim:1: syntax error, unexpected ',', expecting ')'
+app/views/web/auth/new.html.slim:1: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/views/web/auth/new.html.slim:1: syntax error, unexpected ',', expecting ')'
+app/views/web/auth/new.html.slim:1: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/views/web/auth/new.html.slim:1: syntax error, unexpected ',', expecting ')'
+app/views/web/auth/new.html.slim:1: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/views/web/auth/new.html.slim:1: syntax error, unexpected ',', expecting ')'
+app/views/web/auth/new.html.slim:1: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/views/web/auth/new.html.slim:1: syntax error, unexpected ',', expecting ')'
+app/views/web/auth/new.html.slim:1: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/views/web/auth/new.html.slim:1: syntax error, unexpected ',', expecting ')'
+Started GET "/login" for 127.0.0.1 at 2022-05-03 13:46:24 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 5.0ms | Allocations: 1591)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 27.8ms | Allocations: 12486)
+Completed 200 OK in 33ms (Views: 31.4ms | ActiveRecord: 0.0ms | Allocations: 13890)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 13:46:27 +0300
+Started GET "/auth/callback%C2%B7?error=redirect_uri_mismatch&error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch&state=00c8a733c4dfb0c80888b8bd47f9805cfb55acf3c7af2c74" for 127.0.0.1 at 2022-05-03 13:46:27 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/callback%C2%B7"):
+  
+Started GET "/login" for 127.0.0.1 at 2022-05-03 13:58:15 +0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 21.2ms | Allocations: 9632)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 106.1ms | Allocations: 29053)
+Completed 200 OK in 134ms (Views: 114.9ms | ActiveRecord: 0.0ms | Allocations: 32774)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 13:58:17 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.8ms | Allocations: 140)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 17.1ms | Allocations: 7328)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms | Allocations: 7885)
+
+
+Started POST "/auth/github.github" for 127.0.0.1 at 2022-05-03 13:58:19 +0300
+  
+AbstractController::ActionNotFound (The action 'request' could not be found for Web::AuthController
+Did you mean?  new
+               auth
+               callback):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionview (6.1.5) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+omniauth (2.0.4) lib/omniauth/strategy.rb:202:in `call!'
+omniauth (2.0.4) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.0.4) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.5) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.5) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+rollbar (3.3.0) lib/rollbar/middleware/rails/rollbar.rb:25:in `block in call'
+rollbar (3.3.0) lib/rollbar.rb:145:in `scoped'
+rollbar (3.3.0) lib/rollbar/middleware/rails/rollbar.rb:22:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+rollbar (3.3.0) lib/rollbar/middleware/rails/show_exceptions.rb:22:in `call_with_rollbar'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2022-05-03 14:02:27 +0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 16.9ms | Allocations: 9632)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 90.1ms | Allocations: 29053)
+Completed 200 OK in 108ms (Views: 95.6ms | ActiveRecord: 0.0ms | Allocations: 32753)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 14:02:29 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 15.1ms | Allocations: 140)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 156.7ms | Allocations: 7192)
+Completed 200 OK in 219ms (Views: 164.1ms | ActiveRecord: 0.0ms | Allocations: 7748)
+
+
+Started POST "/auth/github.github" for 127.0.0.1 at 2022-05-03 14:02:31 +0300
+  
+AbstractController::ActionNotFound (The action 'request' could not be found for Web::AuthController
+Did you mean?  new
+               auth
+               github):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionview (6.1.5) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+omniauth (2.0.4) lib/omniauth/strategy.rb:202:in `call!'
+omniauth (2.0.4) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.0.4) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.5) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.5) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+rollbar (3.3.0) lib/rollbar/middleware/rails/rollbar.rb:25:in `block in call'
+rollbar (3.3.0) lib/rollbar.rb:145:in `scoped'
+rollbar (3.3.0) lib/rollbar/middleware/rails/rollbar.rb:22:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+rollbar (3.3.0) lib/rollbar/middleware/rails/show_exceptions.rb:22:in `call_with_rollbar'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2022-05-03 14:02:57 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 3.8ms | Allocations: 1557)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 23.2ms | Allocations: 12313)
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.0ms | Allocations: 13712)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 14:02:58 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.2ms | Allocations: 82)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 17.9ms | Allocations: 6961)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.0ms | Allocations: 7461)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 14:02:59 +0300
+Started GET "/auth/callback%C2%B7?error=redirect_uri_mismatch&error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch&state=8675971f79faa4b557debbb0a3ba621c9ad74433ae98a1ba" for 127.0.0.1 at 2022-05-03 14:02:59 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/callback%C2%B7"):
+  
+Started GET "/" for 127.0.0.1 at 2022-05-03 16:25:15 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 5.8ms | Allocations: 1520)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 38.2ms | Allocations: 8620)
+Completed 200 OK in 58ms (Views: 43.3ms | Allocations: 9844)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 16:27:41 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 2.6ms | Allocations: 148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 57.4ms | Allocations: 7285)
+Completed 200 OK in 60ms (Views: 59.0ms | Allocations: 8062)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 16:27:43 +0300
+Started GET "/auth/callback%C2%B7?error=redirect_uri_mismatch&error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch&state=74027bd05f93e19a52709c790624cd5c937a9241aa136320" for 127.0.0.1 at 2022-05-03 16:27:44 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/callback%C2%B7"):
+  
+Started GET "/login" for 127.0.0.1 at 2022-05-03 16:28:58 +0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 29.0ms | Allocations: 9557)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 136.6ms | Allocations: 28982)
+Completed 200 OK in 178ms (Views: 151.0ms | ActiveRecord: 0.0ms | Allocations: 32682)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 16:29:00 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 11.9ms | Allocations: 110)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 149.3ms | Allocations: 7153)
+Completed 200 OK in 163ms (Views: 150.3ms | ActiveRecord: 0.0ms | Allocations: 7709)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 16:29:01 +0300
+Started GET "/auth/callback%C2%B7?error=redirect_uri_mismatch&error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch&state=20aff0a45a8320b85c7fbdb32d5a1474b3c5291d718a9860" for 127.0.0.1 at 2022-05-03 16:29:01 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/callback%C2%B7"):
+  
+Started GET "/login" for 127.0.0.1 at 2022-05-03 16:29:17 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.3ms | Allocations: 148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 16.4ms | Allocations: 7234)
+Completed 200 OK in 18ms (Views: 17.5ms | Allocations: 8021)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 16:29:18 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.3ms | Allocations: 82)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 20.3ms | Allocations: 6962)
+Completed 200 OK in 22ms (Views: 21.0ms | Allocations: 7457)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 16:29:20 +0300
+Started GET "/auth/callback%C2%B7?error=redirect_uri_mismatch&error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch&state=8ceddaa0b41309dac7bfb57d0d3e197096221133cfec7223" for 127.0.0.1 at 2022-05-03 16:29:20 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/callback%C2%B7"):
+  
+Started GET "/login" for 127.0.0.1 at 2022-05-03 16:30:21 +0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 17.3ms | Allocations: 11015)
+  Rendered layout layouts/application.html.slim (Duration: 17.7ms | Allocations: 11110)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms | Allocations: 14736)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"request", :controller=>"web/auth"}, missing required keys: [:provider]
+Did you mean?  auth_request_url):
+    1: = link_to 'v', auth_request_path, method: :post, class: 'btn w-100 border btn-outline-secondary'
+  
+app/views/web/auth/new.html.slim:1
+Started GET "/login" for 127.0.0.1 at 2022-05-03 16:30:24 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.8ms | Allocations: 1222)
+  Rendered layout layouts/application.html.slim (Duration: 1.1ms | Allocations: 1291)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1788)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"request", :controller=>"web/auth"}, missing required keys: [:provider]
+Did you mean?  auth_request_url):
+    1: = link_to 'v', auth_request_path, method: :post, class: 'btn w-100 border btn-outline-secondary'
+  
+app/views/web/auth/new.html.slim:1
+Started GET "/" for 127.0.0.1 at 2022-05-03 16:31:31 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 5.9ms | Allocations: 1545)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 99.2ms | Allocations: 20953)
+Completed 200 OK in 113ms (Views: 107.5ms | Allocations: 22208)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-03 16:31:32 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 0.5ms | Allocations: 42)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 17.4ms | Allocations: 7069)
+Completed 200 OK in 19ms (Views: 18.0ms | Allocations: 7611)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 16:31:36 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 1.7ms | Allocations: 1212)
+  Rendered layout layouts/application.html.slim (Duration: 2.1ms | Allocations: 1286)
+Completed 500 Internal Server Error in 5ms (Allocations: 2022)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"request", :controller=>"web/auth"}, missing required keys: [:provider]
+Did you mean?  auth_request_url):
+    1: = link_to 'v', auth_request_path, method: :post, class: 'btn w-100 border btn-outline-secondary'
+  
+app/views/web/auth/new.html.slim:1
+Started GET "/login" for 127.0.0.1 at 2022-05-03 16:32:20 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 17.2ms | Allocations: 11015)
+  Rendered layout layouts/application.html.slim (Duration: 17.4ms | Allocations: 11110)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.0ms | Allocations: 14736)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"request", :controller=>"web/auth"}, missing required keys: [:provider]
+Did you mean?  auth_request_url):
+    1: = link_to 'v', auth_request_path, method: :post, class: 'btn w-100 border btn-outline-secondary'
+  
+app/views/web/auth/new.html.slim:1
+Started GET "/login" for 127.0.0.1 at 2022-05-03 16:32:22 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 1.2ms | Allocations: 1222)
+  Rendered layout layouts/application.html.slim (Duration: 1.5ms | Allocations: 1291)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1787)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"request", :controller=>"web/auth"}, missing required keys: [:provider]
+Did you mean?  auth_request_url):
+    1: = link_to 'v', auth_request_path, method: :post, class: 'btn w-100 border btn-outline-secondary'
+  
+app/views/web/auth/new.html.slim:1
+Started GET "/login" for 127.0.0.1 at 2022-05-03 16:32:49 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 4.7ms | Allocations: 1597)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 78.5ms | Allocations: 21016)
+Completed 200 OK in 83ms (Views: 81.2ms | ActiveRecord: 0.0ms | Allocations: 22393)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 16:32:50 +0300
+Started GET "/auth/callback%C2%B7?error=redirect_uri_mismatch&error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch&state=693344e36be0b5d8219a70ea5a0f7332ecd0028390922d33" for 127.0.0.1 at 2022-05-03 16:32:51 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/callback%C2%B7"):
+  
+Started GET "/login" for 127.0.0.1 at 2022-05-03 16:33:33 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 4.0ms | Allocations: 1554)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 24.8ms | Allocations: 12401)
+Completed 200 OK in 29ms (Views: 27.4ms | Allocations: 13880)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 16:33:34 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.3ms | Allocations: 82)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 19.8ms | Allocations: 6962)
+Completed 200 OK in 22ms (Views: 21.2ms | Allocations: 7457)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 16:33:35 +0300
+Started GET "/auth/callback%C2%B7?error=redirect_uri_mismatch&error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch&state=bc87fe00af0805692dee0b8c51b0c0611d7c23250c5097ae" for 127.0.0.1 at 2022-05-03 16:33:35 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/callback%C2%B7"):
+  
+Started GET "/login" for 127.0.0.1 at 2022-05-03 16:33:50 +0300
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 15.1ms | Allocations: 9557)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 150.9ms | Allocations: 28982)
+Completed 200 OK in 176ms (Views: 164.7ms | ActiveRecord: 0.0ms | Allocations: 32682)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 16:33:51 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 10.0ms | Allocations: 110)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 96.7ms | Allocations: 7144)
+Completed 200 OK in 108ms (Views: 97.4ms | ActiveRecord: 0.0ms | Allocations: 7700)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 16:33:52 +0300
+Started GET "/auth/callback%C2%B7?error=redirect_uri_mismatch&error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch&state=9a560931846dc18c14553a1d020128e10a7faa59b827ef62" for 127.0.0.1 at 2022-05-03 16:33:52 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/callback%C2%B7"):
+  
+Started GET "/login" for 127.0.0.1 at 2022-05-03 16:36:54 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 4.3ms | Allocations: 1512)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 21.1ms | Allocations: 12254)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.0ms | Allocations: 13659)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 16:36:55 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.6ms | Allocations: 60)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 18.0ms | Allocations: 6940)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.0ms | Allocations: 7440)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 16:36:56 +0300
+Started GET "/auth/callback%C2%B7?error=redirect_uri_mismatch&error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch&state=13061a3af2d30a14db0c64ba92321362074075cb6440095f" for 127.0.0.1 at 2022-05-03 16:36:57 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/callback%C2%B7"):
+  
+Started GET "/login" for 127.0.0.1 at 2022-05-03 17:11:06 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 4.7ms | Allocations: 2434)
+  Rendered layout layouts/application.html.slim (Duration: 5.3ms | Allocations: 2510)
+Completed 500 Internal Server Error in 10ms (Allocations: 3826)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check = link_to('Github', auth_request_path('github'), method: :post
+):
+1:    = link_to('Github', auth_request_path('github'), method: :post
+  
+app/views/web/auth/new.html.slim:1: syntax error, unexpected ';', expecting ')'
+app/views/web/auth/new.html.slim:1: syntax error, unexpected ';', expecting ')'
+app/views/web/auth/new.html.slim:1: syntax error, unexpected ';', expecting ')'
+app/views/web/auth/new.html.slim:1: syntax error, unexpected ';', expecting ')'
+app/views/web/auth/new.html.slim:1: syntax error, unexpected ';', expecting ')'
+app/views/web/auth/new.html.slim:1: syntax error, unexpected ';', expecting ')'
+Started GET "/" for 127.0.0.1 at 2022-05-03 17:11:41 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 3.4ms | Allocations: 1534)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 31.5ms | Allocations: 12396)
+Completed 200 OK in 36ms (Views: 34.0ms | Allocations: 13863)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 17:11:45 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 4.5ms | Allocations: 1630)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 58.6ms | Allocations: 8808)
+Completed 200 OK in 64ms (Views: 62.0ms | Allocations: 9916)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 17:12:42 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 5.9ms | Allocations: 1564)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 74.3ms | Allocations: 12267)
+Completed 200 OK in 78ms (Views: 76.9ms | Allocations: 13558)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 17:13:15 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 4.7ms | Allocations: 1565)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 39.2ms | Allocations: 12265)
+Completed 200 OK in 49ms (Views: 47.5ms | Allocations: 13555)
+
+
+Started POST "/auth/github.github" for 127.0.0.1 at 2022-05-03 17:13:17 +0300
+  
+AbstractController::ActionNotFound (The action 'request' could not be found for Web::AuthController
+Did you mean?  destroy
+               callback):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionview (6.1.5) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+omniauth (2.0.4) lib/omniauth/strategy.rb:202:in `call!'
+omniauth (2.0.4) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.0.4) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.5) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.5) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+rollbar (3.3.0) lib/rollbar/middleware/rails/rollbar.rb:25:in `block in call'
+rollbar (3.3.0) lib/rollbar.rb:145:in `scoped'
+rollbar (3.3.0) lib/rollbar/middleware/rails/rollbar.rb:22:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+rollbar (3.3.0) lib/rollbar/middleware/rails/show_exceptions.rb:22:in `call_with_rollbar'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2022-05-03 17:56:13 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant AuthController):
+  
+Started GET "/login" for 127.0.0.1 at 2022-05-03 17:56:17 +0300
+  
+ActionController::RoutingError (uninitialized constant AuthController):
+  
+Started GET "/login" for 127.0.0.1 at 2022-05-03 17:56:43 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 13.9ms | Allocations: 9568)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 80.9ms | Allocations: 28971)
+Completed 200 OK in 95ms (Views: 84.7ms | ActiveRecord: 0.0ms | Allocations: 32246)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 17:56:45 +0300
+Started GET "/auth/callback%C2%B7?error=redirect_uri_mismatch&error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch&state=eac8e71ec279edd65713e9f1407a5ffc1b70420e00a4b87c" for 127.0.0.1 at 2022-05-03 17:56:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/callback%C2%B7"):
+  
+Started GET "/login" for 127.0.0.1 at 2022-05-03 18:00:28 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 18.7ms | Allocations: 9568)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 88.7ms | Allocations: 28987)
+Completed 200 OK in 103ms (Views: 93.1ms | ActiveRecord: 0.0ms | Allocations: 32262)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 18:00:30 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.4ms | Allocations: 113)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 47.8ms | Allocations: 7300)
+Completed 200 OK in 49ms (Views: 48.5ms | ActiveRecord: 0.0ms | Allocations: 7851)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 18:00:31 +0300
+Started GET "/auth/callback%C2%B7?error=redirect_uri_mismatch&error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch&state=604bbee85434fa97d7ffba623ff5e739ad31c3e784251d1b" for 127.0.0.1 at 2022-05-03 18:00:31 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/callback%C2%B7"):
+  
+Started GET "/login" for 127.0.0.1 at 2022-05-03 18:13:32 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 20.2ms | Allocations: 9568)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 102.8ms | Allocations: 28982)
+Completed 200 OK in 121ms (Views: 107.0ms | ActiveRecord: 0.0ms | Allocations: 32257)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 18:13:35 +0300
+Started GET "/auth/callback%C2%B7?error=redirect_uri_mismatch&error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch&state=445ace2092f40a7f574d3c5525ff683e7d4ab48f5e85096c" for 127.0.0.1 at 2022-05-03 18:13:35 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/callback%C2%B7"):
+  
+Started GET "/login" for 127.0.0.1 at 2022-05-03 18:15:53 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.6ms | Allocations: 101)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 20.1ms | Allocations: 7266)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms | Allocations: 7802)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 18:15:54 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.2ms | Allocations: 81)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 17.2ms | Allocations: 6942)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.0ms | Allocations: 7394)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 18:15:55 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.2ms | Allocations: 81)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 23.4ms | Allocations: 6943)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms | Allocations: 7395)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 18:15:56 +0300
+Started GET "/auth/callback%C2%B7?error=redirect_uri_mismatch&error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch&state=584871e9745745478add5009272258b64dd8c2bdf375a2b5" for 127.0.0.1 at 2022-05-03 18:15:57 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/callback%C2%B7"):
+  
+Started GET "/login" for 127.0.0.1 at 2022-05-03 18:20:02 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.7ms | Allocations: 81)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 37.1ms | Allocations: 6943)
+Completed 200 OK in 40ms (Views: 38.4ms | Allocations: 7392)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 18:20:04 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.2ms | Allocations: 81)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 20.8ms | Allocations: 6941)
+Completed 200 OK in 23ms (Views: 22.0ms | Allocations: 7390)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 18:20:05 +0300
+Started GET "/auth/github/callback%C2%B7?error=redirect_uri_mismatch&error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch&state=f5e218f5aaf8e27a285320c47f26769c17cc68ef3b943116" for 127.0.0.1 at 2022-05-03 18:20:06 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/github/callback%C2%B7"):
+  
+Started GET "/login" for 127.0.0.1 at 2022-05-03 18:23:12 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.2ms | Allocations: 81)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 85.2ms | Allocations: 7004)
+Completed 200 OK in 88ms (Views: 86.9ms | Allocations: 7453)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 18:23:14 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.2ms | Allocations: 81)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 17.7ms | Allocations: 6941)
+Completed 200 OK in 19ms (Views: 18.3ms | Allocations: 7390)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 18:23:15 +0300
+Started GET "/auth/github/callback%C2%B7?error=redirect_uri_mismatch&error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch&state=0e72cc9d6af2a25f876c9792b4ebe3c5fbbeb95a08baa0a9" for 127.0.0.1 at 2022-05-03 18:23:15 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/github/callback%C2%B7"):
+  
+Started GET "/login" for 127.0.0.1 at 2022-05-03 19:00:59 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.2ms | Allocations: 81)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 22.6ms | Allocations: 7004)
+Completed 200 OK in 24ms (Views: 23.5ms | Allocations: 7453)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 19:01:01 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.3ms | Allocations: 81)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 26.4ms | Allocations: 6941)
+Completed 200 OK in 28ms (Views: 27.2ms | Allocations: 7390)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 19:01:02 +0300
+Started GET "/auth/github/callback%C2%B7?error=redirect_uri_mismatch&error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch&state=3a54d554cb82f5d3e50fc5680901178237b16bd8ed63163f" for 127.0.0.1 at 2022-05-03 19:01:02 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/github/callback%C2%B7"):
+  
+Started GET "/login" for 127.0.0.1 at 2022-05-03 19:02:25 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.2ms | Allocations: 81)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 16.6ms | Allocations: 6941)
+Completed 200 OK in 18ms (Views: 17.2ms | Allocations: 7390)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 19:02:26 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.2ms | Allocations: 81)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 19.9ms | Allocations: 6941)
+Completed 200 OK in 21ms (Views: 20.6ms | Allocations: 7390)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 19:02:28 +0300
+Started GET "/auth/github/callback?code=ef73ec3edfd0bb8634ce&state=c1ef3a4062de2dead3aac6aceb25f7883e7c3b3bc5d8aa35" for 127.0.0.1 at 2022-05-03 19:02:54 +0300
+Processing by Web::AuthController#callback as HTML
+  Parameters: {"code"=>"ef73ec3edfd0bb8634ce", "state"=>"c1ef3a4062de2dead3aac6aceb25f7883e7c3b3bc5d8aa35", "provider"=>"github"}
+Completed 500 Internal Server Error in 90ms (Allocations: 4209)
+
+
+  
+NoMethodError (undefined method `find_or_create_with_omniauth' for User:Class
+Did you mean?  find_or_create_by):
+  
+app/controllers/web/auth_controller.rb:7:in `callback'
+Started GET "/login" for 127.0.0.1 at 2022-05-03 19:20:33 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 1.8ms | Allocations: 151)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 33.1ms | Allocations: 7368)
+Completed 200 OK in 35ms (Views: 34.3ms | Allocations: 8152)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 19:20:35 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.2ms | Allocations: 81)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 19.3ms | Allocations: 6941)
+Completed 200 OK in 21ms (Views: 19.9ms | Allocations: 7436)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 19:20:36 +0300
+Started GET "/auth/github/callback?code=5a8ae16418a90f3b0262&state=f51ddd26e87f87af6e958852a63db9957f16d8358f526ff8" for 127.0.0.1 at 2022-05-03 19:20:37 +0300
+Processing by Web::AuthController#callback as HTML
+  Parameters: {"code"=>"5a8ae16418a90f3b0262", "state"=>"f51ddd26e87f87af6e958852a63db9957f16d8358f526ff8", "provider"=>"github"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/user.rb:4:in `login_with_omniauth'
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 1.1ms | Allocations: 7217)
+
+
+  
+NoMethodError (undefined method `provider=' for #<User id: nil, name: nil, email: nil, created_at: nil, updated_at: nil>):
+  
+app/models/user.rb:5:in `block in login_with_omniauth'
+app/models/user.rb:4:in `login_with_omniauth'
+app/controllers/web/auth_controller.rb:9:in `callback'
+Started GET "/login" for 127.0.0.1 at 2022-05-03 20:24:53 +0300
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 17.4ms | Allocations: 9569)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 139.3ms | Allocations: 28974)
+Completed 200 OK in 156ms (Views: 144.6ms | ActiveRecord: 0.0ms | Allocations: 32249)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 20:24:55 +0300
+Started GET "/auth/github/callback?code=4a1359b0cec68f5528c9&state=1a94dddb005851eb216124791007bfb2431364ff5cade958" for 127.0.0.1 at 2022-05-03 20:24:56 +0300
+Processing by Web::AuthController#callback as HTML
+  Parameters: {"code"=>"4a1359b0cec68f5528c9", "state"=>"1a94dddb005851eb216124791007bfb2431364ff5cade958", "provider"=>"github"}
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms | Allocations: 1123)
+
+
+  
+SyntaxError (/Users/Mars/Hexlet/rails-project-lvl3/app/models/user.rb:9: syntax error, unexpected `end', expecting end-of-input):
+  
+app/models/user.rb:9: syntax error, unexpected `end', expecting end-of-input
+app/models/user.rb:9: syntax error, unexpected `end', expecting end-of-input
+app/models/user.rb:9: syntax error, unexpected `end', expecting end-of-input
+app/controllers/web/auth_controller.rb:9:in `callback'
+Started GET "/auth/github/callback?code=4a1359b0cec68f5528c9&state=1a94dddb005851eb216124791007bfb2431364ff5cade958" for 127.0.0.1 at 2022-05-03 20:25:38 +0300
+  
+OAuth2::Error (bad_verification_code: The code passed is incorrect or expired.
+error=bad_verification_code&error_description=The+code+passed+is+incorrect+or+expired.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-oauth-app-access-token-request-errors%2F%23bad-verification-code):
+  
+oauth2 (1.4.7) lib/oauth2/client.rb:174:in `get_token'
+oauth2 (1.4.7) lib/oauth2/strategy/auth_code.rb:30:in `get_token'
+omniauth-oauth2 (1.7.2) lib/omniauth/strategies/oauth2.rb:126:in `build_access_token'
+omniauth-oauth2 (1.7.2) lib/omniauth/strategies/oauth2.rb:91:in `callback_phase'
+omniauth (2.0.4) lib/omniauth/strategy.rb:272:in `callback_call'
+omniauth (2.0.4) lib/omniauth/strategy.rb:194:in `call!'
+omniauth (2.0.4) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.0.4) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.5) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.5) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+rollbar (3.3.0) lib/rollbar/middleware/rails/rollbar.rb:25:in `block in call'
+rollbar (3.3.0) lib/rollbar.rb:145:in `scoped'
+rollbar (3.3.0) lib/rollbar/middleware/rails/rollbar.rb:22:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+rollbar (3.3.0) lib/rollbar/middleware/rails/show_exceptions.rb:22:in `call_with_rollbar'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2022-05-03 20:28:56 +0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 15.8ms | Allocations: 9568)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 111.6ms | Allocations: 28971)
+Completed 200 OK in 131ms (Views: 119.3ms | ActiveRecord: 0.0ms | Allocations: 32246)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 20:28:57 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.3ms | Allocations: 113)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 15.5ms | Allocations: 7280)
+Completed 200 OK in 17ms (Views: 16.7ms | ActiveRecord: 0.0ms | Allocations: 7831)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 20:28:59 +0300
+Started GET "/auth/github/callback?code=13e2a8994404f2e8127a&state=6aaf4b84bd196418a1f531c0d82fce57c298158c31f71349" for 127.0.0.1 at 2022-05-03 20:29:00 +0300
+Processing by Web::AuthController#callback as HTML
+  Parameters: {"code"=>"13e2a8994404f2e8127a", "state"=>"6aaf4b84bd196418a1f531c0d82fce57c298158c31f71349", "provider"=>"github"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `login_with_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:6:in `login_with_omniauth'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "mars.shamgulov@gmail.com"], ["created_at", "2022-05-03 17:29:01.804426"], ["updated_at", "2022-05-03 17:29:01.804426"]]
+  ↳ app/models/user.rb:6:in `login_with_omniauth'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:6:in `login_with_omniauth'
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 3.5ms | Allocations: 9341)
+
+
+  
+NoMethodError (undefined method `persisted?' for true:TrueClass):
+  
+app/controllers/web/auth_controller.rb:11:in `callback'
+Started GET "/login" for 127.0.0.1 at 2022-05-03 20:29:48 +0300
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 31.5ms | Allocations: 9568)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 131.5ms | Allocations: 28971)
+Completed 200 OK in 161ms (Views: 142.5ms | ActiveRecord: 0.0ms | Allocations: 32246)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 20:29:50 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.3ms | Allocations: 113)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 15.2ms | Allocations: 7282)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms | Allocations: 7833)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 20:29:51 +0300
+Started GET "/auth/github/callback?code=cf610d30670f92ac6168&state=f2dd4dd9d010f63f4aeb720813965c915a3a2664e9ad903f" for 127.0.0.1 at 2022-05-03 20:29:51 +0300
+Processing by Web::AuthController#callback as HTML
+  Parameters: {"code"=>"cf610d30670f92ac6168", "state"=>"f2dd4dd9d010f63f4aeb720813965c915a3a2664e9ad903f", "provider"=>"github"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `login_with_omniauth'
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.0ms | Allocations: 9128)
+
+
+  
+NoMethodError (undefined method `sign_in' for #<Web::AuthController:0x00000000009588>):
+  
+app/controllers/web/auth_controller.rb:12:in `callback'
+Started GET "/login" for 127.0.0.1 at 2022-05-03 20:30:01 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.6ms | Allocations: 101)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 14.4ms | Allocations: 7270)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms | Allocations: 7805)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-03 20:30:36 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 4.1ms | Allocations: 1533)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 20.3ms | Allocations: 8640)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.0ms | Allocations: 9787)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 20:30:43 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.3ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 24.9ms | Allocations: 6954)
+Completed 200 OK in 26ms (Views: 25.7ms | ActiveRecord: 0.0ms | Allocations: 7446)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 20:30:47 +0300
+Started GET "/login" for 127.0.0.1 at 2022-05-03 20:31:23 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.5ms | Allocations: 151)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 17.8ms | Allocations: 7366)
+Completed 200 OK in 20ms (Views: 19.5ms | Allocations: 8149)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 20:31:24 +0300
+Started GET "/auth/github/callback?code=2bf76d353a7b0b1c3e81&state=a210bdcb262372b868e8ba2d1e85f1a0dfb3cac857e6dd4b" for 127.0.0.1 at 2022-05-03 20:31:24 +0300
+Processing by Web::AuthController#callback as HTML
+  Parameters: {"code"=>"2bf76d353a7b0b1c3e81", "state"=>"a210bdcb262372b868e8ba2d1e85f1a0dfb3cac857e6dd4b", "provider"=>"github"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/user.rb:4:in `login_with_omniauth'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `login_with_omniauth'
+Redirected to http://localhost:3000/
+Completed 302 Found in 376ms (ActiveRecord: 1.8ms | Allocations: 348012)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-03 20:31:26 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 0.2ms | Allocations: 56)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 14.5ms | Allocations: 7350)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 8133)
+
+
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2022-05-03 20:45:27 +0300
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 13.4ms | Allocations: 9464)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 200.5ms | Allocations: 28972)
+Completed 200 OK in 219ms (Views: 206.4ms | ActiveRecord: 0.0ms | Allocations: 32666)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 20:45:32 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 3.5ms | Allocations: 1602)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 18.1ms | Allocations: 8819)
+Completed 200 OK in 49ms (Views: 38.1ms | ActiveRecord: 0.0ms | Allocations: 9990)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 20:45:33 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.4ms | Allocations: 81)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 21.6ms | Allocations: 6943)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.0ms | Allocations: 7444)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 20:45:34 +0300
+Started GET "/auth/github/callback?code=bf5edf6d28b554a7bd5b&state=ae076b59ab864fb7a3effe86c6c90aa4cfb615a7d2116f88" for 127.0.0.1 at 2022-05-03 20:45:35 +0300
+Processing by Web::AuthController#callback as HTML
+  Parameters: {"code"=>"bf5edf6d28b554a7bd5b", "state"=>"ae076b59ab864fb7a3effe86c6c90aa4cfb615a7d2116f88", "provider"=>"github"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `login_with_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/web/auth_controller.rb:11:in `callback'
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "name" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["name", nil], ["updated_at", "2022-05-03 17:45:36.493389"], ["id", 1]]
+  ↳ app/controllers/web/auth_controller.rb:11:in `callback'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/web/auth_controller.rb:11:in `callback'
+Redirected to http://localhost:3000/
+Completed 302 Found in 358ms (ActiveRecord: 2.9ms | Allocations: 350907)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-03 20:45:36 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 0.1ms | Allocations: 40)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 13.2ms | Allocations: 7236)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.0ms | Allocations: 7768)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2022-05-03 20:46:17 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 13.8ms | Allocations: 9568)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 92.3ms | Allocations: 28971)
+Completed 200 OK in 105ms (Views: 96.2ms | ActiveRecord: 0.0ms | Allocations: 32248)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 20:46:19 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.3ms | Allocations: 113)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 92.0ms | Allocations: 7191)
+Completed 200 OK in 105ms (Views: 92.7ms | ActiveRecord: 0.0ms | Allocations: 7743)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 20:46:20 +0300
+Started GET "/auth/github/callback?code=567078c7f2577644f1c4&state=268e72fcc0665acdb7e2e554c1208abf3a1f93806d6345ce" for 127.0.0.1 at 2022-05-03 20:46:21 +0300
+Processing by Web::AuthController#callback as HTML
+  Parameters: {"code"=>"567078c7f2577644f1c4", "state"=>"268e72fcc0665acdb7e2e554c1208abf3a1f93806d6345ce", "provider"=>"github"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `login_with_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/web/auth_controller.rb:11:in `callback'
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "name" = ?, "email" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["name", "кайтек"], ["email", "mars.shamgulov@gmail.com"], ["updated_at", "2022-05-03 17:46:22.325379"], ["id", 1]]
+  ↳ app/controllers/web/auth_controller.rb:11:in `callback'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/web/auth_controller.rb:11:in `callback'
+Redirected to http://localhost:3000/
+Completed 302 Found in 285ms (ActiveRecord: 2.8ms | Allocations: 350896)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-03 20:46:22 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 2.9ms | Allocations: 1534)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 15.6ms | Allocations: 8830)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.0ms | Allocations: 10056)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUidAndProviderToUsers (20220503190924)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.5ms)[0m  [1m[35mALTER TABLE "users" ADD "uid" varchar[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "provider" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220503190924"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-05-03 22:19:51 +0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 13.0ms | Allocations: 9464)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 119.8ms | Allocations: 28972)
+Completed 200 OK in 136ms (Views: 124.6ms | ActiveRecord: 0.0ms | Allocations: 32666)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 22:20:03 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 4.1ms | Allocations: 1589)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 36.4ms | Allocations: 8676)
+Completed 200 OK in 40ms (Views: 38.6ms | ActiveRecord: 0.0ms | Allocations: 9846)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 22:20:07 +0300
+Started GET "/auth/github/callback?code=6a7ecc460f8544428173&state=1b2ab8122a59aa1dec0b527cea7fd9b79af0845a99712c7d" for 127.0.0.1 at 2022-05-03 22:20:07 +0300
+Processing by Web::AuthController#callback as HTML
+  Parameters: {"code"=>"6a7ecc460f8544428173", "state"=>"1b2ab8122a59aa1dec0b527cea7fd9b79af0845a99712c7d", "provider"=>"github"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "45975483"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `login_with_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/web/auth_controller.rb:11:in `callback'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "uid") VALUES (?, ?, ?, ?, ?)[0m  [["name", "кайтек"], ["email", "mars.shamgulov@gmail.com"], ["created_at", "2022-05-03 19:20:08.817484"], ["updated_at", "2022-05-03 19:20:08.817484"], ["uid", "45975483"]]
+  ↳ app/controllers/web/auth_controller.rb:11:in `callback'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/web/auth_controller.rb:11:in `callback'
+Redirected to http://localhost:3000/
+Completed 302 Found in 544ms (ActiveRecord: 2.9ms | Allocations: 353391)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-03 22:20:09 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 0.1ms | Allocations: 40)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 14.7ms | Allocations: 7236)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 7768)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2022-05-03 22:22:56 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 51.7ms | Allocations: 9568)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 129.0ms | Allocations: 28971)
+Completed 200 OK in 152ms (Views: 136.8ms | ActiveRecord: 0.0ms | Allocations: 32699)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-05-03 22:22:58 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.3ms | Allocations: 113)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 89.1ms | Allocations: 7159)
+Completed 200 OK in 99ms (Views: 89.7ms | ActiveRecord: 0.0ms | Allocations: 7711)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 22:23:00 +0300
+Started GET "/auth/github/callback?code=7b260d53ceb7200e9af0&state=4f02c532f3ec6d265dd6cd176bc723ffbd251d3b75f0fe7c" for 127.0.0.1 at 2022-05-03 22:23:00 +0300
+Processing by Web::AuthController#callback as HTML
+  Parameters: {"code"=>"7b260d53ceb7200e9af0", "state"=>"4f02c532f3ec6d265dd6cd176bc723ffbd251d3b75f0fe7c", "provider"=>"github"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "45975483"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `login_with_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/web/auth_controller.rb:11:in `callback'
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "provider" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2022-05-03 19:23:01.986994"], ["provider", "github"], ["id", 2]]
+  ↳ app/controllers/web/auth_controller.rb:11:in `callback'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/web/auth_controller.rb:11:in `callback'
+Redirected to http://localhost:3000/
+Completed 302 Found in 389ms (ActiveRecord: 3.1ms | Allocations: 354219)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-03 22:23:02 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 2.8ms | Allocations: 1534)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 18.2ms | Allocations: 8830)
+Completed 200 OK in 23ms (Views: 20.6ms | ActiveRecord: 0.0ms | Allocations: 10056)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2022-05-03 23:08:44 +0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NameError (uninitialized constant ApplicationController::Sessions):
+  
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:3:in `<main>'
+app/controllers/home_controller.rb:3:in `<main>'
+Started GET "/" for 127.0.0.1 at 2022-05-03 23:10:56 +0300
+  
+NameError (uninitialized constant ApplicationController::Authentication):
+  
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:3:in `<main>'
+app/controllers/home_controller.rb:3:in `<main>'
+Started GET "/" for 127.0.0.1 at 2022-05-03 23:11:33 +0300
+  
+NameError (uninitialized constant ApplicationController::Authentication):
+  
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:3:in `<main>'
+app/controllers/home_controller.rb:3:in `<main>'
+Started GET "/" for 127.0.0.1 at 2022-05-03 23:12:38 +0300
+  
+NameError (uninitialized constant ApplicationController::Authentication):
+  
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:3:in `<main>'
+app/controllers/home_controller.rb:3:in `<main>'
+Started GET "/" for 127.0.0.1 at 2022-05-03 23:14:26 +0300
+  
+Zeitwerk::NameError (expected file /Users/Mars/Hexlet/rails-project-lvl3/app/controllers/web/authentication.rb to define constant Web::Authentication, but didn't):
+  
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:3:in `<main>'
+app/controllers/home_controller.rb:3:in `<main>'
+Started GET "/" for 127.0.0.1 at 2022-05-03 23:14:57 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 13.0ms | Allocations: 9294)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 138.0ms | Allocations: 28740)
+Completed 200 OK in 147ms (Views: 140.8ms | Allocations: 31421)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2022-05-03 23:15:07 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/sign_in"):
+  
+Started GET "/sign_in" for 127.0.0.1 at 2022-05-03 23:16:07 +0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 13.7ms | Allocations: 9570)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 105.7ms | Allocations: 28973)
+Completed 200 OK in 121ms (Views: 110.8ms | ActiveRecord: 0.0ms | Allocations: 32250)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2022-05-03 23:16:37 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 13.7ms | Allocations: 9570)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 106.1ms | Allocations: 28973)
+Completed 200 OK in 119ms (Views: 110.6ms | ActiveRecord: 0.0ms | Allocations: 32250)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2022-05-03 23:16:39 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.3ms | Allocations: 113)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 16.2ms | Allocations: 7112)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.0ms | Allocations: 7664)
+
+
+Started GET "/as" for 127.0.0.1 at 2022-05-03 23:21:12 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/as"):
+  
+Started GET "/sign_in" for 127.0.0.1 at 2022-05-03 23:28:30 +0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 19.6ms | Allocations: 9570)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 161.7ms | Allocations: 28976)
+Completed 200 OK in 179ms (Views: 167.9ms | ActiveRecord: 0.0ms | Allocations: 32253)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 23:28:33 +0300
+Started GET "/auth/github/callback?code=30c540934ad1bedb7726&state=7f08acd1fccfa54ac254b6ebc3d57fc4e84b8d563867f724" for 127.0.0.1 at 2022-05-03 23:28:34 +0300
+Processing by Web::AuthController#callback as HTML
+  Parameters: {"code"=>"30c540934ad1bedb7726", "state"=>"7f08acd1fccfa54ac254b6ebc3d57fc4e84b8d563867f724", "provider"=>"github"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "45975483"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `login_with_omniauth'
+Redirected to http://localhost:3000/
+Completed 302 Found in 350ms (ActiveRecord: 1.1ms | Allocations: 349202)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-03 23:28:35 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 3.2ms | Allocations: 1534)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 16.4ms | Allocations: 8832)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.0ms | Allocations: 10063)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-03 23:30:04 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 39.1ms | Allocations: 8701)
+  Rendered layout layouts/application.html.slim (Duration: 40.9ms | Allocations: 8785)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.0ms | Allocations: 10164)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<ActionView::Base:0x000000000096f0>
+Did you mean?  current_page?):
+    1: | Home#index
+    2:   Find me in app/views/home/index.html.slim
+    3: = current_user.email
+  
+app/views/home/index.html.slim:3
+Started GET "/" for 127.0.0.1 at 2022-05-03 23:32:27 +0300
+  
+NoMethodError (undefined method `helper_methods' for Web::Authentication:Module):
+  
+app/controllers/web/authentication.rb:4:in `<module:Authentication>'
+app/controllers/web/authentication.rb:3:in `<main>'
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:3:in `<main>'
+app/controllers/home_controller.rb:3:in `<main>'
+Started GET "/" for 127.0.0.1 at 2022-05-03 23:32:41 +0300
+  
+NoMethodError (undefined method `helper_method' for Web::Authentication:Module):
+  
+app/controllers/web/authentication.rb:4:in `<module:Authentication>'
+app/controllers/web/authentication.rb:3:in `<main>'
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:3:in `<main>'
+app/controllers/home_controller.rb:3:in `<main>'
+Started GET "/" for 127.0.0.1 at 2022-05-03 23:33:11 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/web/authentication.rb:19:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:19:in `current_user'
+  Rendered home/index.html.slim within layouts/application (Duration: 34.4ms | Allocations: 5893)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 76.7ms | Allocations: 16827)
+Completed 200 OK in 90ms (Views: 85.7ms | ActiveRecord: 1.9ms | Allocations: 17609)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-03 23:33:54 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:19:in `current_user'
+  Rendered home/index.html.slim within layouts/application (Duration: 2.1ms | Allocations: 697)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 15.2ms | Allocations: 7579)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.2ms | Allocations: 8095)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-03 23:33:57 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:19:in `current_user'
+  Rendered home/index.html.slim within layouts/application (Duration: 2.8ms | Allocations: 685)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 22.3ms | Allocations: 7565)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.2ms | Allocations: 8016)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-03 23:35:08 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:19:in `current_user'
+  Rendered home/index.html.slim within layouts/application (Duration: 6.2ms | Allocations: 2568)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 33.0ms | Allocations: 13385)
+Completed 200 OK in 38ms (Views: 36.2ms | ActiveRecord: 0.1ms | Allocations: 14750)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-03 23:43:54 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 3.3ms | Allocations: 1520)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.slim (Duration: 30.2ms | Allocations: 13965)
+Completed 500 Internal Server Error in 36ms (Allocations: 15397)
+
+
+  
+ActionView::Template::Error (Missing partial home/_nav, application/_nav with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :slim, :jbuilder]}. Searched in:
+  * "/Users/Mars/Hexlet/rails-project-lvl3/app/views"
+  * "/Users/Mars/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actiontext-6.1.5/app/views"
+  * "/Users/Mars/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actionmailbox-6.1.5/app/views"
+):
+     9:     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    10:     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    11:   body
+    12:     = render 'nav'
+    13:     = render 'flash'
+    14:     = yield
+  
+app/views/layouts/application.html.slim:12
+Started GET "/" for 127.0.0.1 at 2022-05-03 23:44:26 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 2.5ms | Allocations: 1532)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_nav.html.slim (Duration: 5.6ms | Allocations: 4268)
+  Rendered layouts/shared/_flash.html.slim (Duration: 15.0ms | Allocations: 7540)
+  Rendered layout layouts/application.html.slim (Duration: 49.5ms | Allocations: 24823)
+Completed 500 Internal Server Error in 55ms (Allocations: 26162)
+
+
+  
+ActionView::Template::Error (undefined method `flash_class' for #<ActionView::Base:0x0000000000f0c8>):
+    1: - if flash.any?
+    2:   .container.my-2
+    3:     - flash.each do |type, msg|
+    4:       div class="alert alert-dismissible #{flash_class(type.to_s)}"
+    5:         = msg
+    6:         button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'
+  
+app/views/layouts/shared/_flash.html.slim:4
+app/views/layouts/shared/_flash.html.slim:3
+app/views/layouts/application.html.slim:13
+Started GET "/" for 127.0.0.1 at 2022-05-03 23:45:31 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 0.2ms | Allocations: 56)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_nav.html.slim (Duration: 0.6ms | Allocations: 365)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.slim (Duration: 25.3ms | Allocations: 7787)
+Completed 200 OK in 30ms (Views: 28.7ms | Allocations: 8568)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-03 23:47:02 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_nav.html.slim (Duration: 0.6ms | Allocations: 294)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.1ms | Allocations: 55)
+  Rendered layout layouts/application.html.slim (Duration: 12034.3ms | Allocations: 61977)
+Completed 200 OK in 12035ms (Views: 12034.9ms | Allocations: 62463)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-03 23:49:08 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 3.7ms | Allocations: 1533)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/web/authentication.rb:19:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:19:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 53.7ms | Allocations: 15578)
+  Rendered layouts/shared/_flash.html.slim (Duration: 6.9ms | Allocations: 3625)
+  Rendered layout layouts/application.html.slim (Duration: 88.8ms | Allocations: 32163)
+Completed 200 OK in 94ms (Views: 92.3ms | ActiveRecord: 0.7ms | Allocations: 33525)
+
+
+Started GET "/bulletins" for 127.0.0.1 at 2022-05-03 23:49:37 +0300
+  
+ActionController::RoutingError (uninitialized constant Web::BulletinsController
+Did you mean?  Web::BulletinController):
+  
+Started GET "/bulletins" for 127.0.0.1 at 2022-05-03 23:50:39 +0300
+  
+ActionController::RoutingError (uninitialized constant Web::BulletinsController
+Did you mean?  Web::BulletinController):
+  
+Started GET "/bulletins" for 127.0.0.1 at 2022-05-03 23:50:46 +0300
+  
+ActionController::RoutingError (uninitialized constant Web::BulletinsController
+Did you mean?  Web::BulletinController):
+  
+Started GET "/" for 127.0.0.1 at 2022-05-03 23:50:51 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 0.1ms | Allocations: 56)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/web/authentication.rb:19:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:19:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 16.0ms | Allocations: 6327)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.1ms | Allocations: 65)
+  Rendered layout layouts/application.html.slim (Duration: 37.2ms | Allocations: 13666)
+Completed 200 OK in 39ms (Views: 38.3ms | ActiveRecord: 1.3ms | Allocations: 14438)
+
+
+Started DELETE "/sign_out" for 127.0.0.1 at 2022-05-03 23:50:58 +0300
+Processing by Web::AuthController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 553)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-03 23:50:58 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 0.2ms | Allocations: 40)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:19:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 4.1ms | Allocations: 1394)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.1ms | Allocations: 66)
+  Rendered layout layouts/application.html.slim (Duration: 18.5ms | Allocations: 8654)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.5ms | Allocations: 9142)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-03 23:53:26 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 2.7ms | Allocations: 1532)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/web/authentication.rb:19:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:19:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 23.5ms | Allocations: 10206)
+  Rendered layouts/shared/_flash.html.slim (Duration: 5.3ms | Allocations: 3639)
+  Rendered layout layouts/application.html.slim (Duration: 50.5ms | Allocations: 26763)
+Completed 200 OK in 56ms (Views: 54.2ms | ActiveRecord: 9.3ms | Allocations: 28229)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2022-05-03 23:53:29 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 34.8ms | Allocations: 1546)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:19:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 4.3ms | Allocations: 1365)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.2ms | Allocations: 62)
+  Rendered layout layouts/application.html.slim (Duration: 63.4ms | Allocations: 10149)
+Completed 200 OK in 68ms (Views: 66.4ms | ActiveRecord: 0.2ms | Allocations: 11301)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-03 23:54:17 +0300
+Started GET "/auth/github/callback?code=ca6bf1bb36eab30171ce&state=8f5e20013ad4c644eb2724acc718781be693c3d787788b68" for 127.0.0.1 at 2022-05-03 23:54:17 +0300
+Processing by Web::AuthController#callback as HTML
+  Parameters: {"code"=>"ca6bf1bb36eab30171ce", "state"=>"8f5e20013ad4c644eb2724acc718781be693c3d787788b68", "provider"=>"github"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "45975483"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `login_with_omniauth'
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 0.9ms | Allocations: 4009)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-03 23:54:18 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:19:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 3.5ms | Allocations: 1215)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.1ms | Allocations: 66)
+  Rendered layout layouts/application.html.slim (Duration: 18.2ms | Allocations: 8316)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.2ms | Allocations: 8784)
+
+

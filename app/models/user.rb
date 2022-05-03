@@ -1,2 +1,10 @@
 class User < ApplicationRecord
+  def self.login_with_omniauth(auth)
+    user = find_or_initialize_by(uid: auth.uid)
+    user.uid = auth.uid
+    user.provider = auth.provider
+    user.email = auth.info.email
+    user.name = auth.info.name
+    user
+  end
 end

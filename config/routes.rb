@@ -5,10 +5,12 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root 'home#index'
 
-  scope module: 'web' do
+  scope module: :web do
     post 'auth/:provider', to: 'auth#request', as: :auth_request
     get 'auth/:provider/callback', to: 'auth#callback', as: :callback_auth
-    get '/login', to: 'auth#new'
+    get 'sign_in', to: 'auth#new'
+    delete 'sign_out', to: 'auth#destroy'
+
     resources :bulletins
   end
 end
