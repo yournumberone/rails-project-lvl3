@@ -7021,3 +7021,116 @@ Entrypoint application = js/application-acd65231ce2cc8863fdd.js js/application-a
 Completed 200 OK in 7175ms (Views: 7173.2ms | ActiveRecord: 0.3ms | Allocations: 30512)
 
 
+Started GET "/" for 127.0.0.1 at 2022-05-12 16:56:52 +0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 17.5ms | Allocations: 9493)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 430.0ms | Allocations: 358101)
+  Rendered layouts/shared/_flash.html.slim (Duration: 4.0ms | Allocations: 3661)
+  Rendered layout layouts/application.html.slim (Duration: 15473.4ms | Allocations: 452183)
+Completed 200 OK in 15506ms (Views: 15477.4ms | ActiveRecord: 1.7ms | Allocations: 455953)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-12 17:08:22 +0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 14.1ms | Allocations: 9493)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/Mars/Hexlet/rails-project-lvl3/public/packs
+[Webpacker] warning ../../package.json: No license field
+
+[Webpacker] Hash: 8dd424c90a6041a2152d
+Version: webpack 4.46.0
+Time: 10563ms
+Built at: 12.05.2022 17:08:36
+                                                    Asset      Size       Chunks                         Chunk Names
+                   js/application-b65b16381f6caf8e9170.js  1.54 MiB  application  [emitted] [immutable]  application
+               js/application-b65b16381f6caf8e9170.js.map  1.59 MiB  application  [emitted] [dev]        application
+                                            manifest.json  1.19 KiB               [emitted]              
+media/images/favicon-95386d8488b4063077f05f38d8438c06.ico   123 KiB               [emitted]              
+                media/webfonts/fa-brands-400-b823fc0d.ttf   178 KiB               [emitted]              
+              media/webfonts/fa-brands-400-ebb7a127.woff2   103 KiB               [emitted]              
+             media/webfonts/fa-regular-400-0caf4c6c.woff2  23.4 KiB               [emitted]              
+               media/webfonts/fa-regular-400-0d03b1bb.ttf  59.1 KiB               [emitted]              
+               media/webfonts/fa-solid-900-59edf72a.woff2   151 KiB               [emitted]              
+                 media/webfonts/fa-solid-900-e615bbcb.ttf   379 KiB               [emitted]              
+           media/webfonts/fa-v4compatibility-4baccb54.ttf  10.3 KiB               [emitted]              
+         media/webfonts/fa-v4compatibility-afac8956.woff2  4.84 KiB               [emitted]              
+Entrypoint application = js/application-b65b16381f6caf8e9170.js js/application-b65b16381f6caf8e9170.js.map
+[0] multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss 40 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/images sync recursive ^\.\/.*$] ./app/javascript/images sync ^\.\/.*$ 178 bytes {application} [built]
+[./app/javascript/images/favicon.ico] 103 bytes {application} [optional] [built]
+[./app/javascript/packs/application.js] 614 bytes {application} [built]
+[./app/javascript/packs/application.scss] 664 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss 744 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 75 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 394.1ms | Allocations: 358650)
+  Rendered layouts/shared/_flash.html.slim (Duration: 3.5ms | Allocations: 3662)
+  Rendered layout layouts/application.html.slim (Duration: 14230.9ms | Allocations: 383344)
+Completed 200 OK in 14251ms (Views: 14235.0ms | ActiveRecord: 1.6ms | Allocations: 387115)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-12 17:09:28 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 0.1ms | Allocations: 42)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/Mars/Hexlet/rails-project-lvl3/public/packs
+[Webpacker] warning ../../package.json: No license field
+
+[Webpacker] Hash: a8de912340e9e742c57e
+Version: webpack 4.46.0
+Time: 10713ms
+Built at: 12.05.2022 17:09:42
+                                                    Asset      Size       Chunks                         Chunk Names
+                   js/application-37c43683626b9f24b518.js  1.54 MiB  application  [emitted] [immutable]  application
+               js/application-37c43683626b9f24b518.js.map  1.59 MiB  application  [emitted] [dev]        application
+                                            manifest.json  1.19 KiB               [emitted]              
+media/images/favicon-95386d8488b4063077f05f38d8438c06.ico   123 KiB               [emitted]              
+                media/webfonts/fa-brands-400-b823fc0d.ttf   178 KiB               [emitted]              
+              media/webfonts/fa-brands-400-ebb7a127.woff2   103 KiB               [emitted]              
+             media/webfonts/fa-regular-400-0caf4c6c.woff2  23.4 KiB               [emitted]              
+               media/webfonts/fa-regular-400-0d03b1bb.ttf  59.1 KiB               [emitted]              
+               media/webfonts/fa-solid-900-59edf72a.woff2   151 KiB               [emitted]              
+                 media/webfonts/fa-solid-900-e615bbcb.ttf   379 KiB               [emitted]              
+           media/webfonts/fa-v4compatibility-4baccb54.ttf  10.3 KiB               [emitted]              
+         media/webfonts/fa-v4compatibility-afac8956.woff2  4.84 KiB               [emitted]              
+Entrypoint application = js/application-37c43683626b9f24b518.js js/application-37c43683626b9f24b518.js.map
+[0] multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss 40 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/images sync recursive ^\.\/.*$] ./app/javascript/images sync ^\.\/.*$ 178 bytes {application} [built]
+[./app/javascript/images/favicon.ico] 103 bytes {application} [optional] [built]
+[./app/javascript/packs/application.js] 614 bytes {application} [built]
+[./app/javascript/packs/application.scss] 664 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss 744 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 75 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 4.6ms | Allocations: 1214)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.2ms | Allocations: 60)
+  Rendered layout layouts/application.html.slim (Duration: 14155.8ms | Allocations: 7589)
+Completed 200 OK in 14157ms (Views: 14156.3ms | ActiveRecord: 0.3ms | Allocations: 8138)
+
+
