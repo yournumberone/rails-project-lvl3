@@ -7564,3 +7564,1169 @@ Entrypoint application = js/application-1d2ee1bb5ac1f167bf12.js js/application-1
 Completed 200 OK in 18733ms (Views: 18732.4ms | ActiveRecord: 2.2ms | Allocations: 14607)
 
 
+Started GET "/" for 127.0.0.1 at 2022-05-13 01:13:02 +0300
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 17.3ms | Allocations: 9493)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 451.4ms | Allocations: 358274)
+  Rendered layouts/shared/_flash.html.slim (Duration: 4.0ms | Allocations: 3662)
+  Rendered layout layouts/application.html.slim (Duration: 504.4ms | Allocations: 380857)
+Completed 200 OK in 529ms (Views: 510.8ms | ActiveRecord: 1.7ms | Allocations: 384625)
+
+
+Started GET "/bulletins" for 127.0.0.1 at 2022-05-13 01:13:06 +0300
+Processing by Web::BulletinsController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/bulletins/index.html.slim within layouts/application
+  [1m[36mBulletin Load (1.5ms)[0m  [1m[34mSELECT "bulletins".* FROM "bulletins" ORDER BY "bulletins"."created_at" DESC[0m
+  ↳ app/views/web/bulletins/index.html.slim:1
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Bulletin"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/web/bulletins/index.html.slim:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/web/bulletins/index.html.slim:9
+  Rendered web/bulletins/index.html.slim within layouts/application (Duration: 226.4ms | Allocations: 27608)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 4.8ms | Allocations: 1211)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.2ms | Allocations: 62)
+  Rendered layout layouts/application.html.slim (Duration: 249.3ms | Allocations: 33223)
+Completed 200 OK in 268ms (Views: 249.1ms | ActiveRecord: 5.5ms | Allocations: 37370)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--923d9ce9f59aa7969464dbf5fd7730fb420b94e8/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-05-05%20%D0%B2%204.27.17%20PM.png" for 127.0.0.1 at 2022-05-13 01:13:06 +0300
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--923d9ce9f59aa7969464dbf5fd7730fb420b94e8", "filename"=>"Снимок экрана 2022-05-05 в 4.27.17 PM"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (3.2ms) [0m[34mGenerated URL for file at key: ac30z1fe423uwe05adoq4osqm7y7 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZV016TUhveFptVTBNak4xZDJVd05XRmtiM0UwYjNOeGJUZDVOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWQxcGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0lESXdNakl0TURVdE1EVWdKVE5HSURRdU1qY3VNVGNnVUUwdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWNsUkRBbFFURWxSREFsUWtRbFJEQWxRamdsUkRBbFFrTWxSREFsUWtVbFJEQWxRa0VsTWpBbFJERWxPRVFsUkRBbFFrRWxSREVsT0RBbFJEQWxRakFsUkRBbFFrUWxSREFsUWpBbE1qQXlNREl5TFRBMUxUQTFKVEl3SlVRd0pVSXlKVEl3TkM0eU55NHhOeVV5TUZCTkxuQnVad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRG1sdFlXZGxMM0J1WndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wNS0xMlQyMjoxODowNi44MTNaIiwicHVyIjoiYmxvYl9rZXkifX0=--b04d81fac91d657917621e0ad6b66203d4874976/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-05-05%20%D0%B2%204.27.17%20PM.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZV016TUhveFptVTBNak4xZDJVd05XRmtiM0UwYjNOeGJUZDVOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWQxcGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0lESXdNakl0TURVdE1EVWdKVE5HSURRdU1qY3VNVGNnVUUwdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWNsUkRBbFFURWxSREFsUWtRbFJEQWxRamdsUkRBbFFrTWxSREFsUWtVbFJEQWxRa0VsTWpBbFJERWxPRVFsUkRBbFFrRWxSREVsT0RBbFJEQWxRakFsUkRBbFFrUWxSREFsUWpBbE1qQXlNREl5TFRBMUxUQTFKVEl3SlVRd0pVSXlKVEl3TkM0eU55NHhOeVV5TUZCTkxuQnVad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRG1sdFlXZGxMM0J1WndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wNS0xMlQyMjoxODowNi44MTNaIiwicHVyIjoiYmxvYl9rZXkifX0=--b04d81fac91d657917621e0ad6b66203d4874976/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-05-05%20%D0%B2%204.27.17%20PM.png
+Completed 302 Found in 32ms (ActiveRecord: 0.3ms | Allocations: 2808)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZV016TUhveFptVTBNak4xZDJVd05XRmtiM0UwYjNOeGJUZDVOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWQxcGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0lESXdNakl0TURVdE1EVWdKVE5HSURRdU1qY3VNVGNnVUUwdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWNsUkRBbFFURWxSREFsUWtRbFJEQWxRamdsUkRBbFFrTWxSREFsUWtVbFJEQWxRa0VsTWpBbFJERWxPRVFsUkRBbFFrRWxSREVsT0RBbFJEQWxRakFsUkRBbFFrUWxSREFsUWpBbE1qQXlNREl5TFRBMUxUQTFKVEl3SlVRd0pVSXlKVEl3TkM0eU55NHhOeVV5TUZCTkxuQnVad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRG1sdFlXZGxMM0J1WndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wNS0xMlQyMjoxODowNi44MTNaIiwicHVyIjoiYmxvYl9rZXkifX0=--b04d81fac91d657917621e0ad6b66203d4874976/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-05-05%20%D0%B2%204.27.17%20PM.png" for 127.0.0.1 at 2022-05-13 01:13:06 +0300
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"Снимок экрана 2022-05-05 в 4.27.17 PM"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 486)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-13 01:13:14 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 0.2ms | Allocations: 40)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 3.9ms | Allocations: 1204)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.1ms | Allocations: 59)
+  Rendered layout layouts/application.html.slim (Duration: 36.6ms | Allocations: 5652)
+Completed 200 OK in 39ms (Views: 37.4ms | ActiveRecord: 0.3ms | Allocations: 6146)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-13 01:13:16 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 4.4ms | Allocations: 1072)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.2ms | Allocations: 54)
+  Rendered layout layouts/application.html.slim (Duration: 27.9ms | Allocations: 5443)
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 0.4ms | Allocations: 5892)
+
+
+Started GET "/bulletins" for 127.0.0.1 at 2022-05-13 01:13:18 +0300
+Processing by Web::BulletinsController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/bulletins/index.html.slim within layouts/application
+  [1m[36mBulletin Load (0.2ms)[0m  [1m[34mSELECT "bulletins".* FROM "bulletins" ORDER BY "bulletins"."created_at" DESC[0m
+  ↳ app/views/web/bulletins/index.html.slim:1
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Bulletin"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/web/bulletins/index.html.slim:9
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/web/bulletins/index.html.slim:9
+  Rendered web/bulletins/index.html.slim within layouts/application (Duration: 16.1ms | Allocations: 3036)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 4.8ms | Allocations: 1076)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.3ms | Allocations: 56)
+  Rendered layout layouts/application.html.slim (Duration: 41.7ms | Allocations: 8499)
+Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 0.8ms | Allocations: 9018)
+
+
+Started DELETE "/sign_out" for 127.0.0.1 at 2022-05-13 01:13:28 +0300
+Processing by Web::AuthController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 553)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-13 01:13:28 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 0.2ms | Allocations: 40)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 4.1ms | Allocations: 1400)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.1ms | Allocations: 68)
+  Rendered layout layouts/application.html.slim (Duration: 23.1ms | Allocations: 5862)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.3ms | Allocations: 6353)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2022-05-13 01:13:40 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 4.5ms | Allocations: 2280)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 3.9ms | Allocations: 1365)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.3ms | Allocations: 62)
+  Rendered layout layouts/application.html.slim (Duration: 22.1ms | Allocations: 8099)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.2ms | Allocations: 9254)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-13 01:14:27 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 0.5ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 4.6ms | Allocations: 1192)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.1ms | Allocations: 54)
+  Rendered layout layouts/application.html.slim (Duration: 54.6ms | Allocations: 5563)
+Completed 200 OK in 57ms (Views: 55.1ms | ActiveRecord: 0.2ms | Allocations: 6059)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-13 01:14:30 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 4.4ms | Allocations: 1189)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.1ms | Allocations: 54)
+  Rendered layout layouts/application.html.slim (Duration: 25.6ms | Allocations: 5560)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.2ms | Allocations: 6008)
+
+
+Started GET "/bulletins" for 127.0.0.1 at 2022-05-13 01:14:31 +0300
+Processing by Web::BulletinsController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/bulletins/index.html.slim within layouts/application
+  [1m[36mBulletin Load (0.2ms)[0m  [1m[34mSELECT "bulletins".* FROM "bulletins" ORDER BY "bulletins"."created_at" DESC[0m
+  ↳ app/views/web/bulletins/index.html.slim:1
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Bulletin"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/web/bulletins/index.html.slim:9
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/web/bulletins/index.html.slim:9
+  Rendered web/bulletins/index.html.slim within layouts/application (Duration: 12.7ms | Allocations: 2985)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 4.2ms | Allocations: 1192)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.1ms | Allocations: 56)
+  Rendered layout layouts/application.html.slim (Duration: 32.6ms | Allocations: 8565)
+Completed 200 OK in 36ms (Views: 32.8ms | ActiveRecord: 0.8ms | Allocations: 9087)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZV016TUhveFptVTBNak4xZDJVd05XRmtiM0UwYjNOeGJUZDVOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWQxcGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0lESXdNakl0TURVdE1EVWdKVE5HSURRdU1qY3VNVGNnVUUwdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWNsUkRBbFFURWxSREFsUWtRbFJEQWxRamdsUkRBbFFrTWxSREFsUWtVbFJEQWxRa0VsTWpBbFJERWxPRVFsUkRBbFFrRWxSREVsT0RBbFJEQWxRakFsUkRBbFFrUWxSREFsUWpBbE1qQXlNREl5TFRBMUxUQTFKVEl3SlVRd0pVSXlKVEl3TkM0eU55NHhOeVV5TUZCTkxuQnVad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRG1sdFlXZGxMM0J1WndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wNS0xMlQyMjoxODowNi44MTNaIiwicHVyIjoiYmxvYl9rZXkifX0=--b04d81fac91d657917621e0ad6b66203d4874976/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-05-05%20%D0%B2%204.27.17%20PM.png" for 127.0.0.1 at 2022-05-13 01:14:31 +0300
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"Снимок экрана 2022-05-05 в 4.27.17 PM"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 336)
+
+
+Started GET "/bulletins/1" for 127.0.0.1 at 2022-05-13 01:14:33 +0300
+Processing by Web::BulletinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBulletin Load (0.5ms)[0m  [1m[34mSELECT "bulletins".* FROM "bulletins" WHERE "bulletins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/web/bulletins_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.slim
+  Rendering web/bulletins/show.html.slim within layouts/application
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/views/web/bulletins/show.html.slim:4
+  Rendered web/bulletins/show.html.slim within layouts/application (Duration: 75.1ms | Allocations: 9174)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 5.3ms | Allocations: 1252)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.2ms | Allocations: 62)
+  Rendered layout layouts/application.html.slim (Duration: 101.2ms | Allocations: 14810)
+Completed 200 OK in 110ms (Views: 101.3ms | ActiveRecord: 2.2ms | Allocations: 16168)
+
+
+Started GET "/bulletinss" for 127.0.0.1 at 2022-05-13 01:18:00 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bulletinss"):
+  
+Started GET "/admin/bulletins" for 127.0.0.1 at 2022-05-13 01:38:40 +0300
+Processing by Web::Admin::BulletinsController#index as HTML
+Completed 406 Not Acceptable in 13ms (Allocations: 4074)
+
+
+  
+ActionController::MissingExactTemplate (Web::Admin::BulletinsController#index is missing a template for request formats: text/html):
+  
+actionpack (6.1.5) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.1.5) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (6.1.5) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.1.5) lib/abstract_controller/base.rb:228:in `process_action'
+actionpack (6.1.5) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.1.5) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.1.5) lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+actiontext (6.1.5) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.5) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.5) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.5) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.5) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.5) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.5) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.5) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.5) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.5) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.5) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.5) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.5) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.5) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.5) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.5) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+omniauth (2.0.4) lib/omniauth/strategy.rb:202:in `call!'
+omniauth (2.0.4) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.0.4) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.5) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.5) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+rollbar (3.3.0) lib/rollbar/middleware/rails/rollbar.rb:25:in `block in call'
+rollbar (3.3.0) lib/rollbar.rb:145:in `scoped'
+rollbar (3.3.0) lib/rollbar/middleware/rails/rollbar.rb:22:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+rollbar (3.3.0) lib/rollbar/middleware/rails/show_exceptions.rb:22:in `call_with_rollbar'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/admin/bulletins" for 127.0.0.1 at 2022-05-13 01:39:26 +0300
+Processing by Web::Admin::BulletinsController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/admin/bulletins/index.html.slim within layouts/application
+  Rendered web/admin/bulletins/index.html.slim within layouts/application (Duration: 4.1ms | Allocations: 1467)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 52.1ms | Allocations: 13295)
+  Rendered layouts/shared/_flash.html.slim (Duration: 7.3ms | Allocations: 3626)
+  Rendered layout layouts/application.html.slim (Duration: 88.4ms | Allocations: 27396)
+Completed 200 OK in 102ms (Views: 99.8ms | ActiveRecord: 0.8ms | Allocations: 29560)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2022-05-13 01:39:31 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 6.1ms | Allocations: 2277)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 4.7ms | Allocations: 1365)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.slim (Duration: 27.2ms | Allocations: 8050)
+Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 0.2ms | Allocations: 9291)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-13 01:39:33 +0300
+Started GET "/auth/github/callback?code=bba4bd242c4b935e9626&state=4a78f0c153c0b0e01f42f75b926e657f7e63d801c79563c6" for 127.0.0.1 at 2022-05-13 01:39:34 +0300
+Processing by Web::AuthController#callback as HTML
+  Parameters: {"code"=>"bba4bd242c4b935e9626", "state"=>"4a78f0c153c0b0e01f42f75b926e657f7e63d801c79563c6", "provider"=>"github"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "45975483"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:5:in `login_with_omniauth'
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 0.7ms | Allocations: 4867)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-13 01:39:36 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 2.9ms | Allocations: 1519)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 5.0ms | Allocations: 1432)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.slim (Duration: 24.5ms | Allocations: 7423)
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 0.2ms | Allocations: 8721)
+
+
+Started GET "/bulletins" for 127.0.0.1 at 2022-05-13 01:39:40 +0300
+Processing by Web::BulletinsController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/bulletins/index.html.slim within layouts/application
+  [1m[36mBulletin Load (0.6ms)[0m  [1m[34mSELECT "bulletins".* FROM "bulletins" ORDER BY "bulletins"."created_at" DESC[0m
+  ↳ app/views/web/bulletins/index.html.slim:1
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Bulletin"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/web/bulletins/index.html.slim:9
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/web/bulletins/index.html.slim:9
+  Rendered web/bulletins/index.html.slim within layouts/application (Duration: 68.3ms | Allocations: 22570)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 3.6ms | Allocations: 1211)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.slim (Duration: 87.3ms | Allocations: 28184)
+Completed 200 OK in 97ms (Views: 87.2ms | ActiveRecord: 2.1ms | Allocations: 31293)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--923d9ce9f59aa7969464dbf5fd7730fb420b94e8/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-05-05%20%D0%B2%204.27.17%20PM.png" for 127.0.0.1 at 2022-05-13 01:39:40 +0300
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--923d9ce9f59aa7969464dbf5fd7730fb420b94e8", "filename"=>"Снимок экрана 2022-05-05 в 4.27.17 PM"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (1.2ms) [0m[34mGenerated URL for file at key: ac30z1fe423uwe05adoq4osqm7y7 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZV016TUhveFptVTBNak4xZDJVd05XRmtiM0UwYjNOeGJUZDVOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWQxcGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0lESXdNakl0TURVdE1EVWdKVE5HSURRdU1qY3VNVGNnVUUwdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWNsUkRBbFFURWxSREFsUWtRbFJEQWxRamdsUkRBbFFrTWxSREFsUWtVbFJEQWxRa0VsTWpBbFJERWxPRVFsUkRBbFFrRWxSREVsT0RBbFJEQWxRakFsUkRBbFFrUWxSREFsUWpBbE1qQXlNREl5TFRBMUxUQTFKVEl3SlVRd0pVSXlKVEl3TkM0eU55NHhOeVV5TUZCTkxuQnVad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRG1sdFlXZGxMM0J1WndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wNS0xMlQyMjo0NDo0MC40MTdaIiwicHVyIjoiYmxvYl9rZXkifX0=--401200a6285a1c5b83fb755decd14857442fc124/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-05-05%20%D0%B2%204.27.17%20PM.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZV016TUhveFptVTBNak4xZDJVd05XRmtiM0UwYjNOeGJUZDVOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWQxcGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0lESXdNakl0TURVdE1EVWdKVE5HSURRdU1qY3VNVGNnVUUwdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWNsUkRBbFFURWxSREFsUWtRbFJEQWxRamdsUkRBbFFrTWxSREFsUWtVbFJEQWxRa0VsTWpBbFJERWxPRVFsUkRBbFFrRWxSREVsT0RBbFJEQWxRakFsUkRBbFFrUWxSREFsUWpBbE1qQXlNREl5TFRBMUxUQTFKVEl3SlVRd0pVSXlKVEl3TkM0eU55NHhOeVV5TUZCTkxuQnVad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRG1sdFlXZGxMM0J1WndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wNS0xMlQyMjo0NDo0MC40MTdaIiwicHVyIjoiYmxvYl9rZXkifX0=--401200a6285a1c5b83fb755decd14857442fc124/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-05-05%20%D0%B2%204.27.17%20PM.png
+Completed 302 Found in 12ms (ActiveRecord: 0.2ms | Allocations: 2514)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZV016TUhveFptVTBNak4xZDJVd05XRmtiM0UwYjNOeGJUZDVOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWQxcGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0lESXdNakl0TURVdE1EVWdKVE5HSURRdU1qY3VNVGNnVUUwdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWNsUkRBbFFURWxSREFsUWtRbFJEQWxRamdsUkRBbFFrTWxSREFsUWtVbFJEQWxRa0VsTWpBbFJERWxPRVFsUkRBbFFrRWxSREVsT0RBbFJEQWxRakFsUkRBbFFrUWxSREFsUWpBbE1qQXlNREl5TFRBMUxUQTFKVEl3SlVRd0pVSXlKVEl3TkM0eU55NHhOeVV5TUZCTkxuQnVad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRG1sdFlXZGxMM0J1WndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wNS0xMlQyMjo0NDo0MC40MTdaIiwicHVyIjoiYmxvYl9rZXkifX0=--401200a6285a1c5b83fb755decd14857442fc124/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-05-05%20%D0%B2%204.27.17%20PM.png" for 127.0.0.1 at 2022-05-13 01:39:40 +0300
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"Снимок экрана 2022-05-05 в 4.27.17 PM"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 476)
+
+
+Started GET "/admin/bulletins" for 127.0.0.1 at 2022-05-13 01:39:51 +0300
+Processing by Web::Admin::BulletinsController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/admin/bulletins/index.html.slim within layouts/application
+  Rendered web/admin/bulletins/index.html.slim within layouts/application (Duration: 0.1ms | Allocations: 42)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 5.8ms | Allocations: 1194)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.1ms | Allocations: 59)
+  Rendered layout layouts/application.html.slim (Duration: 61.5ms | Allocations: 5642)
+Completed 200 OK in 63ms (Views: 62.2ms | ActiveRecord: 0.3ms | Allocations: 6196)
+
+
+Started GET "/admin/bulletins" for 127.0.0.1 at 2022-05-13 02:02:57 +0300
+Processing by Web::Admin::BulletinsController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/admin/bulletins/index.html.slim within layouts/application
+  Rendered web/admin/bulletins/index.html.slim within layouts/application (Duration: 0.1ms | Allocations: 58)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 21.1ms | Allocations: 6854)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.1ms | Allocations: 65)
+  Rendered layout layouts/application.html.slim (Duration: 36.4ms | Allocations: 11382)
+Completed 500 Internal Server Error in 56ms (Views: 37.8ms | ActiveRecord: 1.0ms | Allocations: 15223)
+
+
+  
+NoMethodError (undefined method `verify_policy_scoped' for #<Web::Admin::BulletinsController:0x00000000010d38>):
+  
+activesupport (6.1.5) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.5) lib/active_support/callbacks.rb:246:in `block in halting'
+activesupport (6.1.5) lib/active_support/callbacks.rb:516:in `block in invoke_after'
+activesupport (6.1.5) lib/active_support/callbacks.rb:516:in `each'
+activesupport (6.1.5) lib/active_support/callbacks.rb:516:in `invoke_after'
+activesupport (6.1.5) lib/active_support/callbacks.rb:131:in `block in run_callbacks'
+actiontext (6.1.5) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.5) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.5) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.5) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.5) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.5) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.5) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.5) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.5) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.5) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.5) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.5) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.5) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.5) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.5) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.5) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+omniauth (2.0.4) lib/omniauth/strategy.rb:202:in `call!'
+omniauth (2.0.4) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.0.4) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.5) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.5) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+rollbar (3.3.0) lib/rollbar/middleware/rails/rollbar.rb:25:in `block in call'
+rollbar (3.3.0) lib/rollbar.rb:145:in `scoped'
+rollbar (3.3.0) lib/rollbar/middleware/rails/rollbar.rb:22:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+rollbar (3.3.0) lib/rollbar/middleware/rails/show_exceptions.rb:22:in `call_with_rollbar'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/admin/bulletins" for 127.0.0.1 at 2022-05-13 02:11:47 +0300
+Processing by Web::Admin::BulletinsController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/admin/bulletins/index.html.slim within layouts/application
+  Rendered web/admin/bulletins/index.html.slim within layouts/application (Duration: 0.2ms | Allocations: 58)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 31.7ms | Allocations: 6850)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.7ms | Allocations: 65)
+  Rendered layout layouts/application.html.slim (Duration: 54.3ms | Allocations: 11378)
+Completed 500 Internal Server Error in 139ms (Views: 58.1ms | ActiveRecord: 1.1ms | Allocations: 15172)
+
+
+  
+NoMethodError (undefined method `verify_policy_scoped' for #<Web::Admin::BulletinsController:0x00000000012fc0>):
+  
+activesupport (6.1.5) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.5) lib/active_support/callbacks.rb:246:in `block in halting'
+activesupport (6.1.5) lib/active_support/callbacks.rb:516:in `block in invoke_after'
+activesupport (6.1.5) lib/active_support/callbacks.rb:516:in `each'
+activesupport (6.1.5) lib/active_support/callbacks.rb:516:in `invoke_after'
+activesupport (6.1.5) lib/active_support/callbacks.rb:131:in `block in run_callbacks'
+actiontext (6.1.5) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.5) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.5) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.5) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.5) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.5) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.5) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.5) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.5) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.5) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.5) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.5) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.5) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.5) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.5) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.5) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+omniauth (2.0.4) lib/omniauth/strategy.rb:202:in `call!'
+omniauth (2.0.4) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.0.4) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.5) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.5) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+rollbar (3.3.0) lib/rollbar/middleware/rails/rollbar.rb:25:in `block in call'
+rollbar (3.3.0) lib/rollbar.rb:145:in `scoped'
+rollbar (3.3.0) lib/rollbar/middleware/rails/rollbar.rb:22:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+rollbar (3.3.0) lib/rollbar/middleware/rails/show_exceptions.rb:22:in `call_with_rollbar'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/admin/bulletins" for 127.0.0.1 at 2022-05-13 02:12:19 +0300
+Processing by Web::Admin::BulletinsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendering layout layouts/application.html.slim
+  Rendering web/admin/bulletins/index.html.slim within layouts/application
+  Rendered web/admin/bulletins/index.html.slim within layouts/application (Duration: 0.2ms | Allocations: 58)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_nav.html.slim (Duration: 1.2ms | Allocations: 477)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.slim (Duration: 22.3ms | Allocations: 4993)
+Completed 200 OK in 56ms (Views: 26.2ms | ActiveRecord: 2.1ms | Allocations: 12541)
+
+
+Started DELETE "/sign_out" for 127.0.0.1 at 2022-05-13 02:13:02 +0300
+Processing by Web::AuthController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 495)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-13 02:13:02 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 0.1ms | Allocations: 56)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 6.0ms | Allocations: 1453)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.1ms | Allocations: 74)
+  Rendered layout layouts/application.html.slim (Duration: 16.8ms | Allocations: 5988)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.3ms | Allocations: 6762)
+
+
+Started GET "/admin/bulletins" for 127.0.0.1 at 2022-05-13 02:13:06 +0300
+Processing by Web::Admin::BulletinsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+Redirected to http://localhost:3000/sign_in
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms | Allocations: 1050)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2022-05-13 02:13:06 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.8ms | Allocations: 171)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 4.2ms | Allocations: 1365)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.slim (Duration: 19.6ms | Allocations: 6002)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.1ms | Allocations: 6705)
+
+
+Started GET "/bulletins" for 127.0.0.1 at 2022-05-13 02:13:07 +0300
+Processing by Web::BulletinsController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/bulletins/index.html.slim within layouts/application
+  [1m[36mBulletin Load (0.6ms)[0m  [1m[34mSELECT "bulletins".* FROM "bulletins" ORDER BY "bulletins"."created_at" DESC[0m
+  ↳ app/views/web/bulletins/index.html.slim:1
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Bulletin"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/web/bulletins/index.html.slim:9
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/web/bulletins/index.html.slim:9
+  Rendered web/bulletins/index.html.slim within layouts/application (Duration: 59.0ms | Allocations: 20570)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 3.5ms | Allocations: 1374)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.slim (Duration: 73.7ms | Allocations: 26347)
+Completed 200 OK in 82ms (Views: 71.6ms | ActiveRecord: 4.1ms | Allocations: 29286)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--923d9ce9f59aa7969464dbf5fd7730fb420b94e8/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-05-05%20%D0%B2%204.27.17%20PM.png" for 127.0.0.1 at 2022-05-13 02:13:07 +0300
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--923d9ce9f59aa7969464dbf5fd7730fb420b94e8", "filename"=>"Снимок экрана 2022-05-05 в 4.27.17 PM"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (1.1ms) [0m[34mGenerated URL for file at key: ac30z1fe423uwe05adoq4osqm7y7 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZV016TUhveFptVTBNak4xZDJVd05XRmtiM0UwYjNOeGJUZDVOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWQxcGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0lESXdNakl0TURVdE1EVWdKVE5HSURRdU1qY3VNVGNnVUUwdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWNsUkRBbFFURWxSREFsUWtRbFJEQWxRamdsUkRBbFFrTWxSREFsUWtVbFJEQWxRa0VsTWpBbFJERWxPRVFsUkRBbFFrRWxSREVsT0RBbFJEQWxRakFsUkRBbFFrUWxSREFsUWpBbE1qQXlNREl5TFRBMUxUQTFKVEl3SlVRd0pVSXlKVEl3TkM0eU55NHhOeVV5TUZCTkxuQnVad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRG1sdFlXZGxMM0J1WndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wNS0xMlQyMzoxODowNy42OTVaIiwicHVyIjoiYmxvYl9rZXkifX0=--c0630a1e957e6087ece6098464ac95e0b0351117/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-05-05%20%D0%B2%204.27.17%20PM.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZV016TUhveFptVTBNak4xZDJVd05XRmtiM0UwYjNOeGJUZDVOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWQxcGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0lESXdNakl0TURVdE1EVWdKVE5HSURRdU1qY3VNVGNnVUUwdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWNsUkRBbFFURWxSREFsUWtRbFJEQWxRamdsUkRBbFFrTWxSREFsUWtVbFJEQWxRa0VsTWpBbFJERWxPRVFsUkRBbFFrRWxSREVsT0RBbFJEQWxRakFsUkRBbFFrUWxSREFsUWpBbE1qQXlNREl5TFRBMUxUQTFKVEl3SlVRd0pVSXlKVEl3TkM0eU55NHhOeVV5TUZCTkxuQnVad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRG1sdFlXZGxMM0J1WndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wNS0xMlQyMzoxODowNy42OTVaIiwicHVyIjoiYmxvYl9rZXkifX0=--c0630a1e957e6087ece6098464ac95e0b0351117/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-05-05%20%D0%B2%204.27.17%20PM.png
+Completed 302 Found in 9ms (ActiveRecord: 0.2ms | Allocations: 2523)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZV016TUhveFptVTBNak4xZDJVd05XRmtiM0UwYjNOeGJUZDVOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWQxcGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0lESXdNakl0TURVdE1EVWdKVE5HSURRdU1qY3VNVGNnVUUwdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWNsUkRBbFFURWxSREFsUWtRbFJEQWxRamdsUkRBbFFrTWxSREFsUWtVbFJEQWxRa0VsTWpBbFJERWxPRVFsUkRBbFFrRWxSREVsT0RBbFJEQWxRakFsUkRBbFFrUWxSREFsUWpBbE1qQXlNREl5TFRBMUxUQTFKVEl3SlVRd0pVSXlKVEl3TkM0eU55NHhOeVV5TUZCTkxuQnVad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRG1sdFlXZGxMM0J1WndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wNS0xMlQyMzoxODowNy42OTVaIiwicHVyIjoiYmxvYl9rZXkifX0=--c0630a1e957e6087ece6098464ac95e0b0351117/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-05-05%20%D0%B2%204.27.17%20PM.png" for 127.0.0.1 at 2022-05-13 02:13:07 +0300
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"Снимок экрана 2022-05-05 в 4.27.17 PM"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 475)
+
+
+Started GET "/admin/bulletins" for 127.0.0.1 at 2022-05-13 02:13:15 +0300
+Processing by Web::Admin::BulletinsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+Redirected to http://localhost:3000/sign_in
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 1163)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2022-05-13 02:13:15 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.8ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 4.0ms | Allocations: 1187)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.2ms | Allocations: 64)
+  Rendered layout layouts/application.html.slim (Duration: 25.0ms | Allocations: 5667)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.2ms | Allocations: 6159)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-13 02:13:20 +0300
+Started GET "/auth/github/callback?code=6e172fac3455d8c6d5c4&state=46f8c76a2d4d93ebc1085e845a3dbfce4552eb05d2452b4b" for 127.0.0.1 at 2022-05-13 02:13:21 +0300
+Processing by Web::AuthController#callback as HTML
+  Parameters: {"code"=>"6e172fac3455d8c6d5c4", "state"=>"46f8c76a2d4d93ebc1085e845a3dbfce4552eb05d2452b4b", "provider"=>"github"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "45975483"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:5:in `login_with_omniauth'
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms | Allocations: 1279)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-13 02:13:22 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 6.1ms | Allocations: 1091)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.3ms | Allocations: 61)
+  Rendered layout layouts/application.html.slim (Duration: 109.7ms | Allocations: 5469)
+Completed 200 OK in 112ms (Views: 110.9ms | ActiveRecord: 0.2ms | Allocations: 5924)
+
+
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/sign_in" for 127.0.0.1 at 2022-05-13 02:13:47 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.5ms | Allocations: 94)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 3.6ms | Allocations: 1057)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.2ms | Allocations: 54)
+  Rendered layout layouts/application.html.slim (Duration: 13.9ms | Allocations: 5448)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.2ms | Allocations: 5898)
+
+
+Started GET "/bulletins" for 127.0.0.1 at 2022-05-13 02:13:49 +0300
+Processing by Web::BulletinsController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/bulletins/index.html.slim within layouts/application
+  [1m[36mBulletin Load (0.4ms)[0m  [1m[34mSELECT "bulletins".* FROM "bulletins" ORDER BY "bulletins"."created_at" DESC[0m
+  ↳ app/views/web/bulletins/index.html.slim:1
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Bulletin"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/web/bulletins/index.html.slim:9
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/web/bulletins/index.html.slim:9
+  Rendered web/bulletins/index.html.slim within layouts/application (Duration: 9.5ms | Allocations: 2963)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 3.8ms | Allocations: 1077)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.1ms | Allocations: 56)
+  Rendered layout layouts/application.html.slim (Duration: 24.0ms | Allocations: 8427)
+Completed 200 OK in 26ms (Views: 23.8ms | ActiveRecord: 0.9ms | Allocations: 8938)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZV016TUhveFptVTBNak4xZDJVd05XRmtiM0UwYjNOeGJUZDVOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWQxcGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0lESXdNakl0TURVdE1EVWdKVE5HSURRdU1qY3VNVGNnVUUwdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWNsUkRBbFFURWxSREFsUWtRbFJEQWxRamdsUkRBbFFrTWxSREFsUWtVbFJEQWxRa0VsTWpBbFJERWxPRVFsUkRBbFFrRWxSREVsT0RBbFJEQWxRakFsUkRBbFFrUWxSREFsUWpBbE1qQXlNREl5TFRBMUxUQTFKVEl3SlVRd0pVSXlKVEl3TkM0eU55NHhOeVV5TUZCTkxuQnVad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRG1sdFlXZGxMM0J1WndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wNS0xMlQyMzoxODowNy42OTVaIiwicHVyIjoiYmxvYl9rZXkifX0=--c0630a1e957e6087ece6098464ac95e0b0351117/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-05-05%20%D0%B2%204.27.17%20PM.png" for 127.0.0.1 at 2022-05-13 02:13:49 +0300
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"Снимок экрана 2022-05-05 в 4.27.17 PM"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 319)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2022-05-13 02:13:52 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.3ms | Allocations: 94)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 2.7ms | Allocations: 1054)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.1ms | Allocations: 54)
+  Rendered layout layouts/application.html.slim (Duration: 13.6ms | Allocations: 5445)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.2ms | Allocations: 5895)
+
+
+Started GET "/admin/bulletins" for 127.0.0.1 at 2022-05-13 02:14:04 +0300
+Processing by Web::Admin::BulletinsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendering layout layouts/application.html.slim
+  Rendering web/admin/bulletins/index.html.slim within layouts/application
+  Rendered web/admin/bulletins/index.html.slim within layouts/application (Duration: 0.2ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_nav.html.slim (Duration: 0.9ms | Allocations: 397)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.1ms | Allocations: 54)
+  Rendered layout layouts/application.html.slim (Duration: 11.1ms | Allocations: 4769)
+Completed 200 OK in 16ms (Views: 11.8ms | ActiveRecord: 0.7ms | Allocations: 5862)
+
+
+Started GET "/admin/bulletins" for 127.0.0.1 at 2022-05-13 02:17:16 +0300
+Processing by Web::Admin::BulletinsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 2.0ms | Allocations: 11457)
+
+
+  
+NoMethodError (undefined method `authorize' for #<Web::Admin::BulletinsController:0x00000000017f48>):
+  
+app/controllers/web/admin/bulletins_controller.rb:5:in `index'
+Started GET "/admin/bulletins" for 127.0.0.1 at 2022-05-13 02:19:27 +0300
+Processing by Web::Admin::BulletinsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 1.8ms | Allocations: 9439)
+
+
+  
+Pundit::NotAuthorizedError (not allowed to index? this Bulletin::ActiveRecord_Relation):
+  
+app/controllers/web/admin/bulletins_controller.rb:5:in `index'
+Started GET "/admin/bulletins" for 127.0.0.1 at 2022-05-13 02:21:15 +0300
+Processing by Web::Admin::BulletinsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.5ms | Allocations: 9363)
+
+
+  
+Pundit::NotAuthorizedError (not allowed to index? this Bulletin::ActiveRecord_Relation):
+  
+app/controllers/web/admin/bulletins_controller.rb:5:in `index'
+Started GET "/sign_in" for 127.0.0.1 at 2022-05-13 02:21:44 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.3ms | Allocations: 173)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 5.7ms | Allocations: 1199)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.slim (Duration: 20.6ms | Allocations: 5780)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.2ms | Allocations: 6554)
+
+
+Started POST "/auth/github" for 127.0.0.1 at 2022-05-13 02:21:47 +0300
+Started GET "/auth/github/callback?code=473930dd3907bd10de15&state=8c5cc46e7d01a8ad0e391d0f8fe79b351cf00bbd656a45db" for 127.0.0.1 at 2022-05-13 02:21:47 +0300
+Processing by Web::AuthController#callback as HTML
+  Parameters: {"code"=>"473930dd3907bd10de15", "state"=>"8c5cc46e7d01a8ad0e391d0f8fe79b351cf00bbd656a45db", "provider"=>"github"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "45975483"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:5:in `login_with_omniauth'
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms | Allocations: 1369)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-13 02:21:49 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 0.1ms | Allocations: 56)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 3.1ms | Allocations: 1246)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.1ms | Allocations: 74)
+  Rendered layout layouts/application.html.slim (Duration: 13.9ms | Allocations: 5773)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.2ms | Allocations: 6550)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2022-05-13 02:21:53 +0300
+Processing by Web::AuthController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/auth/new.html.slim within layouts/application
+  Rendered web/auth/new.html.slim within layouts/application (Duration: 0.3ms | Allocations: 103)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 2.9ms | Allocations: 1054)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.1ms | Allocations: 54)
+  Rendered layout layouts/application.html.slim (Duration: 15.6ms | Allocations: 5454)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.2ms | Allocations: 5952)
+
+
+Started GET "/bulletins" for 127.0.0.1 at 2022-05-13 02:21:53 +0300
+Processing by Web::BulletinsController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/bulletins/index.html.slim within layouts/application
+  [1m[36mBulletin Load (0.8ms)[0m  [1m[34mSELECT "bulletins".* FROM "bulletins" ORDER BY "bulletins"."created_at" DESC[0m
+  ↳ app/views/web/bulletins/index.html.slim:1
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Bulletin"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/web/bulletins/index.html.slim:9
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/web/bulletins/index.html.slim:9
+  Rendered web/bulletins/index.html.slim within layouts/application (Duration: 68.4ms | Allocations: 20564)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 13.8ms | Allocations: 1211)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.6ms | Allocations: 62)
+  Rendered layout layouts/application.html.slim (Duration: 121.9ms | Allocations: 26178)
+Completed 200 OK in 127ms (Views: 119.7ms | ActiveRecord: 4.8ms | Allocations: 27594)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--923d9ce9f59aa7969464dbf5fd7730fb420b94e8/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-05-05%20%D0%B2%204.27.17%20PM.png" for 127.0.0.1 at 2022-05-13 02:21:54 +0300
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--923d9ce9f59aa7969464dbf5fd7730fb420b94e8", "filename"=>"Снимок экрана 2022-05-05 в 4.27.17 PM"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (1.0ms) [0m[34mGenerated URL for file at key: ac30z1fe423uwe05adoq4osqm7y7 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZV016TUhveFptVTBNak4xZDJVd05XRmtiM0UwYjNOeGJUZDVOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWQxcGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0lESXdNakl0TURVdE1EVWdKVE5HSURRdU1qY3VNVGNnVUUwdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWNsUkRBbFFURWxSREFsUWtRbFJEQWxRamdsUkRBbFFrTWxSREFsUWtVbFJEQWxRa0VsTWpBbFJERWxPRVFsUkRBbFFrRWxSREVsT0RBbFJEQWxRakFsUkRBbFFrUWxSREFsUWpBbE1qQXlNREl5TFRBMUxUQTFKVEl3SlVRd0pVSXlKVEl3TkM0eU55NHhOeVV5TUZCTkxuQnVad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRG1sdFlXZGxMM0J1WndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wNS0xMlQyMzoyNjo1NC4zMzdaIiwicHVyIjoiYmxvYl9rZXkifX0=--56eb623b79604b24bc9af424e76f63587ae53de8/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-05-05%20%D0%B2%204.27.17%20PM.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZV016TUhveFptVTBNak4xZDJVd05XRmtiM0UwYjNOeGJUZDVOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWQxcGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0lESXdNakl0TURVdE1EVWdKVE5HSURRdU1qY3VNVGNnVUUwdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWNsUkRBbFFURWxSREFsUWtRbFJEQWxRamdsUkRBbFFrTWxSREFsUWtVbFJEQWxRa0VsTWpBbFJERWxPRVFsUkRBbFFrRWxSREVsT0RBbFJEQWxRakFsUkRBbFFrUWxSREFsUWpBbE1qQXlNREl5TFRBMUxUQTFKVEl3SlVRd0pVSXlKVEl3TkM0eU55NHhOeVV5TUZCTkxuQnVad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRG1sdFlXZGxMM0J1WndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wNS0xMlQyMzoyNjo1NC4zMzdaIiwicHVyIjoiYmxvYl9rZXkifX0=--56eb623b79604b24bc9af424e76f63587ae53de8/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-05-05%20%D0%B2%204.27.17%20PM.png
+Completed 302 Found in 9ms (ActiveRecord: 0.2ms | Allocations: 2509)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZV016TUhveFptVTBNak4xZDJVd05XRmtiM0UwYjNOeGJUZDVOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWQxcGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0lESXdNakl0TURVdE1EVWdKVE5HSURRdU1qY3VNVGNnVUUwdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWNsUkRBbFFURWxSREFsUWtRbFJEQWxRamdsUkRBbFFrTWxSREFsUWtVbFJEQWxRa0VsTWpBbFJERWxPRVFsUkRBbFFrRWxSREVsT0RBbFJEQWxRakFsUkRBbFFrUWxSREFsUWpBbE1qQXlNREl5TFRBMUxUQTFKVEl3SlVRd0pVSXlKVEl3TkM0eU55NHhOeVV5TUZCTkxuQnVad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRG1sdFlXZGxMM0J1WndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wNS0xMlQyMzoyNjo1NC4zMzdaIiwicHVyIjoiYmxvYl9rZXkifX0=--56eb623b79604b24bc9af424e76f63587ae53de8/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-05-05%20%D0%B2%204.27.17%20PM.png" for 127.0.0.1 at 2022-05-13 02:21:54 +0300
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"Снимок экрана 2022-05-05 в 4.27.17 PM"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 476)
+
+
+Started GET "/bulletins" for 127.0.0.1 at 2022-05-13 02:21:56 +0300
+Processing by Web::BulletinsController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/bulletins/index.html.slim within layouts/application
+  [1m[36mBulletin Load (0.2ms)[0m  [1m[34mSELECT "bulletins".* FROM "bulletins" ORDER BY "bulletins"."created_at" DESC[0m
+  ↳ app/views/web/bulletins/index.html.slim:1
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Bulletin"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/web/bulletins/index.html.slim:9
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/web/bulletins/index.html.slim:9
+  Rendered web/bulletins/index.html.slim within layouts/application (Duration: 11.7ms | Allocations: 3120)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 3.5ms | Allocations: 1116)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.1ms | Allocations: 61)
+  Rendered layout layouts/application.html.slim (Duration: 30.6ms | Allocations: 8685)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.7ms | Allocations: 9251)
+
+
+Started GET "/admin/bulletins" for 127.0.0.1 at 2022-05-13 02:23:11 +0300
+Processing by Web::Admin::BulletinsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 3.0ms | Allocations: 11746)
+
+
+  
+NameError (undefined method `user_not_authorized' for class `#<Class:#<Web::Admin::BulletinsController:0x00007fe8ad42c870>>'):
+  
+activesupport (6.1.5) lib/active_support/rescuable.rb:106:in `method'
+activesupport (6.1.5) lib/active_support/rescuable.rb:106:in `handler_for_rescue'
+activesupport (6.1.5) lib/active_support/rescuable.rb:91:in `rescue_with_handler'
+activesupport (6.1.5) lib/active_support/rescuable.rb:165:in `rescue_with_handler'
+actionpack (6.1.5) lib/action_controller/metal/rescue.rb:25:in `rescue in process_action'
+actionpack (6.1.5) lib/action_controller/metal/rescue.rb:21:in `process_action'
+actionpack (6.1.5) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.5) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.5) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.5) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.5) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.5) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.5) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.5) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.5) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+omniauth (2.0.4) lib/omniauth/strategy.rb:202:in `call!'
+omniauth (2.0.4) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.0.4) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.5) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.5) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+rollbar (3.3.0) lib/rollbar/middleware/rails/rollbar.rb:25:in `block in call'
+rollbar (3.3.0) lib/rollbar.rb:145:in `scoped'
+rollbar (3.3.0) lib/rollbar/middleware/rails/rollbar.rb:22:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+rollbar (3.3.0) lib/rollbar/middleware/rails/show_exceptions.rb:22:in `call_with_rollbar'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/admin/bulletins" for 127.0.0.1 at 2022-05-13 02:24:27 +0300
+Processing by Web::Admin::BulletinsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+Redirected to http://localhost:3000/
+Completed 302 Found in 36ms (ActiveRecord: 1.5ms | Allocations: 9401)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-13 02:24:27 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 0.2ms | Allocations: 56)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 5.8ms | Allocations: 1246)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.slim (Duration: 23.8ms | Allocations: 5773)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.2ms | Allocations: 6553)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "admin" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2022-05-12 23:24:51.003658"], ["admin", 1], ["id", 2]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/bulletins" for 127.0.0.1 at 2022-05-13 02:24:57 +0300
+Processing by Web::BulletinsController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/bulletins/index.html.slim within layouts/application
+  [1m[36mBulletin Load (0.2ms)[0m  [1m[34mSELECT "bulletins".* FROM "bulletins" ORDER BY "bulletins"."created_at" DESC[0m
+  ↳ app/views/web/bulletins/index.html.slim:1
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Bulletin"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/web/bulletins/index.html.slim:9
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/web/bulletins/index.html.slim:9
+  Rendered web/bulletins/index.html.slim within layouts/application (Duration: 61.8ms | Allocations: 20558)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 9.7ms | Allocations: 1211)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.2ms | Allocations: 62)
+  Rendered layout layouts/application.html.slim (Duration: 89.6ms | Allocations: 26172)
+Completed 200 OK in 97ms (Views: 90.9ms | ActiveRecord: 2.8ms | Allocations: 27587)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZV016TUhveFptVTBNak4xZDJVd05XRmtiM0UwYjNOeGJUZDVOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWQxcGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0lESXdNakl0TURVdE1EVWdKVE5HSURRdU1qY3VNVGNnVUUwdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWNsUkRBbFFURWxSREFsUWtRbFJEQWxRamdsUkRBbFFrTWxSREFsUWtVbFJEQWxRa0VsTWpBbFJERWxPRVFsUkRBbFFrRWxSREVsT0RBbFJEQWxRakFsUkRBbFFrUWxSREFsUWpBbE1qQXlNREl5TFRBMUxUQTFKVEl3SlVRd0pVSXlKVEl3TkM0eU55NHhOeVV5TUZCTkxuQnVad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRG1sdFlXZGxMM0J1WndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wNS0xMlQyMzoyNjo1NC4zMzdaIiwicHVyIjoiYmxvYl9rZXkifX0=--56eb623b79604b24bc9af424e76f63587ae53de8/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-05-05%20%D0%B2%204.27.17%20PM.png" for 127.0.0.1 at 2022-05-13 02:24:58 +0300
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"Снимок экрана 2022-05-05 в 4.27.17 PM"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 612)
+
+
+Started GET "/admin/bulletins" for 127.0.0.1 at 2022-05-13 02:25:05 +0300
+Processing by Web::Admin::BulletinsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendering layout layouts/application.html.slim
+  Rendering web/admin/bulletins/index.html.slim within layouts/application
+  Rendered web/admin/bulletins/index.html.slim within layouts/application (Duration: 0.1ms | Allocations: 58)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_nav.html.slim (Duration: 0.8ms | Allocations: 475)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.2ms | Allocations: 62)
+  Rendered layout layouts/application.html.slim (Duration: 13.1ms | Allocations: 5037)
+Completed 200 OK in 18ms (Views: 14.2ms | ActiveRecord: 0.2ms | Allocations: 6582)
+
+

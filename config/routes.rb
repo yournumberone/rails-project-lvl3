@@ -12,5 +12,11 @@ Rails.application.routes.draw do
     delete 'sign_out', to: 'auth#destroy'
 
     resources :bulletins
+
+    namespace :admin do
+      resources :bulletins
+      resources :categories
+      resources :users
+    end
   end
 end
