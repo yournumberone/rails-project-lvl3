@@ -6898,3 +6898,41 @@ Processing by ActiveStorage::DiskController#show as PNG
 Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 332)
 
 
+Started GET "/" for 127.0.0.1 at 2022-05-12 16:38:13 +0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 23.5ms | Allocations: 9493)
+  Rendered layout layouts/application.html.slim (Duration: 62.9ms | Allocations: 18328)
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 0.0ms | Allocations: 22047)
+
+
+  
+ActionView::Template::Error (undefined method `favicon_image_tag' for #<ActionView::Base:0x0000000000a820>
+Did you mean?  favicon_link_tag
+               favicon_pack_tag):
+    1: doctype html
+    2: html
+    3:   head
+    4:     = favicon_image_tag 'favicon.ico'
+    5:     title
+    6:       | BulletinBoard
+    7:     meta[name="viewport" content="width=device-width,initial-scale=1"]
+  
+app/views/layouts/application.html.slim:4
+Started GET "/" for 127.0.0.1 at 2022-05-12 16:39:14 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 3.3ms | Allocations: 1533)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 749.3ms | Allocations: 361349)
+  Rendered layouts/shared/_flash.html.slim (Duration: 3.7ms | Allocations: 3661)
+  Rendered layout layouts/application.html.slim (Duration: 867.1ms | Allocations: 387767)
+Completed 200 OK in 875ms (Views: 871.9ms | ActiveRecord: 1.3ms | Allocations: 389285)
+
+
