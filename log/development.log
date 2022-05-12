@@ -7378,3 +7378,189 @@ Entrypoint application = js/application-1c26df9b87ae9839cfbd.js js/application-1
 Completed 200 OK in 15626ms (Views: 15608.4ms | ActiveRecord: 1.8ms | Allocations: 387101)
 
 
+Started GET "/" for 127.0.0.1 at 2022-05-12 22:43:42 +0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 18.9ms | Allocations: 9491)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 1e85a9c81c7f1ee89807
+Version: webpack 4.46.0
+Time: 10309ms
+Built at: 12.05.2022 22:43:56
+                                                    Asset      Size       Chunks                         Chunk Names
+                   js/application-5f9373d43da11ada2253.js  1.54 MiB  application  [emitted] [immutable]  application
+               js/application-5f9373d43da11ada2253.js.map  1.59 MiB  application  [emitted] [dev]        application
+                                            manifest.json  1.19 KiB               [emitted]              
+media/images/favicon-95386d8488b4063077f05f38d8438c06.ico   123 KiB               [emitted]              
+                media/webfonts/fa-brands-400-b823fc0d.ttf   178 KiB               [emitted]              
+              media/webfonts/fa-brands-400-ebb7a127.woff2   103 KiB               [emitted]              
+             media/webfonts/fa-regular-400-0caf4c6c.woff2  23.4 KiB               [emitted]              
+               media/webfonts/fa-regular-400-0d03b1bb.ttf  59.1 KiB               [emitted]              
+               media/webfonts/fa-solid-900-59edf72a.woff2   151 KiB               [emitted]              
+                 media/webfonts/fa-solid-900-e615bbcb.ttf   379 KiB               [emitted]              
+           media/webfonts/fa-v4compatibility-4baccb54.ttf  10.3 KiB               [emitted]              
+         media/webfonts/fa-v4compatibility-afac8956.woff2  4.84 KiB               [emitted]              
+Entrypoint application = js/application-5f9373d43da11ada2253.js js/application-5f9373d43da11ada2253.js.map
+[0] multi ./app/frontend/packs/application.js ./app/frontend/packs/application.scss 40 bytes {application} [built]
+[./app/frontend/channels sync recursive _channel\.js$] ./app/frontend/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/frontend/channels/index.js] 211 bytes {application} [built]
+[./app/frontend/images sync recursive ^\.\/.*$] ./app/frontend/images sync ^\.\/.*$ 178 bytes {application} [built]
+[./app/frontend/images/favicon.ico] 103 bytes {application} [optional] [built]
+[./app/frontend/packs/application.js] 648 bytes {application} [built]
+[./app/frontend/packs/application.scss] 664 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/frontend/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/frontend/packs/application.scss 744 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 75 hidden modules
+
+ERROR in ./app/frontend/packs/application.js
+Module not found: Error: Can't resolve 'styles/application.scss' in '/Users/Mars/Hexlet/rails-project-lvl3/app/frontend/packs'
+ @ ./app/frontend/packs/application.js 10:0-33
+ @ multi ./app/frontend/packs/application.js ./app/frontend/packs/application.scss
+
+
+warning ../../package.json: No license field
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 461.2ms | Allocations: 358131)
+  Rendered layouts/shared/_flash.html.slim (Duration: 4.7ms | Allocations: 3663)
+  Rendered layout layouts/application.html.slim (Duration: 14655.8ms | Allocations: 382748)
+Completed 200 OK in 14684ms (Views: 14666.1ms | ActiveRecord: 1.6ms | Allocations: 387213)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-12 22:46:42 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 0.1ms | Allocations: 42)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 7380a0b292b38b7be7e1
+Version: webpack 4.46.0
+Time: 11415ms
+Built at: 12.05.2022 22:46:57
+                                                    Asset      Size       Chunks                         Chunk Names
+                   js/application-0af73bb616bf73f47f20.js  1.54 MiB  application  [emitted] [immutable]  application
+               js/application-0af73bb616bf73f47f20.js.map  1.59 MiB  application  [emitted] [dev]        application
+                                            manifest.json  1.19 KiB               [emitted]              
+media/images/favicon-95386d8488b4063077f05f38d8438c06.ico   123 KiB               [emitted]              
+                media/webfonts/fa-brands-400-b823fc0d.ttf   178 KiB               [emitted]              
+              media/webfonts/fa-brands-400-ebb7a127.woff2   103 KiB               [emitted]              
+             media/webfonts/fa-regular-400-0caf4c6c.woff2  23.4 KiB               [emitted]              
+               media/webfonts/fa-regular-400-0d03b1bb.ttf  59.1 KiB               [emitted]              
+               media/webfonts/fa-solid-900-59edf72a.woff2   151 KiB               [emitted]              
+                 media/webfonts/fa-solid-900-e615bbcb.ttf   379 KiB               [emitted]              
+           media/webfonts/fa-v4compatibility-4baccb54.ttf  10.3 KiB               [emitted]              
+         media/webfonts/fa-v4compatibility-afac8956.woff2  4.84 KiB               [emitted]              
+Entrypoint application = js/application-0af73bb616bf73f47f20.js js/application-0af73bb616bf73f47f20.js.map
+[0] multi ./app/frontend/packs/application.js ./app/frontend/packs/application.scss 40 bytes {application} [built]
+[./app/frontend/channels sync recursive _channel\.js$] ./app/frontend/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/frontend/channels/index.js] 211 bytes {application} [built]
+[./app/frontend/images sync recursive ^\.\/.*$] ./app/frontend/images sync ^\.\/.*$ 178 bytes {application} [built]
+[./app/frontend/images/favicon.ico] 103 bytes {application} [optional] [built]
+[./app/frontend/packs/application.js] 651 bytes {application} [built]
+[./app/frontend/packs/application.scss] 664 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/frontend/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/frontend/packs/application.scss 744 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 75 hidden modules
+
+ERROR in ./app/frontend/packs/application.js
+Module not found: Error: Can't resolve '../styles/application.scss' in '/Users/Mars/Hexlet/rails-project-lvl3/app/frontend/packs'
+ @ ./app/frontend/packs/application.js 10:0-36
+ @ multi ./app/frontend/packs/application.js ./app/frontend/packs/application.scss
+
+
+warning ../../package.json: No license field
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 4.3ms | Allocations: 1214)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.1ms | Allocations: 60)
+  Rendered layout layouts/application.html.slim (Duration: 15516.0ms | Allocations: 7520)
+Completed 200 OK in 15518ms (Views: 15516.4ms | ActiveRecord: 0.3ms | Allocations: 8068)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-12 22:47:00 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 4.1ms | Allocations: 1072)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.1ms | Allocations: 54)
+  Rendered layout layouts/application.html.slim (Duration: 17.7ms | Allocations: 5439)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.2ms | Allocations: 5885)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-12 22:47:08 +0300
+Processing by HomeController#index as */*
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 0.2ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 10.5ms | Allocations: 1316)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.2ms | Allocations: 54)
+  Rendered layout layouts/application.html.slim (Duration: 34.8ms | Allocations: 5982)
+Completed 200 OK in 39ms (Views: 35.5ms | ActiveRecord: 0.9ms | Allocations: 6552)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-12 22:48:13 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 0.4ms | Allocations: 56)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/Mars/Hexlet/rails-project-lvl3/public/packs
+[Webpacker] warning ../../package.json: No license field
+
+[Webpacker] Hash: d124207c19b21b7e571c
+Version: webpack 4.46.0
+Time: 13946ms
+Built at: 12.05.2022 22:48:32
+                                                    Asset      Size       Chunks                         Chunk Names
+                   js/application-1d2ee1bb5ac1f167bf12.js  1.54 MiB  application  [emitted] [immutable]  application
+               js/application-1d2ee1bb5ac1f167bf12.js.map  1.59 MiB  application  [emitted] [dev]        application
+                                            manifest.json  1.19 KiB               [emitted]              
+media/images/favicon-95386d8488b4063077f05f38d8438c06.ico   123 KiB               [emitted]              
+                media/webfonts/fa-brands-400-b823fc0d.ttf   178 KiB               [emitted]              
+              media/webfonts/fa-brands-400-ebb7a127.woff2   103 KiB               [emitted]              
+             media/webfonts/fa-regular-400-0caf4c6c.woff2  23.4 KiB               [emitted]              
+               media/webfonts/fa-regular-400-0d03b1bb.ttf  59.1 KiB               [emitted]              
+               media/webfonts/fa-solid-900-59edf72a.woff2   151 KiB               [emitted]              
+                 media/webfonts/fa-solid-900-e615bbcb.ttf   379 KiB               [emitted]              
+           media/webfonts/fa-v4compatibility-4baccb54.ttf  10.3 KiB               [emitted]              
+         media/webfonts/fa-v4compatibility-afac8956.woff2  4.84 KiB               [emitted]              
+Entrypoint application = js/application-1d2ee1bb5ac1f167bf12.js js/application-1d2ee1bb5ac1f167bf12.js.map
+[./app/frontend/channels sync recursive _channel\.js$] ./app/frontend/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/frontend/channels/index.js] 211 bytes {application} [built]
+[./app/frontend/images sync recursive ^\.\/.*$] ./app/frontend/images sync ^\.\/.*$ 178 bytes {application} [built]
+[./app/frontend/images/favicon.ico] 103 bytes {application} [optional] [built]
+[./app/frontend/packs/application.js] 648 bytes {application} [built]
+[./app/frontend/styles/application.scss] 664 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/frontend/styles/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/frontend/styles/application.scss 744 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 75 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 28.5ms | Allocations: 7358)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.3ms | Allocations: 64)
+  Rendered layout layouts/application.html.slim (Duration: 18729.4ms | Allocations: 13829)
+Completed 200 OK in 18733ms (Views: 18732.4ms | ActiveRecord: 2.2ms | Allocations: 14607)
+
+
