@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :bulletins
+
   def self.login_with_omniauth(auth)
     user = find_or_initialize_by(uid: auth.uid)
     user.uid = auth.uid

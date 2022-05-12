@@ -10,5 +10,6 @@ html
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   body
     = render 'layouts/shared/nav'
-    = render 'layouts/shared/flash'
-    = yield
+    .container
+      = render 'layouts/shared/flash'
+      = yield
