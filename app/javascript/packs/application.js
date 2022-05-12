@@ -9,6 +9,7 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import "@fortawesome/fontawesome-free/css/all"
 require("bootstrap");
+const images = require.context('../images', true)
 
 Rails.start()
 Turbolinks.start()

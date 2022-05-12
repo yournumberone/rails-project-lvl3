@@ -1,16 +1,17 @@
 {
-  "application.js": "/packs/js/application-2753991dc78bbcaa1d01.js",
-  "application.js.map": "/packs/js/application-2753991dc78bbcaa1d01.js.map",
+  "application.js": "/packs/js/application-acd65231ce2cc8863fdd.js",
+  "application.js.map": "/packs/js/application-acd65231ce2cc8863fdd.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-2753991dc78bbcaa1d01.js"
+        "/packs/js/application-acd65231ce2cc8863fdd.js"
       ],
       "js.map": [
-        "/packs/js/application-2753991dc78bbcaa1d01.js.map"
+        "/packs/js/application-acd65231ce2cc8863fdd.js.map"
       ]
     }
   },
+  "media/images/favicon.ico": "/packs/media/images/favicon-95386d8488b4063077f05f38d8438c06.ico",
   "media/webfonts/fa-brands-400.ttf": "/packs/media/webfonts/fa-brands-400-b823fc0d.ttf",
   "media/webfonts/fa-brands-400.woff2": "/packs/media/webfonts/fa-brands-400-ebb7a127.woff2",
   "media/webfonts/fa-regular-400.ttf": "/packs/media/webfonts/fa-regular-400-0d03b1bb.ttf",
