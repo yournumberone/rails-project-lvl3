@@ -6720,3 +6720,181 @@ Migrating to AddAdminToUsers (20220512102049)
   [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-05-12 14:30:08 +0300
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20220512111122_update_admins_list.rb
+
+
+):
+  
+activerecord (6.1.5) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.5) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.5) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.5) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.5) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.5) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+rollbar (3.3.0) lib/rollbar/middleware/rails/rollbar.rb:25:in `block in call'
+rollbar (3.3.0) lib/rollbar.rb:145:in `scoped'
+rollbar (3.3.0) lib/rollbar/middleware/rails/rollbar.rb:22:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+rollbar (3.3.0) lib/rollbar/middleware/rails/show_exceptions.rb:22:in `call_with_rollbar'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/rails/actions" for 127.0.0.1 at 2022-05-12 14:30:18 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to UpdateAdminsList (20220512111122)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mars.shamgulov@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "admin" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2022-05-12 11:30:18.377310"], ["admin", 1], ["id", 1]]
+  [1m[36mActiveRecord::SchemaMigration Create (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220512111122"]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-05-12 14:30:18 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 12.7ms | Allocations: 9317)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 417.7ms | Allocations: 351646)
+  Rendered layouts/shared/_flash.html.slim (Duration: 7.5ms | Allocations: 3611)
+  Rendered layout layouts/application.html.slim (Duration: 571.1ms | Allocations: 392560)
+Completed 200 OK in 586ms (Views: 574.7ms | ActiveRecord: 0.3ms | Allocations: 395448)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-12 14:30:38 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (Duration: 0.3ms | Allocations: 56)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 18.6ms | Allocations: 7416)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.1ms | Allocations: 64)
+  Rendered layout layouts/application.html.slim (Duration: 38.0ms | Allocations: 14858)
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 1.9ms | Allocations: 15636)
+
+
+Started GET "/bulletins" for 127.0.0.1 at 2022-05-12 14:30:40 +0300
+Processing by Web::BulletinsController#index as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering web/bulletins/index.html.slim within layouts/application
+  [1m[36mBulletin Load (0.2ms)[0m  [1m[34mSELECT "bulletins".* FROM "bulletins" ORDER BY "bulletins"."created_at" DESC[0m
+  ↳ app/views/web/bulletins/index.html.slim:1
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Bulletin"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/web/bulletins/index.html.slim:9
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/web/bulletins/index.html.slim:9
+  Rendered web/bulletins/index.html.slim within layouts/application (Duration: 323.3ms | Allocations: 27497)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 9.8ms | Allocations: 1211)
+  Rendered layouts/shared/_flash.html.slim (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.slim (Duration: 353.0ms | Allocations: 35938)
+Completed 200 OK in 375ms (Views: 355.5ms | ActiveRecord: 3.2ms | Allocations: 40031)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--923d9ce9f59aa7969464dbf5fd7730fb420b94e8/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-05-05%20%D0%B2%204.27.17%20PM.png" for 127.0.0.1 at 2022-05-12 14:30:41 +0300
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--923d9ce9f59aa7969464dbf5fd7730fb420b94e8", "filename"=>"Снимок экрана 2022-05-05 в 4.27.17 PM"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (1.3ms) [0m[34mGenerated URL for file at key: ac30z1fe423uwe05adoq4osqm7y7 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZV016TUhveFptVTBNak4xZDJVd05XRmtiM0UwYjNOeGJUZDVOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWQxcGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0lESXdNakl0TURVdE1EVWdKVE5HSURRdU1qY3VNVGNnVUUwdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWNsUkRBbFFURWxSREFsUWtRbFJEQWxRamdsUkRBbFFrTWxSREFsUWtVbFJEQWxRa0VsTWpBbFJERWxPRVFsUkRBbFFrRWxSREVsT0RBbFJEQWxRakFsUkRBbFFrUWxSREFsUWpBbE1qQXlNREl5TFRBMUxUQTFKVEl3SlVRd0pVSXlKVEl3TkM0eU55NHhOeVV5TUZCTkxuQnVad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRG1sdFlXZGxMM0J1WndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wNS0xMlQxMTozNTo0MS4xMThaIiwicHVyIjoiYmxvYl9rZXkifX0=--1b497b1a56034a423b5926efba55d5ebdeceeecd/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-05-05%20%D0%B2%204.27.17%20PM.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZV016TUhveFptVTBNak4xZDJVd05XRmtiM0UwYjNOeGJUZDVOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWQxcGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0lESXdNakl0TURVdE1EVWdKVE5HSURRdU1qY3VNVGNnVUUwdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWNsUkRBbFFURWxSREFsUWtRbFJEQWxRamdsUkRBbFFrTWxSREFsUWtVbFJEQWxRa0VsTWpBbFJERWxPRVFsUkRBbFFrRWxSREVsT0RBbFJEQWxRakFsUkRBbFFrUWxSREFsUWpBbE1qQXlNREl5TFRBMUxUQTFKVEl3SlVRd0pVSXlKVEl3TkM0eU55NHhOeVV5TUZCTkxuQnVad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRG1sdFlXZGxMM0J1WndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wNS0xMlQxMTozNTo0MS4xMThaIiwicHVyIjoiYmxvYl9rZXkifX0=--1b497b1a56034a423b5926efba55d5ebdeceeecd/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-05-05%20%D0%B2%204.27.17%20PM.png
+Completed 302 Found in 21ms (ActiveRecord: 0.4ms | Allocations: 2794)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZV016TUhveFptVTBNak4xZDJVd05XRmtiM0UwYjNOeGJUZDVOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWQxcGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0lESXdNakl0TURVdE1EVWdKVE5HSURRdU1qY3VNVGNnVUUwdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWNsUkRBbFFURWxSREFsUWtRbFJEQWxRamdsUkRBbFFrTWxSREFsUWtVbFJEQWxRa0VsTWpBbFJERWxPRVFsUkRBbFFrRWxSREVsT0RBbFJEQWxRakFsUkRBbFFrUWxSREFsUWpBbE1qQXlNREl5TFRBMUxUQTFKVEl3SlVRd0pVSXlKVEl3TkM0eU55NHhOeVV5TUZCTkxuQnVad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRG1sdFlXZGxMM0J1WndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wNS0xMlQxMTozNTo0MS4xMThaIiwicHVyIjoiYmxvYl9rZXkifX0=--1b497b1a56034a423b5926efba55d5ebdeceeecd/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-05-05%20%D0%B2%204.27.17%20PM.png" for 127.0.0.1 at 2022-05-12 14:30:41 +0300
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"Снимок экрана 2022-05-05 в 4.27.17 PM"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 496)
+
+
+Started GET "/bulletins" for 127.0.0.1 at 2022-05-12 14:39:05 +0300
+Processing by Web::BulletinsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/web/bulletins_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.slim
+  Rendering web/bulletins/index.html.slim within layouts/application
+  [1m[36mBulletin Load (0.3ms)[0m  [1m[34mSELECT "bulletins".* FROM "bulletins" ORDER BY "bulletins"."created_at" DESC[0m
+  ↳ app/views/web/bulletins/index.html.slim:1
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Bulletin"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/web/bulletins/index.html.slim:9
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/web/bulletins/index.html.slim:9
+  Rendered web/bulletins/index.html.slim within layouts/application (Duration: 25.7ms | Allocations: 6253)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/web/authentication.rb:18:in `current_user'
+  Rendered layouts/shared/_nav.html.slim (Duration: 14.3ms | Allocations: 7857)
+  Rendered layouts/shared/_flash.html.slim (Duration: 5.2ms | Allocations: 3575)
+  Rendered layout layouts/application.html.slim (Duration: 126.5ms | Allocations: 44190)
+Completed 200 OK in 152ms (Views: 137.1ms | ActiveRecord: 1.8ms | Allocations: 46453)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--923d9ce9f59aa7969464dbf5fd7730fb420b94e8/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-05-05%20%D0%B2%204.27.17%20PM.png" for 127.0.0.1 at 2022-05-12 14:39:06 +0300
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--923d9ce9f59aa7969464dbf5fd7730fb420b94e8", "filename"=>"Снимок экрана 2022-05-05 в 4.27.17 PM"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (1.9ms) [0m[34mGenerated URL for file at key: ac30z1fe423uwe05adoq4osqm7y7 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZV016TUhveFptVTBNak4xZDJVd05XRmtiM0UwYjNOeGJUZDVOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWQxcGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0lESXdNakl0TURVdE1EVWdKVE5HSURRdU1qY3VNVGNnVUUwdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWNsUkRBbFFURWxSREFsUWtRbFJEQWxRamdsUkRBbFFrTWxSREFsUWtVbFJEQWxRa0VsTWpBbFJERWxPRVFsUkRBbFFrRWxSREVsT0RBbFJEQWxRakFsUkRBbFFrUWxSREFsUWpBbE1qQXlNREl5TFRBMUxUQTFKVEl3SlVRd0pVSXlKVEl3TkM0eU55NHhOeVV5TUZCTkxuQnVad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRG1sdFlXZGxMM0J1WndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wNS0xMlQxMTo0NDowNi4zMTBaIiwicHVyIjoiYmxvYl9rZXkifX0=--be219924101d6609e624e28f6520bd0c201d5519/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-05-05%20%D0%B2%204.27.17%20PM.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZV016TUhveFptVTBNak4xZDJVd05XRmtiM0UwYjNOeGJUZDVOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWQxcGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0lESXdNakl0TURVdE1EVWdKVE5HSURRdU1qY3VNVGNnVUUwdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWNsUkRBbFFURWxSREFsUWtRbFJEQWxRamdsUkRBbFFrTWxSREFsUWtVbFJEQWxRa0VsTWpBbFJERWxPRVFsUkRBbFFrRWxSREVsT0RBbFJEQWxRakFsUkRBbFFrUWxSREFsUWpBbE1qQXlNREl5TFRBMUxUQTFKVEl3SlVRd0pVSXlKVEl3TkM0eU55NHhOeVV5TUZCTkxuQnVad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRG1sdFlXZGxMM0J1WndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wNS0xMlQxMTo0NDowNi4zMTBaIiwicHVyIjoiYmxvYl9rZXkifX0=--be219924101d6609e624e28f6520bd0c201d5519/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-05-05%20%D0%B2%204.27.17%20PM.png
+Completed 302 Found in 15ms (ActiveRecord: 0.2ms | Allocations: 1886)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZV016TUhveFptVTBNak4xZDJVd05XRmtiM0UwYjNOeGJUZDVOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWQxcGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ0pUTkdKVE5HSlROR0pUTkdKVE5HSlROR0lESXdNakl0TURVdE1EVWdKVE5HSURRdU1qY3VNVGNnVUUwdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWNsUkRBbFFURWxSREFsUWtRbFJEQWxRamdsUkRBbFFrTWxSREFsUWtVbFJEQWxRa0VsTWpBbFJERWxPRVFsUkRBbFFrRWxSREVsT0RBbFJEQWxRakFsUkRBbFFrUWxSREFsUWpBbE1qQXlNREl5TFRBMUxUQTFKVEl3SlVRd0pVSXlKVEl3TkM0eU55NHhOeVV5TUZCTkxuQnVad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRG1sdFlXZGxMM0J1WndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wNS0xMlQxMTo0NDowNi4zMTBaIiwicHVyIjoiYmxvYl9rZXkifX0=--be219924101d6609e624e28f6520bd0c201d5519/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-05-05%20%D0%B2%204.27.17%20PM.png" for 127.0.0.1 at 2022-05-12 14:39:06 +0300
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"Снимок экрана 2022-05-05 в 4.27.17 PM"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 332)
+
+
