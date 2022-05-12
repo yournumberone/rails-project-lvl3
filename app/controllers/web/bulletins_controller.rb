@@ -2,7 +2,7 @@ class Web::BulletinsController < ApplicationController
   before_action :authenticate_user!, only: %i[new create update destroy]
 
   def index
-    @bulletins = Bulletin.order(:desc)
+    @bulletins = Bulletin.order(created_at: :desc)
   end
 
   def show
