@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class BulletinPolicy < ApplicationPolicy
   def update?
     return false if user.nil?

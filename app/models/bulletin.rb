@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Bulletin < ApplicationRecord
   include AASM
 
@@ -5,8 +7,8 @@ class Bulletin < ApplicationRecord
   belongs_to :category
   has_one_attached :image
 
-  validates :title, presence: true, length: {maximum: 50}
-  validates :description, presence: true, length: {maximum: 1000}
+  validates :title, presence: true, length: { maximum: 50 }
+  validates :description, presence: true, length: { maximum: 1000 }
   validates :image, attached: true, size: { less_than: 5.megabytes, message: 'too_large_image' }
 
   aasm column: :state, whiny_transitions: false do

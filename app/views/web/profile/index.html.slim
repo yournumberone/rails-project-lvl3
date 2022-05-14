@@ -10,31 +10,38 @@ nav.my-3
       = t('under_moderation')
     button.nav-link id="nav-published-tab" data-bs-toggle="tab" data-bs-target="#nav-published" type="button" role="tab" aria-controls="nav-published" aria-selected="false"
       = t('published')
-    button.nav-link id="nav-archived-tab" data-bs-toggle="tab" data-bs-target="#nav-archived" type="button" role="tab" aria-controls="nav-archived" aria-selected="false"
-      = t('archived')
     button.nav-link id="nav-rejected-tab" data-bs-toggle="tab" data-bs-target="#nav-rejected" type="button" role="tab" aria-controls="nav-rejected" aria-selected="false"
       = t('rejected')
+    button.nav-link id="nav-archived-tab" data-bs-toggle="tab" data-bs-target="#nav-archived" type="button" role="tab" aria-controls="nav-archived" aria-selected="false"
+      = t('archived')
+
 
   .tab-content id="nav-tabContent"
+    .row.text-info
+      .col-4
+        = t('title')
+      .col-1
+        = t('status')
+      .col-7
+        = t('actions')
+    hr.text-info
 
     .tab-pane.fade.show.active id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab"
       - @bulletins.each do |bulletin|
-        = bulletin.title
-        - if bulletin.may_archive?
-          = link_to t('to_archive'), archive_bulletin_path(bulletin), method: :patch, data: { confirm: t('confirm_to_archive') }
+        = render partial: 'web/profile/list', locals: { bulletin: bulletin }
 
     .tab-pane.fade id="nav-moderating" role="tabpanel" aria-labelledby="nav-moderating-tab"
       - @under_moderation_bulletins.each do |bulletin|
-        = bulletin.title
+        = render partial: 'web/profile/list', locals: { bulletin: bulletin }
 
     .tab-pane.fade id="nav-published" role="tabpanel" aria-labelledby="nav-published-tab"
       - @published_bulletins.each do |bulletin|
-        = bulletin.title
+        = render partial: 'web/profile/list', locals: { bulletin: bulletin }
 
     .tab-pane.fade id="nav-rejected" role="tabpanel" aria-labelledby="nav-rejected-tab"
       - @rejected_bulletins.each do |bulletin|
-        = bulletin.title
+        = render partial: 'web/profile/list', locals: { bulletin: bulletin }
 
     .tab-pane.fade id="nav-archived" role="tabpanel" aria-labelledby="nav-archived-tab"
       - @archived_bulletins.each do |bulletin|
-        = bulletin.title
+        = render partial: 'web/profile/list', locals: { bulletin: bulletin }

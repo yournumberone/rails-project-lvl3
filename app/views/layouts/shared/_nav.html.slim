@@ -2,22 +2,16 @@ nav.navbar.navbar-expand-lg.bg-dark.bg-gradient.px-3.mb-3.rounded-bottom.border-
   .container-fluid
     = link_to t('Board'), root_path, class: 'navbar-brand text-warning'
 
-  ul.navbar-nav.me-auto.mb-2.mb-lg-0
+  .navbar-nav.me-auto.mb-2.mb-lg-0
 
-  li.nav-item.text-light
-    = link_to t('home'), root_path, class: 'nav-link active text-light'
+  .nav-item.text-light
+    = link_to t('administration'), admin_bulletins_path, class: 'nav-link active text-light'
 
-  li.nav-item
-    = link_to t('.bulletins'), bulletins_path, class: 'nav-link text-light'
+  - if signed_in? && current_user.admin?
+    .nav-item
+      = link_to t('bulletins'), bulletins_path, class: 'nav-link text-light'
 
-  / - if current_page?(bulletins_path) || current_page?(root_path)
-  /   = search_form_for @q, class: 'form d-flex mx-3 w-50' do |f|
-  /     .input-group
-  /       = f.search_field :body_or_title_cont, class: 'form-control border-end-0 border-success', placeholder: 'Search...'
-  /       = f.button :button, class: 'btn btn-outline-success border-start-0 input-group-append' do
-  /         i.fa-solid.fa-magnifying-glass
-
-  li.nav-item.dropdown
+  .nav-item.dropdown
     a#navbarDropdown.nav-link.dropdown-toggle.text-light[href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false']
       - if signed_in? && current_user.avatar_url.present?
         = current_user.name
@@ -26,7 +20,7 @@ nav.navbar.navbar-expand-lg.bg-dark.bg-gradient.px-3.mb-3.rounded-bottom.border-
         i.fa-solid.fa-house-user.text-light
       else
 
-    ul.dropdown-menu-end.bg-dark.bg-gradient.dropdown-menu[aria-labelledby="navbarDropdown"]
+    .dropdown-menu-end.bg-dark.bg-gradient.dropdown-menu[aria-labelledby="navbarDropdown"]
       - if signed_in?
         li
           = link_to t('profile'), profile_path, class: 'dropdown-item text-secondary'

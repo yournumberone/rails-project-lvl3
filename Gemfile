@@ -31,10 +31,10 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'active_storage_validations'
 gem 'aws-sdk-s3'
 gem 'faker'
-gem "kaminari", "~> 1.2"
+gem 'kaminari', '~> 1.2'
 gem 'omniauth-github'
 gem 'omniauth-rails_csrf_protection'
-gem "pundit", "~> 2.2"
+gem 'pundit', '~> 2.2'
 gem 'ransack'
 gem 'rollbar'
 gem 'simple_form'
@@ -75,4 +75,4 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
-gem "aasm", "~> 5.2"
+gem 'aasm', '~> 5.2'

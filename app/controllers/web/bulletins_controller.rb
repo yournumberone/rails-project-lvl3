@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Web::BulletinsController < ApplicationController
   before_action :authenticate_user!, only: %i[new create update destroy]
 
@@ -15,7 +17,6 @@ class Web::BulletinsController < ApplicationController
 
   def create
     @bulletin = current_user.bulletins.new(bulletin_params)
-    @bulletin.moderate
     if @bulletin.save
       redirect_to bulletin_path(@bulletin), notice: t('.success')
     else
@@ -31,7 +32,7 @@ class Web::BulletinsController < ApplicationController
   def update
     bulletin = set_bulletin
     if bulletin.update(bulletin_params)
-      redirect_to bulletin_path(bulletin), notice: t('.success')
+      redirect_to profile_path, notice: t('.success')
     else
       flash[:alert] = bulletin.errors.first.full_message
       render :edit
