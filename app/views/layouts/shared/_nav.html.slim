@@ -19,7 +19,7 @@ nav.navbar.bg-light.navbar-expand-lg.bg-dark.px-3.mb-3.rounded-bottom.border-bot
 
   li.nav-item.dropdown
     a#navbarDropdown.nav-link.dropdown-toggle.text-light[href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false']
-      - if signed_in?
+      - if signed_in? && current_user.avatar_url.present?
         = current_user.name
         = image_tag current_user.avatar_url, size: '32x32', class: 'rounded-circle ms-2'
       - else
