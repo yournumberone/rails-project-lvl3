@@ -10,10 +10,21 @@ Rails.application.routes.draw do
     get 'sign_in', to: 'auth#new'
     delete 'sign_out', to: 'auth#destroy'
 
-    resources :bulletins
+    resources :bulletins do
+      member do
+        patch 'archive'
+        patch 'to_moderate'
+      end
+    end
 
     namespace :admin do
-      resources :bulletins
+      resources :bulletins do
+        member do
+          patch 'reject'
+          patch 'publish'
+          patch 'archive'
+        end
+      end
       resources :categories
       resources :users
     end

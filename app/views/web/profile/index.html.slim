@@ -1,7 +1,40 @@
-- @draft_bulletins.each do |bulletin|
-  = bulletin.title
-  - if bulletin.may_moderate?
-    = simple_form_for bulletin, method: :patch do |f|
-      = f.hidden_field :state, value: 'under_moderation'
-      = f.submit t('to_moderate'), data: { confirm: t('confirm_to_moderate') }
-    br
+.d-flex.justify-content-between
+  h1
+    = t('my_bulletins')
+  = link_to t('new_bulletin'), new_bulletin_path, class: 'btn btn-primary btn-lg'
+nav.my-3
+  .nav.nav-tabs.my-3 id="nav-tab" role="tablist"
+    button.nav-link.active id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-all" type="button" role="tab" aria-controls="nav-all" aria-selected="true"
+      = t('all')
+    button.nav-link id="nav-moderating-tab" data-bs-toggle="tab" data-bs-target="#nav-moderating" type="button" role="tab" aria-controls="nav-moderating" aria-selected="false"
+      = t('under_moderation')
+    button.nav-link id="nav-published-tab" data-bs-toggle="tab" data-bs-target="#nav-published" type="button" role="tab" aria-controls="nav-published" aria-selected="false"
+      = t('published')
+    button.nav-link id="nav-archived-tab" data-bs-toggle="tab" data-bs-target="#nav-archived" type="button" role="tab" aria-controls="nav-archived" aria-selected="false"
+      = t('archived')
+    button.nav-link id="nav-rejected-tab" data-bs-toggle="tab" data-bs-target="#nav-rejected" type="button" role="tab" aria-controls="nav-rejected" aria-selected="false"
+      = t('rejected')
+
+  .tab-content id="nav-tabContent"
+
+    .tab-pane.fade.show.active id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab"
+      - @bulletins.each do |bulletin|
+        = bulletin.title
+        - if bulletin.may_archive?
+          = link_to t('to_archive'), archive_bulletin_path(bulletin), method: :patch, data: { confirm: t('confirm_to_archive') }
+
+    .tab-pane.fade id="nav-moderating" role="tabpanel" aria-labelledby="nav-moderating-tab"
+      - @under_moderation_bulletins.each do |bulletin|
+        = bulletin.title
+
+    .tab-pane.fade id="nav-published" role="tabpanel" aria-labelledby="nav-published-tab"
+      - @published_bulletins.each do |bulletin|
+        = bulletin.title
+
+    .tab-pane.fade id="nav-rejected" role="tabpanel" aria-labelledby="nav-rejected-tab"
+      - @rejected_bulletins.each do |bulletin|
+        = bulletin.title
+
+    .tab-pane.fade id="nav-archived" role="tabpanel" aria-labelledby="nav-archived-tab"
+      - @archived_bulletins.each do |bulletin|
+        = bulletin.title

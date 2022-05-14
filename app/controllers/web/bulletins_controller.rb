@@ -15,6 +15,7 @@ class Web::BulletinsController < ApplicationController
 
   def create
     @bulletin = current_user.bulletins.new(bulletin_params)
+    @bulletin.moderate
     if @bulletin.save
       redirect_to bulletin_path(@bulletin), notice: t('.success')
     else
@@ -41,10 +42,34 @@ class Web::BulletinsController < ApplicationController
     @bulletin = set_bulletin
   end
 
+  def moderate
+    bulletin = set_bulletin
+
+    if bulletin.may_moderate?
+      bulletin.moderate!
+      redirect_to profile_path, notice: t('.success')
+    else
+      flash[:alert] = bulletin.errors.first.full_message
+      redirect_to bulletin_path(bulletin)
+    end
+  end
+
+  def archive
+    bulletin = set_bulletin
+
+    if bulletin.may_archive?
+      bulletin.archive!
+      redirect_to profile_path, notice: t('.success')
+    else
+      flash[:alert] = bulletin.errors.first.full_message
+      redirect_to bulletin_path(bulletin)
+    end
+  end
+
   private
 
   def bulletin_params
-    params.require(:bulletin).permit(%i[category_id title description image state])
+    params.require(:bulletin).permit(%i[category_id title description image])
   end
 
   def set_bulletin

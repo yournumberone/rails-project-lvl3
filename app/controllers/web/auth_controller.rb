@@ -14,6 +14,6 @@ class Web::AuthController < ApplicationController
 
   def destroy
     sign_out
-    redirect_to(root_path, notice: t('See Ya'))
+    redirect_to(root_path, notice: t('see_you'))
   end
 end

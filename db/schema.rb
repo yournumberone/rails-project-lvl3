@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_13_120044) do
+ActiveRecord::Schema.define(version: 2022_05_14_152806) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(version: 2022_05_13_120044) do
     t.string "uid"
     t.string "provider"
     t.boolean "admin", default: false
+    t.string "avatar_url"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
