@@ -32,3 +32,5 @@
 en:
   hello: "Hello world"
   introduce_yourself_cowboy: Register or sign in please.
+  to_moderate: Send to moderation
+  confirm_to_moderate: Ready?

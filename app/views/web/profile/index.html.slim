@@ -1,0 +1,7 @@
+- @draft_bulletins.each do |bulletin|
+  = bulletin.title
+  - if bulletin.may_moderate?
+    = simple_form_for bulletin, method: :patch do |f|
+      = f.hidden_field :state, value: 'under_moderation'
+      = f.submit t('to_moderate'), data: { confirm: t('confirm_to_moderate') }
+    br

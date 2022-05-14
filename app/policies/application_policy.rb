@@ -44,7 +44,6 @@ class ApplicationPolicy
 
     def resolve
       raise NotImplementedError, "You must define #resolve in #{self.class}"
-      scope.all if user.admin?
     end
 
     private
