@@ -1,9 +1,14 @@
-- @bulletins.each do |bulletin|
-  = link_to bulletin_path(bulletin) do
-    .card
-      .card-body
-        .card-title
-          = bulletin.title
-        .card-text
-          = bulletin.description
-          = image_tag(bulletin.image)
+= link_to t('new_bulletin'), new_bulletin_path, class: 'btn btn-primary btn-lg mt-3'
+.row.row-cols-1.row-cols-md-3.g-4.mt-2
+  - @bulletins.each do |bulletin|
+    = link_to bulletin_path(bulletin), class: 'text-decoration-none' do
+      .col
+        .card.bg-dark.text-light
+          = image_tag bulletin.image, class: 'card-img-top'
+          .card-body
+            .card-title
+              h3
+                = bulletin.title
+            .card-text
+              = bulletin.description
+

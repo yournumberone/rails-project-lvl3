@@ -1,0 +1,5 @@
+en:
+  web:
+    bulletins:
+      create:
+        success: 'Bulletin was successfully created!'

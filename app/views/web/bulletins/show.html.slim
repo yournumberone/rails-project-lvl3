@@ -3,4 +3,6 @@ h2
 small
   = @bulletin.category.name
 p
+  = image_tag(@bulletin.image, class: 'img-fluid m-3')
+p
   = @bulletin.description

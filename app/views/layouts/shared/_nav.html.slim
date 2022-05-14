@@ -1,4 +1,4 @@
-nav.navbar.bg-light.navbar-expand-lg.bg-dark.px-3.mb-3.rounded-bottom.border-bottom.border-warning.border-3.sticky-top
+nav.navbar.navbar-expand-lg.bg-dark.bg-gradient.px-3.mb-3.rounded-bottom.border-bottom.border-warning.border-1.sticky-top
   .container-fluid
     = link_to t('Board'), root_path, class: 'navbar-brand text-warning'
 
@@ -26,12 +26,12 @@ nav.navbar.bg-light.navbar-expand-lg.bg-dark.px-3.mb-3.rounded-bottom.border-bot
         i.fa-solid.fa-house-user.text-light
       else
 
-    ul.dropdown-menu-end.bg-dark.dropdown-menu[aria-labelledby="navbarDropdown"]
+    ul.dropdown-menu-end.bg-dark.bg-gradient.dropdown-menu[aria-labelledby="navbarDropdown"]
       - if signed_in?
         li
-          = link_to t('profile'), profile_path, class: 'dropdown-item text-light'
+          = link_to t('profile'), profile_path, class: 'dropdown-item text-secondary'
         li
-          = link_to t('sign_out'), sign_out_path, method: :delete, class: 'dropdown-item text-light'
+          = link_to t('sign_out'), sign_out_path, method: :delete, class: 'dropdown-item text-secondary'
       - else
         li
-          = link_to t('sign_in'), sign_in_path, class: 'dropdown-item text-light'
+          = link_to t('sign_in'), sign_in_path, class: 'dropdown-item text-secondary'
