@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-class Web::BulletinsController < ApplicationController
-  before_action :authenticate_user!, only: %i[new create update destroy]
+class Web::BulletinsController < Web::ApplicationController
+  before_action :authenticate_user!, only: %i[new create update destroy to_moderate archive]
 
   def index
-    @bulletins = Bulletin.published.order(created_at: :desc)
+    @bulletins = Bulletin.published.order(created_at: :desc).includes(:user)
   end
 
   def show
@@ -27,43 +27,51 @@ class Web::BulletinsController < ApplicationController
 
   def edit
     @bulletin = set_bulletin
+    authorize @bulletin
   end
 
   def update
-    bulletin = set_bulletin
-    if bulletin.update(bulletin_params)
+    @bulletin = set_bulletin
+    authorize @bulletin
+    if @bulletin.update(bulletin_params)
       redirect_to profile_path, notice: t('.success')
     else
-      flash[:alert] = bulletin.errors.first.full_message
+      flash[:alert] = @bulletin.errors.first.full_message
       render :edit
     end
   end
 
   def destroy
     @bulletin = set_bulletin
-  end
-
-  def moderate
-    bulletin = set_bulletin
-
-    if bulletin.may_moderate?
-      bulletin.moderate!
+    authorize @bulletin
+    if bulletin.destroy
       redirect_to profile_path, notice: t('.success')
     else
-      flash[:alert] = bulletin.errors.first.full_message
-      redirect_to bulletin_path(bulletin)
+      redirect_to profile_path, alert: t('.fail')
+    end
+  end
+
+  def to_moderate
+    @bulletin = set_bulletin
+    authorize @bulletin
+    if @bulletin.may_moderate?
+      @bulletin.moderate!
+      redirect_to profile_path, notice: t('.success')
+    else
+      flash[:alert] = @bulletin.errors.first.full_message
+      redirect_to bulletin_path(@bulletin)
     end
   end
 
   def archive
-    bulletin = set_bulletin
-
-    if bulletin.may_archive?
-      bulletin.archive!
+    @bulletin = set_bulletin
+    authorize @bulletin
+    if @bulletin.may_archive?
+      @bulletin.archive!
       redirect_to profile_path, notice: t('.success')
     else
-      flash[:alert] = bulletin.errors.first.full_message
-      redirect_to bulletin_path(bulletin)
+      flash[:alert] = @bulletin.errors.first.full_message
+      redirect_to bulletin_path(@bulletin)
     end
   end
 

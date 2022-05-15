@@ -1,13 +1,29 @@
 # frozen_string_literal: true
 
 class BulletinPolicy < ApplicationPolicy
-  def update?
+  def edit?
     return false if user.nil?
 
-    record.creator == user
+    record.user == user
+  end
+
+  def update?
+    edit?
   end
 
   def destroy?
-    record.creator == user
+    edit?
+  end
+
+  def archive?
+    edit?
+  end
+
+  def to_moderate?
+    edit?
+  end
+
+  def to_moderate?
+    edit?
   end
 end

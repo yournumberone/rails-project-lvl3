@@ -18,7 +18,7 @@ Rails.application.routes.draw do
     end
 
     namespace :admin do
-      resources :bulletins do
+      resources :bulletins, only: :index do
         member do
           patch 'reject'
           patch 'publish'

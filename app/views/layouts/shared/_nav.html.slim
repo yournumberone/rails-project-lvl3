@@ -4,21 +4,21 @@ nav.navbar.navbar-expand-lg.bg-dark.bg-gradient.px-3.mb-3.rounded-bottom.border-
 
   .navbar-nav.me-auto.mb-2.mb-lg-0
 
-  .nav-item.text-light
-    = link_to t('administration'), admin_bulletins_path, class: 'nav-link active text-light'
+  - if policy([:admin, Bulletin]).index?
+    .nav-item.text-light
+      = link_to t('administration'), admin_bulletins_path, class: 'nav-link active text-warning'
 
-  - if signed_in? && current_user.admin?
-    .nav-item
-      = link_to t('bulletins'), bulletins_path, class: 'nav-link text-light'
+  .nav-item
+    = link_to t('bulletins'), bulletins_path, class: 'nav-link text-warning'
 
   .nav-item.dropdown
-    a#navbarDropdown.nav-link.dropdown-toggle.text-light[href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false']
+    a#navbarDropdown.nav-link.dropdown-toggle.text-secondary[href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false']
       - if signed_in? && current_user.avatar_url.present?
         = current_user.name
         = image_tag current_user.avatar_url, size: '32x32', class: 'rounded-circle ms-2'
       - else
         i.fa-solid.fa-house-user.text-light
-      else
+
 
     .dropdown-menu-end.bg-dark.bg-gradient.dropdown-menu[aria-labelledby="navbarDropdown"]
       - if signed_in?

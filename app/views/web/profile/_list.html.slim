@@ -1,11 +1,13 @@
 .row
   .col-4
     = bulletin.title
-  .col-1.text-secondary
+  .col-2.text-secondary
     = bulletin.state
-  .col-7
+  .col-6
+    =< link_to t('show'), bulletin_path(bulletin)
+    =< link_to t('edit'), edit_bulletin_path(bulletin)
+    - if bulletin.may_moderate?
+      =< link_to t('to_moderate'), to_moderate_bulletin_path(bulletin), method: :patch, data: { confirm: t('confirm_to_moderate') }
     - if bulletin.may_archive?
-      = link_to t('to_archive'), archive_bulletin_path(bulletin), method: :patch, data: { confirm: t('confirm_to_archive') }
-    - elsif bulletin.may_moderate?
-      = link_to t('to_moderate'), moderate_bulletin_path(bulletin), method: :patch, data: { confirm: t('confirm_to_moderate') }
+      =< link_to t('to_archive'), archive_bulletin_path(bulletin), method: :patch, data: { confirm: t('confirm_to_archive') }
 hr

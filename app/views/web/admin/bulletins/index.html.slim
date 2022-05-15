@@ -1,2 +1,34 @@
-- @bulletins.each do |bulletin|
-  = render partial: 'web/profile/list', locals: { bulletin: bulletin }
+.d-flex.justify-content-between
+  h1
+    = t('bulletins')
+nav.my-3
+  .nav.nav-tabs.my-3 id="nav-tab" role="tablist"
+    button.nav-link.active id="nav-moderating-tab" data-bs-toggle="tab" data-bs-target="#nav-moderating" type="button" role="tab" aria-controls="nav-moderating" aria-selected="true"
+      = t('under_moderation')
+    button.nav-link id="nav-all-tab" data-bs-toggle="tab" data-bs-target="#nav-all" type="button" role="tab" aria-controls="nav-all" aria-selected="false"
+      = t('all')
+    button.nav-link id="nav-archived-tab" data-bs-toggle="tab" data-bs-target="#nav-archived" type="button" role="tab" aria-controls="nav-archived" aria-selected="false"
+      = t('archived')
+
+
+  .tab-content id="nav-tabContent"
+    .row.text-info
+      .col-4
+        = t('title')
+      .col-2
+        = t('status')
+      .col-6
+        = t('actions')
+    hr.text-info
+
+    .tab-pane.fade.show.active id="nav-moderating" role="tabpanel" aria-labelledby="nav-moderating-tab"
+      - @under_moderation_bulletins.each do |bulletin|
+        = render partial: 'web/admin/bulletins/list', locals: { bulletin: bulletin }
+
+    .tab-pane.fade id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab"
+      - @bulletins.each do |bulletin|
+        = render partial: 'web/admin/bulletins/list', locals: { bulletin: bulletin }
+
+    .tab-pane.fade id="nav-archived" role="tabpanel" aria-labelledby="nav-archived-tab"
+      - @archived_bulletins.each do |bulletin|
+        = render partial: 'web/admin/bulletins/list', locals: { bulletin: bulletin }

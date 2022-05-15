@@ -1,8 +1,20 @@
 h2
   = @bulletin.title
-small
+.badge.bg-light.text-secondary
   = @bulletin.category.name
+small.mx-3
+  = datetime_abb_month(@bulletin.created_at)
 p
   = image_tag(@bulletin.image, class: 'img-fluid m-3 img-thumbnail')
 p
   = @bulletin.description
+hr
+
+h3
+  = t('contacts')
+p
+  b
+    = @bulletin.user.name
+  br
+  = t('email')
+  =< @bulletin.user.email
