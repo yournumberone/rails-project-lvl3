@@ -25,8 +25,7 @@ Rails.application.routes.draw do
           patch 'archive'
         end
       end
-      resources :categories
-      resources :users
+      resources :categories, only: %i[index create destroy]
     end
 
     get 'profile', to: 'profile#index'
