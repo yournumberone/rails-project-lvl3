@@ -3,7 +3,7 @@
 class User < ApplicationRecord
   has_many :bulletins
 
-  def self.login_with_omniauth(auth)
+  def self.login_with_oauth(auth)
     user = find_or_initialize_by(uid: auth.uid)
     user.uid = auth.uid
     user.avatar_url = auth.info.image

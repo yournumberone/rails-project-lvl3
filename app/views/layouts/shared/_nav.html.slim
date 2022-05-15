@@ -4,12 +4,20 @@ nav.navbar.navbar-expand-lg.bg-dark.bg-gradient.px-3.mb-3.rounded-bottom.border-
 
   .navbar-nav.me-auto.mb-2.mb-lg-0
 
-  - if policy([:admin, Bulletin]).index?
-    .nav-item.text-light
-      = link_to t('administration'), admin_bulletins_path, class: 'nav-link active text-warning'
-
   .nav-item
     = link_to t('bulletins'), bulletins_path, class: 'nav-link text-warning'
+
+  - if policy([:admin, Bulletin]).index?
+
+    .nav-item.dropdown
+      a#navbarDropdown.nav-link.dropdown-toggle.text-secondary[href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false']
+        = t('administration')
+
+      .dropdown-menu-end.bg-dark.bg-gradient.dropdown-menu[aria-labelledby="navbarDropdown"]
+          li
+            = link_to t('bulletins'), admin_bulletins_path, class: 'dropdown-item text-secondary'
+          li
+            = link_to t('categories'), admin_categories_path, class: 'dropdown-item text-secondary'
 
   .nav-item.dropdown
     a#navbarDropdown.nav-link.dropdown-toggle.text-secondary[href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false']

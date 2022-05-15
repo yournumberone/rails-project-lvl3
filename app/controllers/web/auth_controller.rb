@@ -3,7 +3,7 @@
 class Web::AuthController < ApplicationController
   def callback
     auth = request.env['omniauth.auth']
-    user = User.login_with_omniauth(auth)
+    user = User.login_with_oauth(auth)
     if user.save
       sign_in(user)
       redirect_to(root_path, notice: t('sup'))
