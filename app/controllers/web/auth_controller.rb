@@ -6,14 +6,14 @@ class Web::AuthController < ApplicationController
     user = User.login_with_oauth(auth)
     if user.save
       sign_in(user)
-      redirect_to(root_path, notice: t('sup'))
+      redirect_to root_path, notice: t('welcome', name: user.name)
     else
-      redirect_to(root_path, alert: t('oops'))
+      redirect_to root_path, alert: t('oops')
     end
   end
 
   def destroy
     sign_out
-    redirect_to(root_path, notice: t('see_you'))
+    redirect_to root_path, notice: t('see_you')
   end
 end

@@ -35,3 +35,6 @@ en:
   to_moderate: Send to moderation
   confirm_to_moderate: Ready?
   confirm_to_archive: After archiving, it will be impossible to restore the bulletin. Are you sure?
+  search: 'Search bulletin ...'
+  welcome: "Welcome %{name}"
+  see_you: "We will be missing you!"

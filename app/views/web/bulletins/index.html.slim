@@ -1,4 +1,14 @@
-= link_to t('new_bulletin'), new_bulletin_path, class: 'btn btn-primary btn-lg mt-3'
+.d-flex.justify-content-between
+  h1
+    = t('Bulletins')
+  = link_to t('new_bulletin'), new_bulletin_path, class: 'btn btn-outline-light btn-lg mt-3'
+.d-flex.justify-content-center
+  = search_form_for @q, class: 'form w-50' do |f|
+    .input-group
+      = f.search_field :title_cont, class: 'form-control form-control-lg border-0', placeholder: t('search')
+      = f.button :button, class: 'btn btn-light border-start-0 input-group-append' do
+        i.fa-solid.fa-magnifying-glass
+
 .row.row-cols-1.row-cols-md-3.g-4.mt-2
   - @bulletins.each do |bulletin|
     = link_to bulletin_path(bulletin), class: 'text-decoration-none' do

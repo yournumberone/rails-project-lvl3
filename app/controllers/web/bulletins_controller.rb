@@ -4,7 +4,8 @@ class Web::BulletinsController < Web::ApplicationController
   before_action :authenticate_user!, only: %i[new create update destroy to_moderate archive]
 
   def index
-    @bulletins = Bulletin.published.order(created_at: :desc).includes(:user)
+    @q = Bulletin.published.ransack(params[:q])
+    @bulletins = @q.result.order(created_at: :desc).includes(:user)
   end
 
   def show
