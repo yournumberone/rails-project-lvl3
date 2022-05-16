@@ -5,7 +5,7 @@ class Web::ProfileController < Web::ApplicationController
 
   def index
     @q = current_user.bulletins.ransack(params[:q])
-    @bulletins = @q.result.order(created_at: :desc)
+    @bulletins = @q.result.order(created_at: :desc).page(params[:page])
     @draft_bulletins = @bulletins.draft
     @under_moderation_bulletins = @bulletins.under_moderation
     @published_bulletins = @bulletins.published

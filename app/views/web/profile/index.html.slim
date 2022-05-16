@@ -25,14 +25,15 @@ nav.my-3
 
 
   .tab-content id="nav-tabContent"
-    .row.text-info
-      .col-4
-        = t('title')
-      .col-2
-        = t('status')
-      .col-6
-        = t('actions')
-    hr.text-info
+    = paginate @bulletins, theme: 'bootstrap-5', pagination_class: 'pagination-sm flex-wrap justify-content-end', nav_class: 'd-inline-block'
+      .row.text-info
+        .col-4
+          = t('title')
+        .col-2
+          = t('status')
+        .col-6
+          = t('actions')
+      hr.text-info
 
     .tab-pane.fade.show.active id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab"
       - @bulletins.each do |bulletin|

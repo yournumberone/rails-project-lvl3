@@ -20,5 +20,5 @@
               h3
                 = bulletin.title
             .card-text
-
+= paginate @bulletins, theme: 'bootstrap-5', pagination_class: 'pagination-sm flex-wrap justify-content-end', nav_class: 'd-inline-block'
 

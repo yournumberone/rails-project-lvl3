@@ -5,7 +5,7 @@ class Web::BulletinsController < Web::ApplicationController
 
   def index
     @q = Bulletin.published.ransack(params[:q])
-    @bulletins = @q.result.order(created_at: :desc).includes(:user)
+    @bulletins = @q.result.order(created_at: :desc).includes(:user).page(params[:page])
   end
 
   def show

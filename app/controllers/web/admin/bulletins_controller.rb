@@ -5,7 +5,7 @@ class Web::Admin::BulletinsController < Web::Admin::ApplicationController
   def index
     authorize [:admin, Bulletin]
     @q = Bulletin.ransack(params[:q])
-    @bulletins = @q.result.order(created_at: :desc).includes(:user)
+    @bulletins = @q.result.order(created_at: :desc).includes(:user).page(params[:page])
     @under_moderation_bulletins = @bulletins.under_moderation
     @archived_bulletins = @bulletins.archived
   end
