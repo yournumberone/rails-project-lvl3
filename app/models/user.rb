@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
-  has_many :bulletins
+  has_many :bulletins, dependent: :delete_all
 
   def self.login_with_oauth(auth)
     user = find_or_initialize_by(uid: auth.uid)

@@ -78,4 +78,4 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'aasm', '~> 5.2'
 
-gem "minitest-power_assert", "~> 0.3.1"
+gem 'minitest-power_assert', '~> 0.3.1'

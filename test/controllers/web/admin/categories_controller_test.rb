@@ -3,7 +3,6 @@
 require 'test_helper'
 
 class Web::Admin::CategoriesControllerTest < ActionDispatch::IntegrationTest
-
   setup do
     @category = categories(:one)
     sign_in users(:two)

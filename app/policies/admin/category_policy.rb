@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Admin::CategoryPolicy < ApplicationPolicy
   def index?
     return false if user.nil?

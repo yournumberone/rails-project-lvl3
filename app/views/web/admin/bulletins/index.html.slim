@@ -16,7 +16,6 @@ nav.my-3
     button.nav-link id="nav-archived-tab" data-bs-toggle="tab" data-bs-target="#nav-archived" type="button" role="tab" aria-controls="nav-archived" aria-selected="false"
       = t('archived')
 
-
   .tab-content id="nav-tabContent"
     = paginate @bulletins, theme: 'bootstrap-5', pagination_class: 'pagination-sm flex-wrap justify-content-end', nav_class: 'd-inline-block'
       .row.text-info

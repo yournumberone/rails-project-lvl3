@@ -22,8 +22,4 @@ class BulletinPolicy < ApplicationPolicy
   def to_moderate?
     edit?
   end
-
-  def to_moderate?
-    edit?
-  end
 end

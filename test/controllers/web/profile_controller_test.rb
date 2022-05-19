@@ -3,7 +3,6 @@
 require 'test_helper'
 
 class Web::ProfileControllerTest < ActionDispatch::IntegrationTest
-
   setup do
     sign_in users(:two)
   end

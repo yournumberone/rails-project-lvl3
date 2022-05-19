@@ -3,7 +3,6 @@
 require 'test_helper'
 
 class Web::Admin::BulletinControllerTest < ActionDispatch::IntegrationTest
-
   setup do
     @bulletin = bulletins(:two)
     # admin is not bulletin's owner

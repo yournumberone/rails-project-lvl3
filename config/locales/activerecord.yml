@@ -1,0 +1,8 @@
+en:
+  activerecord:
+    errors:
+      models:
+        bulletin:
+          attributes:
+            image:
+              too_large: 'Too large size to upload. Try another: maximum size 5 Mb'
