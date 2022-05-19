@@ -6,7 +6,7 @@
   = search_form_for @q, class: 'form w-50' do |f|
     .input-group
       = f.search_field :title_cont, class: 'form-control form-control-lg border-0', placeholder: t('search')
-      = f.button :button, class: 'btn btn-light border-start-0 input-group-append' do
+      = f.button :button, class: 'btn btn-light bg-white border-start-0 input-group-append' do
         i.fa-solid.fa-magnifying-glass
 
 .row.row-cols-1.row-cols-md-3.g-4.mt-2
@@ -14,7 +14,7 @@
     = link_to bulletin_path(bulletin), class: 'text-decoration-none' do
       .col
         .card.bg-dark.text-light
-          = image_tag bulletin.image, class: 'card-img-top img-thumbnail'
+          = image_tag bulletin.image, class: 'card-img-top img-thumbnail x-cards-image-size'
           .card-body
             .card-title
               h3

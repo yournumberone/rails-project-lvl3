@@ -45,7 +45,7 @@ class Web::BulletinsController < Web::ApplicationController
   def destroy
     @bulletin = set_bulletin
     authorize @bulletin
-    if bulletin.destroy
+    if @bulletin.destroy
       redirect_to profile_path, notice: t('.success')
     else
       redirect_to profile_path, alert: t('.fail')

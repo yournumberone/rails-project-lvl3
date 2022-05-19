@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class Admin::BulletinPolicy < ApplicationPolicy
-
   def index?
     return false if user.nil?
 

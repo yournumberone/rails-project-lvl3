@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class Web::Admin::BulletinsController < Web::Admin::ApplicationController
-
   def index
     authorize [:admin, Bulletin]
     @q = Bulletin.ransack(params[:q])
@@ -17,8 +16,8 @@ class Web::Admin::BulletinsController < Web::Admin::ApplicationController
       bulletin.reject!
       redirect_to admin_bulletins_path, notice: t('.success')
     else
-      flash[:alert] = bulletin.errors.first.full_message
-      redirect_to admin_bulletins_path
+      flash[:alert] = t('.fail')
+      redirect_to bulletin_path(bulletin)
     end
   end
 
@@ -29,8 +28,8 @@ class Web::Admin::BulletinsController < Web::Admin::ApplicationController
       bulletin.publish!
       redirect_to admin_bulletins_path, notice: t('.success')
     else
-      flash[:alert] = bulletin.errors.first.full_message
-      redirect_to admin_bulletins_path
+      flash[:alert] = t('.fail')
+      redirect_to bulletin_path(bulletin)
     end
   end
 
@@ -41,8 +40,8 @@ class Web::Admin::BulletinsController < Web::Admin::ApplicationController
       bulletin.archive!
       redirect_to admin_bulletins_path, notice: t('.success')
     else
-      flash[:alert] = bulletin.errors.first.full_message
-      redirect_to admin_bulletins_path
+      flash[:alert] = t('.fail')
+      redirect_to bulletin_path(bulletin)
     end
   end
 end

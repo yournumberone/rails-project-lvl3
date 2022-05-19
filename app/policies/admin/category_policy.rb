@@ -1,5 +1,4 @@
 class Admin::CategoryPolicy < ApplicationPolicy
-
   def index?
     return false if user.nil?
 

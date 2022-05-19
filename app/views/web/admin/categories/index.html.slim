@@ -3,6 +3,7 @@ h1
 h4.text-secondary
   = t('new')
 = simple_form_for @category, url: admin_categories_path do |f|
+  = f.error_notification
   = f.input_field :name, class: 'form-control bg-dark text-light'
   = f.button :submit, class: 'btn btn-outline-light my-2'
 

@@ -4,8 +4,9 @@ h2
   = @bulletin.category.name
 small.mx-3
   = datetime_abb_month(@bulletin.created_at)
-p
-  = image_tag(@bulletin.image, class: 'img-fluid m-3 img-thumbnail')
+.col-4
+  - if @bulletin.image_attachment
+    = image_tag(@bulletin&.image, class: 'img-fluid my-3 img-thumbnail')
 p
   = @bulletin.description
 hr

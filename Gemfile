@@ -30,9 +30,9 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'active_storage_validations'
 gem 'aws-sdk-s3'
+gem 'bootstrap5-kaminari-views'
 gem 'faker'
 gem 'kaminari', '~> 1.2'
-gem 'bootstrap5-kaminari-views'
 gem 'omniauth-github'
 gem 'omniauth-rails_csrf_protection'
 gem 'pundit', '~> 2.2'
@@ -77,3 +77,5 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'aasm', '~> 5.2'
+
+gem "minitest-power_assert", "~> 0.3.1"

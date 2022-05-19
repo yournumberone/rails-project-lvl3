@@ -4,7 +4,7 @@ h1
   = search_form_for @q, url: profile_path, class: 'form w-50' do |f|
     .input-group
       = f.search_field :title_cont, class: 'form-control form-control-lg border-0', placeholder: t('search')
-      = f.button :button, class: 'btn btn-light border-start-0 input-group-append' do
+      = f.button :button, class: 'btn btn-light bg-white border-start-0 input-group-append' do
         i.fa-solid.fa-magnifying-glass
 
 nav.my-3

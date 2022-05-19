@@ -2,4 +2,35 @@ en:
   web:
     bulletins:
       create:
-        success: 'Bulletin was successfully created!'
+        success: Bulletin was successfully created
+        fail: Bulletin was not created
+      update:
+        success: Bulletin was successfully updated
+        fail: Bulletin was not updated
+      destroy:
+        success: Bulletin was successfully destroyed
+        fail: Bulletin was not destroyed
+      archive:
+        success: Bulletin was archived
+        fail: Bulletin was not archived
+      to_moderate:
+        success: Bulletin has been sent under moderation
+        fail: Bulletin was not sent under moderation
+    admin:
+      categories:
+        create:
+          success: Category was created
+          fail: Category was not created
+        create:
+          success: Category was destroyed
+          fail: Category was not destroyed
+      bulletins:
+        publish:
+          success: Bulletin was published
+          fail: Bulletin was not published
+        reject:
+          success: Bulletin was rejected
+          fail: Bulletin was not rejected
+        archive:
+          success: Bulletin was archived
+          fail: Bulletin was not archived

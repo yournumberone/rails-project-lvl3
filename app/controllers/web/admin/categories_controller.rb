@@ -13,7 +13,7 @@ class Web::Admin::CategoriesController < Web::Admin::ApplicationController
     if @category.save
       redirect_to admin_categories_path, notice: t('.success')
     else
-      redirect_to admin_categories_path, alert: t('.fail')
+      redirect_to admin_categories_path, alert: @category.errors.first.full_message
     end
   end
 
@@ -23,7 +23,7 @@ class Web::Admin::CategoriesController < Web::Admin::ApplicationController
     if @category.destroy
       redirect_to admin_categories_path, notice: t('.success')
     else
-      redirect_to admin_categories_path, alert: t('.fail')
+      redirect_to admin_categories_path, alert: @category.errors.first.full_message
     end
   end
 
