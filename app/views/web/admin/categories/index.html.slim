@@ -1,11 +1,8 @@
-h1
-  = t('categories')
-h4.text-secondary
-  = t('new')
-= simple_form_for @category, url: admin_categories_path do |f|
-  = f.error_notification
-  = f.input_field :name, class: 'form-control bg-dark text-light'
-  = f.button :submit, class: 'btn btn-outline-light my-2'
+.d-flex.justify-content-between
+  h1
+    = t('categories')
+  span
+    = link_to t('new_category'), new_admin_category_path, class: 'btn btn-outline-warning'
 
 hr.text-info
 h2.text-info

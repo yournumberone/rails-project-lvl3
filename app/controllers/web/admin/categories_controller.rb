@@ -7,6 +7,10 @@ class Web::Admin::CategoriesController < Web::Admin::ApplicationController
     @category = Category.new
   end
 
+  def new
+    @category = Category.new
+  end
+
   def create
     authorize [:admin, Category]
     @category = Category.new(category_params)

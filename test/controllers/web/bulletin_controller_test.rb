@@ -55,7 +55,7 @@ class Web::BulletinControllerTest < ActionDispatch::IntegrationTest
     @bulletin.reload
 
     assert(@bulletin.title == @attributes[:title])
-    assert_redirected_to profile_path
+    assert_redirected_to bulletin_path(@bulletin)
   end
 
   test 'should destroy bulletin' do

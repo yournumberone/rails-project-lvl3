@@ -5,13 +5,13 @@
 # below each fixture, per the syntax in the comments below
 #
 one:
-  uid: 101
+  uid: 12344
   email: bla@bla.com
   name: User1
   admin: false
-#
+
 two:
-  uid: 102
+  uid: 12345
   email: lol@kek.com
   name: User2
   admin: true

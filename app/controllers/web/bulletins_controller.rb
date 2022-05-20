@@ -35,7 +35,7 @@ class Web::BulletinsController < Web::ApplicationController
     @bulletin = set_bulletin
     authorize @bulletin
     if @bulletin.update(bulletin_params)
-      redirect_to profile_path, notice: t('.success')
+      redirect_to bulletin_path(@bulletin), notice: t('.success')
     else
       flash[:alert] = @bulletin.errors.first.full_message
       render :edit
