@@ -34,7 +34,6 @@ class Web::BulletinControllerTest < ActionDispatch::IntegrationTest
 
   test 'should create bulletin' do
     post bulletins_url, params: { bulletin: @attributes }
-
     bulletin = Bulletin.find_by(title: @attributes[:title])
     assert_redirected_to bulletin_path(bulletin.id)
   end

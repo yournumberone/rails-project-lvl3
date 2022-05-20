@@ -1,0 +1,13 @@
+en:
+  web:
+    admin:
+      categories:
+        update:
+          success: Category was updated
+          fail: Category was not updated
+        create:
+          success: Category was created
+          fail: Category was not created
+        destroy:
+          success: Category was destroyed
+          fail: Category was not destroyed

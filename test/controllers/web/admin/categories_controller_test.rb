@@ -21,6 +21,25 @@ class Web::Admin::CategoriesControllerTest < ActionDispatch::IntegrationTest
     assert_response :redirect
   end
 
+  test 'should get new' do
+    get new_admin_category_url
+    assert_response :success
+  end
+
+  test 'should get edit' do
+    get edit_admin_category_url(@category)
+    assert_response :success
+  end
+
+  test 'should update category' do
+    patch admin_category_url(@category), params: { category: @attributes }
+
+    @category.reload
+
+    assert(@category.name == @attributes[:name])
+    assert_redirected_to admin_category_url(@category)
+  end
+
   test 'should create a category' do
     post admin_categories_url, params: { category: @attributes }
 

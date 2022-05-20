@@ -7,6 +7,10 @@ class Web::Admin::CategoriesController < Web::Admin::ApplicationController
     @category = Category.new
   end
 
+  def show
+    @category = Category.find(params[:id])
+  end
+
   def new
     @category = Category.new
   end
@@ -18,6 +22,20 @@ class Web::Admin::CategoriesController < Web::Admin::ApplicationController
       redirect_to admin_categories_path, notice: t('.success')
     else
       redirect_to admin_categories_path, alert: @category.errors.first.full_message
+    end
+  end
+
+  def edit
+    @category = Category.find(params[:id])
+  end
+
+  def update
+    @category = Category.find(params[:id])
+    if @category.update(category_params)
+      redirect_to admin_category_path(@category), notice: t('.success')
+    else
+      flash[:alert] = @category.errors.first.full_message
+      render :edit
     end
   end
 

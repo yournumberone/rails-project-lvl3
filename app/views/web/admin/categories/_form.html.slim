@@ -1,4 +1,4 @@
-= simple_form_for @category, url: admin_categories_path do |f|
+= simple_form_for [:admin, category] do |f|
   = f.error_notification
   = f.label :name
   = f.input_field :name, class: 'form-control bg-dark text-light mt-1'

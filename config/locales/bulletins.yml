@@ -17,13 +17,6 @@ en:
         success: Bulletin has been sent under moderation
         fail: Bulletin was not sent under moderation
     admin:
-      categories:
-        create:
-          success: Category was created
-          fail: Category was not created
-        create:
-          success: Category was destroyed
-          fail: Category was not destroyed
       bulletins:
         publish:
           success: Bulletin was published

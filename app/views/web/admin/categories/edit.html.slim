@@ -1,0 +1,4 @@
+h1.my-3
+  = t('edit_category')
+= render partial: 'form', locals: { category: @category }
+= link_to t('categories'), admin_categories_path, class: 'btn btn-outline-primary'

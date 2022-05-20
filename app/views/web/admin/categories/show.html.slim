@@ -1,0 +1,6 @@
+h1.m-3
+  = @category.name
+span
+  = link_to t('categories'), admin_categories_path, class: 'btn btn-outline-primary'
+  =<  link_to t('delete'), admin_category_path(@category), method: :delete, data: { confirm: 'are_you_sure' }, class: 'btn btn-outline-danger'
+  =< link_to t('edit'), edit_admin_category_path(@category), class: 'btn btn-outline-warning'

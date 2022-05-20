@@ -1,16 +1,17 @@
 .d-flex.justify-content-between
-  h1
+  h1.text-info
     = t('categories')
   span
     = link_to t('new_category'), new_admin_category_path, class: 'btn btn-outline-warning'
 
 hr.text-info
-h2.text-info
-  = t('list_of_categories')
 .list-group
   = paginate @categories, theme: 'bootstrap-5', pagination_class: 'pagination-sm flex-wrap justify-content-end', nav_class: 'd-inline-block'
   - @categories.each do |category|
     .list-group-item.list-group-item-action.list-group-item-primary
       .d-flex.justify-content-between
-        = category.name
-        = link_to t('delete'), admin_category_path(category), method: :delete, data: { confirm: 'are_you_sure' }
+        = link_to admin_category_path(category) do
+          = category.name
+        div
+          = link_to t('delete'), admin_category_path(category), method: :delete, data: { confirm: 'are_you_sure' }
+          =< link_to t('edit'), edit_admin_category_path(category)
