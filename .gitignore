@@ -28,3 +28,6 @@
 *.sqlite33
 .vscode
 .env
+
+/public/packs
+/public/packs-test
