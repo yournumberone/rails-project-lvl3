@@ -2,7 +2,7 @@
   .col-4
     = bulletin.title
   .col-2.text-secondary
-    = bulletin.state
+    = bulletin.aasm.human_state
   .col-6
     =< link_to t('show'), bulletin_path(bulletin)
     =< link_to t('edit'), edit_bulletin_path(bulletin)

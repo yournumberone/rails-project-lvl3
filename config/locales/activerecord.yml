@@ -6,3 +6,11 @@ en:
           attributes:
             image:
               too_large: 'Too large size to upload. Try another: maximum size 5 Mb'
+    attributes:
+      bulletin:
+        state:
+          published: Published
+          archived: Archived
+          rejected: Rejected
+          under_moderation: Under Moderation
+          draft: Draft
