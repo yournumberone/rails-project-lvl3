@@ -16,6 +16,7 @@ h3
 p
   b
     = @bulletin.user.name
-  br
-  = t('email')
-  =< @bulletin.user.email
+    - if @bulletin.user.avatar_url
+      = image_tag @bulletin.user.avatar_url, size: '32x32', class: 'rounded-circle m-3'
+    =< t('email')
+    =< @bulletin.user.email

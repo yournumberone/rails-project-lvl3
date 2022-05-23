@@ -1,5 +1,4 @@
 = simple_form_for [:admin, category] do |f|
   = f.error_notification
-  = f.label :name
-  = f.input_field :name, class: 'form-control bg-dark text-light mt-1'
+  = f.input :name
   = f.button :submit, class: 'btn btn-outline-warning my-2'

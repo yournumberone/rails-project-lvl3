@@ -1,11 +1,11 @@
 nav.navbar.navbar-expand-lg.bg-dark.bg-gradient.px-3.mb-3.rounded-bottom.border-bottom.border-warning.border-1.sticky-top
   .container-fluid
-    = link_to t('Board'), root_path, class: 'navbar-brand text-warning'
+    = link_to t('board'), root_path, class: 'navbar-brand text-warning'
 
   .navbar-nav.me-auto.mb-2.mb-lg-0
 
   .nav-item
-    = link_to t('bulletins'), bulletins_path, class: 'nav-link text-warning'
+    = link_to t('bulletins'), bulletins_path, class: 'nav-link text-secondary'
 
   - if policy([:admin, Bulletin]).index?
 

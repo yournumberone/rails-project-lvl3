@@ -21,7 +21,7 @@ class Web::Admin::CategoriesController < Web::Admin::ApplicationController
     if @category.save
       redirect_to admin_categories_path, notice: t('.success')
     else
-      redirect_to admin_categories_path, alert: @category.errors.first.full_message
+      render :new
     end
   end
 
@@ -34,7 +34,6 @@ class Web::Admin::CategoriesController < Web::Admin::ApplicationController
     if @category.update(category_params)
       redirect_to admin_category_path(@category), notice: t('.success')
     else
-      flash[:alert] = @category.errors.first.full_message
       render :edit
     end
   end

@@ -34,7 +34,35 @@ en:
   introduce_yourself_cowboy: Register or sign in please.
   to_moderate: Send to moderation
   confirm_to_moderate: Ready?
+  confirm_to_reject: Invalid Bulletin? Send back
+  confirm_to_publish: Are you sure? Bulletin must be valid.
   confirm_to_archive: After archiving, it will be impossible to restore the bulletin. Are you sure?
   search: 'Search bulletin ...'
+  show: Show
+  delete: Delete
+  edit: Edit
+  to_archive: To archive
+  reject: Reject
+  publish: Publish
+  to_moderate: To moderation
   welcome: "Welcome %{name}"
   see_you: "We will be missing you!"
+  permission_denied: Permission denied
+  email: 'email: '
+  contacts: 'Contacts: '
+  board: Board
+  bulletins: Bulletins
+  administration: Administration
+  categories: Categories
+  profile: Profile
+  sign_out: Sign Out
+  sign_in: Sign In
+  new_bulletin: New Bulletin
+  my_bulletins: My Bulletins
+  new_category: New Category
+  published: Published
+  all: All
+  draft: Draft
+  rejected: Rejected
+  archived: Archived
+  under_moderation: Under Moderation

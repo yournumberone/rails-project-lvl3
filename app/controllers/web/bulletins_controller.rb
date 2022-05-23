@@ -5,11 +5,12 @@ class Web::BulletinsController < Web::ApplicationController
 
   def index
     @q = Bulletin.published.ransack(params[:q])
-    @bulletins = @q.result.order(created_at: :desc).includes(:user).page(params[:page])
+    @bulletins = @q.result.order(created_at: :desc).includes(:category).page(params[:page])
   end
 
   def show
     @bulletin = set_bulletin
+    authorize @bulletin
   end
 
   def new
@@ -21,7 +22,6 @@ class Web::BulletinsController < Web::ApplicationController
     if @bulletin.save
       redirect_to bulletin_path(@bulletin), notice: t('.success')
     else
-      flash[:alert] = @bulletin.errors.first.full_message
       render :new
     end
   end
@@ -37,7 +37,6 @@ class Web::BulletinsController < Web::ApplicationController
     if @bulletin.update(bulletin_params)
       redirect_to bulletin_path(@bulletin), notice: t('.success')
     else
-      flash[:alert] = @bulletin.errors.first.full_message
       render :edit
     end
   end

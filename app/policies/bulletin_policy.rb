@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 class BulletinPolicy < ApplicationPolicy
+  def show?
+    record.user == user || record.published? || user.admin?
+  end
+
   def edit?
     return false if user.nil?
 
