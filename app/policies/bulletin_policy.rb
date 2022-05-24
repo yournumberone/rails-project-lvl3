@@ -2,6 +2,8 @@
 
 class BulletinPolicy < ApplicationPolicy
   def show?
+    return false if user.nil?
+
     record.user == user || record.published? || user.admin?
   end
 
