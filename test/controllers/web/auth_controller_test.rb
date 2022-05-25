@@ -26,4 +26,17 @@ class Web::AuthControllerTest < ActionDispatch::IntegrationTest
     assert user
     assert signed_in?
   end
+
+  test 'new' do
+    get sign_in_url
+
+    assert_response :success
+  end
+
+  test 'destroy' do
+    delete sign_out_url
+
+    assert_redirected_to root_path
+    assert_not signed_in?
+  end
 end

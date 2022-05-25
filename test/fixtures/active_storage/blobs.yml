@@ -1,0 +1,17 @@
+drafts_image_blob:
+  key: c28n100j3l68sj7910fg3l5swdlx
+  filename: nina.jpg
+  content_type: image/jpeg
+  metadata: '{"identified":true,"width":448,"height":448,"analyzed":true}'
+  byte_size: 10524
+  checksum: K5f4a5jis5zo0KnnawI5rA==
+  service_name: local
+
+under_moderations_image_blob:
+  key: x3em5qp4266feh0pyv3wqhhptkz6
+  filename: nina.jpg
+  content_type: image/jpeg
+  metadata: '{"identified":true,"width":448,"height":448,"analyzed":true}'
+  byte_size: 10524
+  checksum: K5f4a5jis5zo0KnnawI5rA==
+  service_name: local

@@ -43,7 +43,8 @@ class Web::Admin::CategoriesControllerTest < ActionDispatch::IntegrationTest
   test 'should create a category' do
     post admin_categories_url, params: { category: @attributes }
 
-    Category.find_by(name: @attributes[:name])
+    category = Category.find_by(name: @attributes[:name])
+    assert_not_nil category
     assert_redirected_to admin_categories_url
   end
 

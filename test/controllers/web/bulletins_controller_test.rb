@@ -4,7 +4,7 @@ require 'test_helper'
 
 class Web::BulletinControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @bulletin = bulletins(:one)
+    @bulletin = bulletins(:draft)
     sign_in @bulletin.user
     @category = categories(:one)
     @attributes = {
@@ -34,7 +34,7 @@ class Web::BulletinControllerTest < ActionDispatch::IntegrationTest
 
   test 'should create bulletin' do
     post bulletins_url, params: { bulletin: @attributes }
-    bulletin = Bulletin.find_by(title: @attributes[:title])
+    bulletin = Bulletin.find_by(@attributes.except(:image))
     assert_redirected_to bulletin_path(bulletin.id)
   end
 
@@ -68,15 +68,18 @@ class Web::BulletinControllerTest < ActionDispatch::IntegrationTest
   test 'should send bulletin to archive' do
     patch archive_bulletin_path(@bulletin)
 
-    #  не понял, почему стейт не обновляется. но редирект нужный отрабатывает
-    # assert @bulletin.state == 'archived'
+    @bulletin.reload
+
+    assert @bulletin.archived?
     assert_redirected_to profile_url
   end
 
   test 'should send bulletin to moderation' do
     patch to_moderate_bulletin_path(@bulletin)
 
-    # assert @bulletin.state == 'under_moderation'
+    @bulletin.reload
+
+    assert_have_state @bulletin, :under_moderation
     assert_redirected_to profile_url
   end
 end
