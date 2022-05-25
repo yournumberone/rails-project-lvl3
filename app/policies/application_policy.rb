@@ -8,6 +8,12 @@ class ApplicationPolicy
     @record = record
   end
 
+  def admin?
+    return false if user.nil?
+
+    user.admin?
+  end
+
   def index?
     false
   end

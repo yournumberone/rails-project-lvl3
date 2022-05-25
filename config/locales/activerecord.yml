@@ -6,6 +6,7 @@ en:
           attributes:
             image:
               too_large: 'Too large size to upload. Try another: maximum size 5 Mb'
+              content_type_invalid: Only png, jpeg or jpg
     attributes:
       bulletin:
         state:

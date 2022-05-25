@@ -57,6 +57,7 @@ en:
   profile: Profile
   sign_out: Sign Out
   sign_in: Sign In
+  sign_in_with_github: Sign in with Github
   new_bulletin: New Bulletin
   my_bulletins: My Bulletins
   new_category: New Category
@@ -66,3 +67,4 @@ en:
   rejected: Rejected
   archived: Archived
   under_moderation: Under Moderation
+  back: Back

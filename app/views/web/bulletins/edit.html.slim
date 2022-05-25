@@ -1,1 +1,5 @@
+.col-4
+  - if @bulletin.image_attachment
+    = image_tag(@bulletin&.image, class: 'img-fluid my-3 img-thumbnail')
+
 = render partial: 'form', locals: { bulletin: @bulletin }

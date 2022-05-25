@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Web::BulletinsController < Web::ApplicationController
-  before_action :authenticate_user!, only: %i[new create update destroy to_moderate archive]
+  before_action :authenticate_user!, only: %i[new create edit update destroy to_moderate archive]
 
   def index
     @q = Bulletin.published.ransack(params[:q])

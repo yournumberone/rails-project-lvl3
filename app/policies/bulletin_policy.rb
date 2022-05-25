@@ -2,14 +2,12 @@
 
 class BulletinPolicy < ApplicationPolicy
   def show?
-    return false if user.nil?
+    return false if user.nil? && !record.published?
 
     record.user == user || record.published? || user.admin?
   end
 
   def edit?
-    return false if user.nil?
-
     record.user == user
   end
 

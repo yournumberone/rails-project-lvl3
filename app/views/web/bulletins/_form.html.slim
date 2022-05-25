@@ -3,6 +3,10 @@
   = f.association :category
   = f.input :title
   = f.input :description
-  = f.file_field :image
+  = f.label :image
+  = f.file_field :image, class: 'form-control'
+  - if bulletin.errors.any?
+    span.text-danger
+      = bulletin.errors.first.message
   br
   = f.button :submit, class: 'btn btn-success mt-4 btn-block'

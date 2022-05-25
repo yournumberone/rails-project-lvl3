@@ -2,9 +2,9 @@
 
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root 'web/bulletins#index'
 
   scope module: :web do
+    root 'bulletins#index'
     post 'auth/:provider', to: 'auth#request', as: :auth_request
     get 'auth/:provider/callback', to: 'auth#callback', as: :callback_auth
     get 'sign_in', to: 'auth#new'
@@ -28,6 +28,6 @@ Rails.application.routes.draw do
       resources :categories
     end
 
-    get 'profile', to: 'profile#index'
+    resource :profile, to: 'profile#index'
   end
 end

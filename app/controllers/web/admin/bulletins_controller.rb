@@ -2,7 +2,6 @@
 
 class Web::Admin::BulletinsController < Web::Admin::ApplicationController
   def index
-    authorize [:admin, Bulletin]
     @q = Bulletin.ransack(params[:q])
     @bulletins = @q.result.order(created_at: :desc).includes(:user).page(params[:page])
     @under_moderation_bulletins = @bulletins.under_moderation
@@ -14,7 +13,6 @@ class Web::Admin::BulletinsController < Web::Admin::ApplicationController
 
   def reject
     bulletin = Bulletin.find(params[:id])
-    authorize [:admin, bulletin]
     if bulletin.may_reject?
       bulletin.reject!
       redirect_to admin_bulletins_path, notice: t('.success')
@@ -26,7 +24,6 @@ class Web::Admin::BulletinsController < Web::Admin::ApplicationController
 
   def publish
     bulletin = Bulletin.find(params[:id])
-    authorize [:admin, bulletin]
     if bulletin.may_publish?
       bulletin.publish!
       redirect_to admin_bulletins_path, notice: t('.success')
@@ -38,7 +35,6 @@ class Web::Admin::BulletinsController < Web::Admin::ApplicationController
 
   def archive
     bulletin = Bulletin.find(params[:id])
-    authorize [:admin, bulletin]
     if bulletin.may_archive?
       bulletin.archive!
       redirect_to admin_bulletins_path, notice: t('.success')
