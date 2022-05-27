@@ -11,52 +11,51 @@
           i class="fa fa-times align-middle"
       = f.button :button, class: 'btn btn-light bg-white border-start-0 input-group-append' do
         i.fa-solid.fa-magnifying-glass
+
 nav.my-3
   .nav.nav-tabs.my-3 id="nav-tab" role="tablist"
-    button.nav-link.active id="nav-all-tab" data-bs-toggle="tab" data-bs-target="#nav-all" type="button" role="tab" aria-controls="nav-all" aria-selected="true"
-      = t('all')
-    button.nav-link id="nav-draft-tab" data-bs-toggle="tab" data-bs-target="#nav-draft" type="button" role="tab" aria-controls="nav-draft" aria-selected="false"
-      = t('draft')
-    button.nav-link id="nav-moderating-tab" data-bs-toggle="tab" data-bs-target="#nav-moderating" type="button" role="tab" aria-controls="nav-moderating" aria-selected="false"
-      = t('under_moderation')
-    button.nav-link id="nav-published-tab" data-bs-toggle="tab" data-bs-target="#nav-published" type="button" role="tab" aria-controls="nav-published" aria-selected="false"
-      = t('published')
-    button.nav-link id="nav-rejected-tab" data-bs-toggle="tab" data-bs-target="#nav-rejected" type="button" role="tab" aria-controls="nav-rejected" aria-selected="false"
-      = t('rejected')
-    button.nav-link id="nav-archived-tab" data-bs-toggle="tab" data-bs-target="#nav-archived" type="button" role="tab" aria-controls="nav-archived" aria-selected="false"
-      = t('archived')
+    - @tabs_array.each do |tab_id|
+      = link_to t(tab_id.to_s), profile_path(tab: tab_id.to_s),
+      { 'class' => "nav-link #{'active' if params[:tab] == tab_id}", 'id' => tab_id.to_s, 'data-bs-target' => "#nav-#{tab_id}",
+      'type' => 'button', 'role' => 'tab', 'aria-controls' => "nav-#{tab_id}", 'aria-selected' => @active_tab == tab_id ? 'true' : 'false' }
 
   .tab-content id="nav-tabContent"
-    = paginate @bulletins, theme: 'bootstrap-5', pagination_class: 'pagination-sm flex-wrap justify-content-end', nav_class: 'd-inline-block'
-      .row.text-info
-        .col-4
-          = t('title')
-        .col-2
-          = t('status')
-        .col-6
-          = t('actions')
-      hr.text-info
 
-    .tab-pane.fade.show.active id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab"
+    .row.text-info
+      .col-4
+        = t('title')
+      .col-2
+        = t('status')
+      .col-6
+        = t('actions')
+    hr.text-info
+
+    div class="tab-pane #{'show active' if @active_tab == 'all' } fade" id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab"
+      = paginate @bulletins, params: { tab: @active_tab }, theme: 'bootstrap-5', pagination_class: 'pagination-sm flex-wrap justify-content-end', nav_class: 'd-inline-block'
       - @bulletins.each do |bulletin|
         = render partial: 'web/profile/list', locals: { bulletin: bulletin }
 
-    .tab-pane.fade id="nav-draft" role="tabpanel" aria-labelledby="nav-draft-tab"
+    div class="tab-pane #{'show active' if @active_tab == 'draft' } fade" id="nav-draft" role="tabpanel" aria-labelledby="nav-draft-tab"
+      = paginate @draft_bulletins, params: { tab: @active_tab }, theme: 'bootstrap-5', pagination_class: 'pagination-sm flex-wrap justify-content-end', nav_class: 'd-inline-block'
       - @draft_bulletins.each do |bulletin|
         = render partial: 'web/profile/list', locals: { bulletin: bulletin }
 
-    .tab-pane.fade id="nav-moderating" role="tabpanel" aria-labelledby="nav-moderating-tab"
+    div class="tab-pane #{'show active' if @active_tab == 'under-moderation' } fade" id="nav-under-moderation" role="tabpanel" aria-labelledby="nav-under-moderation-tab"
+      = paginate @rejected_bulletins, params: { tab: @active_tab }, theme: 'bootstrap-5', pagination_class: 'pagination-sm flex-wrap', nav_class: 'd-inline-block'
       - @under_moderation_bulletins.each do |bulletin|
         = render partial: 'web/profile/list', locals: { bulletin: bulletin }
 
-    .tab-pane.fade id="nav-published" role="tabpanel" aria-labelledby="nav-published-tab"
+    div class="tab-pane #{'show active' if @active_tab == 'published' } fade" id="nav-published" role="tabpanel" aria-labelledby="nav-published-tab"
+      = paginate @published_bulletins, params: { tab: @active_tab }, theme: 'bootstrap-5', pagination_class: 'pagination-sm flex-wrap', nav_class: 'd-inline-block'
       - @published_bulletins.each do |bulletin|
         = render partial: 'web/profile/list', locals: { bulletin: bulletin }
 
-    .tab-pane.fade id="nav-rejected" role="tabpanel" aria-labelledby="nav-rejected-tab"
+    div class="tab-pane #{'show active' if @active_tab == 'rejected' } fade" id="nav-rejected" role="tabpanel" aria-labelledby="nav-rejected-tab"
+      = paginate @rejected_bulletins, params: { tab: @active_tab }, theme: 'bootstrap-5', pagination_class: 'pagination-sm flex-wrap', nav_class: 'd-inline-block'
       - @rejected_bulletins.each do |bulletin|
         = render partial: 'web/profile/list', locals: { bulletin: bulletin }
 
-    .tab-pane.fade id="nav-archived" role="tabpanel" aria-labelledby="nav-archived-tab"
+    div class="tab-pane #{'show active' if @active_tab == 'archived' } fade" id="nav-archived" role="tabpanel" aria-labelledby="nav-archived-tab"
+      = paginate @archived_bulletins, params: { tab: @active_tab }, theme: 'bootstrap-5', pagination_class: 'pagination-sm flex-wrap', nav_class: 'd-inline-block'
       - @archived_bulletins.each do |bulletin|
         = render partial: 'web/profile/list', locals: { bulletin: bulletin }
