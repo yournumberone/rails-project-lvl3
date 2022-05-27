@@ -11,6 +11,7 @@ import "@fortawesome/fontawesome-free/css/all"
 import "styles/application.scss"
 require("bootstrap");
 const images = require.context('../images', true)
+require('jquery')
 
 Rails.start()
 Turbolinks.start()

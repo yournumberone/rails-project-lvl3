@@ -9,6 +9,9 @@ class Web::Admin::BulletinsController < Web::Admin::ApplicationController
     @draft_bulletins = @bulletins.draft
     @published_bulletins = @bulletins.published
     @rejected_bulletins = @bulletins.rejected
+
+    @tabs_array = %w[all under-moderation draft published rejected archived]
+    @active_tab = params[:tab] || 'all'
   end
 
   def reject
