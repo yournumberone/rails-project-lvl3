@@ -1,11 +1,12 @@
-h1
-  = t('bulletins')
-
+.d-flex.justify-content-between
+  h1
+    = t('my_bulletins')
+  = link_to t('new_bulletin'), new_bulletin_path, class: 'btn btn-primary btn-lg'
 .d-flex.justify-content-center
-  = search_form_for @q, url: admin_bulletins_path, class: 'form w-50' do |f|
+  = search_form_for @q, url: profile_path, class: 'form w-50' do |f|
     .input-group
       = f.search_field :title_cont, class: 'form-control form-control-lg border-0', placeholder: t('search')
-      = link_to admin_bulletins_path do
+      = link_to profile_path do
         button type="button" class="btn my-1 bg-transparent" style="margin-left: -40px; z-index: 100;"
           i class="fa fa-times align-middle"
       = f.button :button, class: 'btn btn-light bg-white border-start-0 input-group-append' do
@@ -14,7 +15,7 @@ h1
 nav.my-3
   .nav.nav-tabs.my-3 id="nav-tab" role="tablist"
     - @tabs_array.each do |tab_id|
-      = link_to t(tab_id.to_s), admin_bulletins_path(tab: tab_id.to_s),
+      = link_to t(tab_id.to_s), profile_path(tab: tab_id.to_s),
       { 'class' => "nav-link #{'active' if params[:tab] == tab_id}", 'id' => tab_id.to_s, 'data-bs-target' => "#nav-#{tab_id}",
       'type' => 'button', 'role' => 'tab', 'aria-controls' => "nav-#{tab_id}", 'aria-selected' => @active_tab == tab_id ? 'true' : 'false' }
 

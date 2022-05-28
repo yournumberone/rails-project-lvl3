@@ -15,7 +15,7 @@ class Web::Admin::CategoriesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'unauthorized users cannot get index' do
-    delete sign_out_path
+    sign_out
 
     get admin_categories_url
     assert_response :redirect

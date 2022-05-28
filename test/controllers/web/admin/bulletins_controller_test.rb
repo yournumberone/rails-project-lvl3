@@ -15,7 +15,7 @@ class Web::Admin::BulletinsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'unauthorized users cannot get index' do
-    delete sign_out_path
+    sign_out
 
     get admin_bulletins_url
     assert_response :redirect

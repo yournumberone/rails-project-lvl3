@@ -23,4 +23,8 @@ module Authentication
 
     redirect_to(sign_in_path, notice: t('introduce_yourself_cowboy'))
   end
+
+  def authenticate_admin!
+    authorize :admin, :admin?
+  end
 end

@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-class Web::BulletinControllerTest < ActionDispatch::IntegrationTest
+class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @bulletin = bulletins(:draft)
     sign_in @bulletin.user
@@ -26,7 +26,7 @@ class Web::BulletinControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'unauthenticated users cannot get new' do
-    delete sign_out_path
+    sign_out
 
     get new_bulletin_url
     assert_response :redirect

@@ -2,16 +2,11 @@
 
 class Web::Admin::BulletinsController < Web::Admin::ApplicationController
   def index
-    @q = Bulletin.ransack(params[:q])
-    @bulletins = @q.result.order(created_at: :desc).includes(:user).page(params[:page])
-    @under_moderation_bulletins = @bulletins.under_moderation
-    @archived_bulletins = @bulletins.archived
-    @draft_bulletins = @bulletins.draft
-    @published_bulletins = @bulletins.published
-    @rejected_bulletins = @bulletins.rejected
-
-    @tabs_array = %w[all under-moderation draft published rejected archived]
+    @tabs_array = %w[all under_moderation draft published rejected archived]
     @active_tab = params[:tab] || 'all'
+
+    @q = Bulletin.ransack(params[:q])
+    @bulletins = @q.result.order(created_at: :desc).includes(:user).page(params[:page]).send(@active_tab)
   end
 
   def reject
