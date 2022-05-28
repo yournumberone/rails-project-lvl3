@@ -5,9 +5,10 @@ h1
   = search_form_for @q, url: admin_bulletins_path, class: 'form w-50' do |f|
     .input-group
       = f.search_field :title_cont, class: 'form-control form-control-lg border-0', placeholder: t('search')
-      = link_to admin_bulletins_path do
-        button type="button" class="btn my-1 bg-transparent" style="margin-left: -40px; z-index: 100;"
-          i class="fa fa-times align-middle"
+      - if params.key?(:button)
+        = link_to admin_bulletins_path do
+          button type="button" class="btn my-1 bg-transparent" style="margin-left: -40px; z-index: 100;"
+            i class="fa fa-times align-middle"
       = f.button :button, class: 'btn btn-light bg-white border-start-0 input-group-append' do
         i.fa-solid.fa-magnifying-glass
 

@@ -1,14 +1,16 @@
 .d-flex.justify-content-between
   h1
     = t('my_bulletins')
+
   = link_to t('new_bulletin'), new_bulletin_path, class: 'btn btn-primary btn-lg'
 .d-flex.justify-content-center
   = search_form_for @q, url: profile_path, class: 'form w-50' do |f|
     .input-group
       = f.search_field :title_cont, class: 'form-control form-control-lg border-0', placeholder: t('search')
-      = link_to profile_path do
-        button type="button" class="btn my-1 bg-transparent" style="margin-left: -40px; z-index: 100;"
-          i class="fa fa-times align-middle"
+      - if params.key?(:button)
+        = link_to profile_path do
+          button type="button" class="btn my-1 bg-transparent" style="margin-left: -40px; z-index: 100;"
+            i class="fa fa-times align-middle"
       = f.button :button, class: 'btn btn-light bg-white border-start-0 input-group-append' do
         i.fa-solid.fa-magnifying-glass
 

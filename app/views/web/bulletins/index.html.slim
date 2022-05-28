@@ -6,9 +6,10 @@
   = search_form_for @q, class: 'form w-50' do |f|
     .input-group
       = f.search_field :title_or_category_name_cont, class: 'form-control form-control-lg border-0', placeholder: t('search')
-      = link_to bulletins_path do
-        button type="button" class="btn my-1 bg-transparent" style="margin-left: -40px; z-index: 100;"
-          i class="fa fa-times placeholder-shown align-middle text-secondary"
+      - if params.key?(:button)
+        = link_to bulletins_path do
+          button type="button" class="btn my-1 bg-transparent" style="margin-left: -40px; z-index: 100;"
+            i class="fa fa-times placeholder-shown align-middle text-secondary"
       = f.button :button, class: 'btn btn-light bg-white border-start-0 input-group-append' do
         i.fa-solid.fa-magnifying-glass
 
