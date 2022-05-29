@@ -2,10 +2,11 @@
 
 class Web::Admin::BulletinsController < Web::Admin::ApplicationController
   def index
+    get_query('bulletin')
     @tabs_array = %w[all under_moderation draft published rejected archived]
     @active_tab = params[:tab] || 'all'
 
-    @q = Bulletin.ransack(params[:q])
+    @q = Bulletin.ransack(@query)
     @bulletins = @q.result.order(created_at: :desc).includes(:user).page(params[:page]).send(@active_tab)
   end
 

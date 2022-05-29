@@ -12,4 +12,12 @@ class ApplicationController < ActionController::Base
     flash[:alert] = t('permission_denied')
     redirect_back(fallback_location: root_path)
   end
+
+  protected
+
+  def get_query(cookie_key)
+    cookies.delete(cookie_key) if params[:clear]
+    cookies[cookie_key] = params[:q].to_json if params[:q]
+    @query = params[:q] || JSON.parse(cookies[cookie_key]) if cookies[cookie_key]
+  end
 end
