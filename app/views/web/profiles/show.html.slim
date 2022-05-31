@@ -35,4 +35,4 @@ nav.my-3
     div class="tab-pane show active fade" id="nav-#{@active_tab}" role="tabpanel" aria-labelledby="nav-#{@active_tab}-tab"
       = paginate @bulletins, params: { tab: @active_tab }, theme: 'bootstrap-5', pagination_class: 'pagination-sm flex-wrap justify-content-end', nav_class: 'd-inline-block'
       - @bulletins.each do |bulletin|
-        = render partial: 'web/admin/bulletins/list', locals: { bulletin: bulletin }
+        = render partial: 'web/profiles/list', locals: { bulletin: bulletin }

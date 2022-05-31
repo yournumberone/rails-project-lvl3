@@ -28,6 +28,6 @@ Rails.application.routes.draw do
       resources :categories
     end
 
-    resource :profile
+    resource :profile, only: :show
   end
 end
