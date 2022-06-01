@@ -16,7 +16,7 @@
 
 nav.my-3
   .nav.nav-tabs.my-3 id="nav-tab" role="tablist"
-    - @tabs_array.each do |tab_id|
+    - @tabs.each do |tab_id|
       = link_to t(tab_id.to_s), profile_path(tab: tab_id.to_s),
       { 'class' => "nav-link #{'active' if params[:tab] == tab_id}", 'id' => tab_id.to_s, 'data-bs-target' => "#nav-#{tab_id}",
       'type' => 'button', 'role' => 'tab', 'aria-controls' => "nav-#{tab_id}", 'aria-selected' => @active_tab == tab_id ? 'true' : 'false' }

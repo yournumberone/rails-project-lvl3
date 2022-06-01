@@ -79,7 +79,7 @@ class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest
 
     @bulletin.reload
 
-    assert_have_state @bulletin, :under_moderation
+    assert @bulletin.under_moderation?
     assert_redirected_to profile_url
   end
 end

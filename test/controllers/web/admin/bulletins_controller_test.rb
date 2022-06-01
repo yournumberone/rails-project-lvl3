@@ -26,7 +26,7 @@ class Web::Admin::BulletinsControllerTest < ActionDispatch::IntegrationTest
 
     @bulletin.reload
 
-    assert_have_state @bulletin, :archived
+    assert @bulletin.archived?
     assert_redirected_to admin_bulletins_path
   end
 
@@ -35,7 +35,7 @@ class Web::Admin::BulletinsControllerTest < ActionDispatch::IntegrationTest
 
     @bulletin.reload
 
-    assert_have_state @bulletin, :rejected
+    assert @bulletin.rejected?
     assert_redirected_to admin_bulletins_path
   end
 
@@ -44,7 +44,7 @@ class Web::Admin::BulletinsControllerTest < ActionDispatch::IntegrationTest
 
     @bulletin.reload
 
-    assert_have_state @bulletin, :published
+    assert @bulletin.published?
     assert_redirected_to admin_bulletins_path
   end
 
@@ -55,7 +55,7 @@ class Web::Admin::BulletinsControllerTest < ActionDispatch::IntegrationTest
 
     @bulletin.reload
 
-    assert_have_state bulletin, :draft
+    assert bulletin.draft?
     assert_redirected_to bulletin_path(bulletin)
   end
 end

@@ -5,7 +5,7 @@ class Web::ProfilesController < Web::ApplicationController
 
   def show
     get_query('bulletin')
-    @tabs_array = %w[all under_moderation draft published rejected archived]
+    @tabs = %w[all under_moderation draft published rejected archived]
     @active_tab = params[:tab] || 'all'
 
     @q = current_user.bulletins.ransack(@query)

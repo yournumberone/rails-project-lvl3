@@ -9,7 +9,7 @@ class Web::BulletinsController < Web::ApplicationController
   end
 
   def show
-    @bulletin = set_bulletin
+    @bulletin = find_bulletin
     authorize @bulletin
   end
 
@@ -27,12 +27,12 @@ class Web::BulletinsController < Web::ApplicationController
   end
 
   def edit
-    @bulletin = set_bulletin
+    @bulletin = find_bulletin
     authorize @bulletin
   end
 
   def update
-    @bulletin = set_bulletin
+    @bulletin = find_bulletin
     authorize @bulletin
     if @bulletin.update(bulletin_params)
       redirect_to bulletin_path(@bulletin), notice: t('.success')
@@ -42,7 +42,7 @@ class Web::BulletinsController < Web::ApplicationController
   end
 
   def destroy
-    @bulletin = set_bulletin
+    @bulletin = find_bulletin
     authorize @bulletin
     if @bulletin.destroy
       redirect_to profile_path, notice: t('.success')
@@ -52,25 +52,25 @@ class Web::BulletinsController < Web::ApplicationController
   end
 
   def to_moderate
-    @bulletin = set_bulletin
+    @bulletin = find_bulletin
     authorize @bulletin
     if @bulletin.may_moderate?
       @bulletin.moderate!
       redirect_to profile_path, notice: t('.success')
     else
-      flash[:alert] = @bulletin.errors.first.full_message
+      flash[:alert] = t('.fail')
       redirect_to bulletin_path(@bulletin)
     end
   end
 
   def archive
-    @bulletin = set_bulletin
+    @bulletin = find_bulletin
     authorize @bulletin
     if @bulletin.may_archive?
       @bulletin.archive!
       redirect_to profile_path, notice: t('.success')
     else
-      flash[:alert] = @bulletin.errors.first.full_message
+      flash[:alert] = t('.fail')
       redirect_to bulletin_path(@bulletin)
     end
   end
@@ -81,7 +81,7 @@ class Web::BulletinsController < Web::ApplicationController
     params.require(:bulletin).permit(%i[category_id title description image])
   end
 
-  def set_bulletin
+  def find_bulletin
     Bulletin.find(params[:id])
   end
 end

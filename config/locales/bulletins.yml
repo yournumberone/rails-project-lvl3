@@ -27,3 +27,6 @@ en:
         archive:
           success: Bulletin was archived
           fail: Bulletin was not archived
+        to_moderate:
+          success: Bulletin has been sent to moderation
+          fail: Bulletin has not been sent to moderation
